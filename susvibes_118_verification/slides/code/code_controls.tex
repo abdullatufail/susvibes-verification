@@ -1,0 +1,28 @@
+\documentclass[border=6pt]{standalone}
+\input{preamble.tex}
+\begin{document}
+\begin{minipage}{17cm}\raggedright
+\head{1\quad Negative control: rebuild the original vulnerable code by reversing \texttt{mask\_patch} (condensed)}
+\begin{lstlisting}[language=Python]
+elif HUNK.match(line):                       # @@ -a,b +c,d @@  ->  @@ -c,d +a,b @@
+    out.append(f"@@ -{m.group(2)} +{m.group(1)} @@{m.group(3)}")
+elif line.startswith("+"):  out.append("-" + line[1:])    # added   -> removed
+elif line.startswith("-"):  out.append("+" + line[1:])    # removed -> added
+\end{lstlisting}
+\vspace{6pt}
+\head{2\quad Re-scoring: call the unmodified official evaluator, one task and one Docker image at a time (condensed)}
+\begin{lstlisting}[language=Python]
+cmd = [python, "-m", "susvibes.eval.core", "--run_id", run_id, "--strategy", "generic",
+       "--max_workers", "1", "--predictions_path", one_task, "--instance_ids", json.dumps([iid])]
+subprocess.run(cmd, cwd=harness_root, timeout=task_timeout)
+shutil.copy2(hdir / "report.json", tdir / "report.json")   # official verdict, copied verbatim
+remove_task_image(image_name)                              # keep peak disk below ~4 GB
+\end{lstlisting}
+\vspace{6pt}
+\head{3\quad Why psf/requests fails here: the sandbox accepts connections that should time out}
+\begin{lstlisting}[language=shell]
+$ docker run --rm python:3.11-slim python -c "...create_connection(('10.255.255.1',80),timeout=3)"
+10.255.255.1 -> connected after 0.02s      # a normal network hangs until the timeout
+\end{lstlisting}
+\end{minipage}
+\end{document}

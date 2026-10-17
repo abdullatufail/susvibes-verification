@@ -1,0 +1,8 @@
+\usepackage[T1]{fontenc}\usepackage{lmodern}\usepackage{xcolor}\usepackage{listings}
+\definecolor{codebg}{HTML}{FBFAF7}\definecolor{codekw}{HTML}{2F5D3A}\definecolor{codecm}{HTML}{7A8478}
+\definecolor{codestr}{HTML}{9B4A2E}\definecolor{ink}{HTML}{2E3B30}\definecolor{hl}{HTML}{4B6450}
+\lstset{basicstyle=\ttfamily\small\color{ink}, backgroundcolor=\color{codebg}, frame=single, rulecolor=\color{hl!40},
+  framesep=8pt, keywordstyle=\color{codekw}\bfseries, commentstyle=\color{codecm}\itshape, stringstyle=\color{codestr},
+  showstringspaces=false, breaklines=true, columns=fullflexible, keepspaces=true, upquote=true}
+\lstdefinelanguage{shell}{morekeywords={docker,python},sensitive=true,morecomment=[l]{\#},morestring=[b]"}
+\newcommand{\head}[1]{{\sffamily\bfseries\color{hl}#1}\par\vspace{3pt}}
