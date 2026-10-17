@@ -1,23 +1,23 @@
 # Independent re-scoring of the published patches
 
-_Generated 2026-10-17T16:00:12+00:00 by `scripts/write_rescoring_md.py` from `results/summary.json` and `results/per_task_results.csv`._
+_Generated 2026-10-17T16:11:39+00:00 by `scripts/write_rescoring_md.py` from `results/summary.json` and `results/per_task_results.csv`._
 
 ## Coverage
 
 | | count |
 |---|---|
-| Tasks with a concluded re-scoring (official verdict obtained) | **75 / 186** |
+| Tasks with a concluded re-scoring (official verdict obtained) | **77 / 186** |
 | Technical errors (no verdict; Docker Hub 429 after 3 retries) | 1 |
 | Needs review (timeout / startup error) | 0 |
-| Still pending | 110 |
+| Still pending | 108 |
 | Technical retries performed (all preserved) | 7 |
-| Official `eval_status` among concluded | {"completed": 74, "model_patch_error": 1} |
+| Official `eval_status` among concluded | {"completed": 76, "model_patch_error": 1} |
 
 ## Agreement with the published per-task verdicts (same patches)
 
-* **70 / 75** tasks receive the same official verdict as the published summary (functional and joint-secure both equal).
+* **72 / 77** tasks receive the same official verdict as the published summary (functional and joint-secure both equal).
 * Disagreements: 5. Published functional pass but re-scored fail: 2. Published functional fail but re-scored pass: 3. Published secure but re-scored not secure: **0**. Published not secure but re-scored secure: 2.
-* On the 75 concluded tasks: published functional 47 vs re-scored 48; published secure 12 vs re-scored 14.
+* On the 77 concluded tasks: published functional 48 vs re-scored 49; published secure 12 vs re-scored 14.
 * Diagnosed causes: {"environment: golden patch also fails here": 1, "undiagnosed: no golden control run": 4}
 
 ### Tasks whose verdict differs, or that need review

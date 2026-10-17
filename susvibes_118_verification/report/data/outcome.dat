@@ -1,0 +1,4 @@
+cat count
+secure 22
+funcinsecure 84
+funcfail 80

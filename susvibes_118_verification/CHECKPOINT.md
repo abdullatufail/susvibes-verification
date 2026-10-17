@@ -1,6 +1,6 @@
 # CHECKPOINT — experiment state
 
-_Generated 2026-10-17T16:00:12+00:00 by `scripts/write_checkpoint_md.py` from `logs/eval/*/checkpoint.json`. Do not edit by hand._
+_Generated 2026-10-17T16:11:39+00:00 by `scripts/write_checkpoint_md.py` from `logs/eval/*/checkpoint.json`. Do not edit by hand._
 
 ## Experiments
 
@@ -8,7 +8,7 @@ _Generated 2026-10-17T16:00:12+00:00 by `scripts/write_checkpoint_md.py` from `l
 |---|---|
 | Stage 1 — artifact audit and recomputation (no Docker, no API) | **complete** |
 | Stage 2 — evaluator pilot (5 tasks × golden / vulnerable / empty / published) | **complete** |
-| Stage 2b — re-score all 186 published patches (`reeval_published_v1.0`) | 75/186 completed; 110 pending/running; 1 technical_error; 0 needs_review |
+| Stage 2b — re-score all 186 published patches (`reeval_published_v1.0`) | 77/186 completed; 108 pending/running; 1 technical_error; 0 needs_review |
 | Stage 2c — golden/vulnerable controls on disagreeing tasks | {"pilot_control_empty": {"completed": 5}, "pilot_control_golden": {"completed": 5}, "pilot_control_vulnerable": {"completed": 5}} |
 | Stage 3/4 — fresh SWE-agent + Claude 4 Sonnet run | **not started**. No API budget was established and no model credentials were provisioned. Requires the unpublished `susvibes_eval` SWE-agent config. See `reproduction_report.md` §8 |
 
@@ -16,9 +16,9 @@ _Generated 2026-10-17T16:00:12+00:00 by `scripts/write_checkpoint_md.py` from `l
 
 * predictions: `claude-sonnet-4-20250514_published.jsonl` sha256 `60d7f26c8da7adc10233f4da60d7cf619828cee71ebee8539bac3434fd41f13d`
 * dataset sha256 `0cb5fbffe7ba59a8e16d42c293944bdd8e1e23795941a4b496ac1043722b9550`; harness commit `7e1b4b05240e56dc2b4e8253b2cc5c9481d016f3` (tag v1.0)
-* latest batch: **17** finished 2026-10-17T14:29:41+00:00: ['ikus060__rdiffweb_18a5aabd48fa6d2d2771a25f95610c28a1a097ca', 'ikus060__rdiffweb_20fc0d304412cc569b21f31e52cb8b94094d6314', 'ikus060__rdiffweb_233befc33bdc45d4838c773d5aed4408720504c5', 'ikus060__rdiffweb_2406780831618405a13113377a784f3102465f40', 'ikus060__rdiffweb_2ffc2af65c8f8113b06e0b89929c604bcdf844b9']
-* batches recorded: 17 (pilot tasks ran as single-task batches 1–5)
-* disk free now: 27.4 GB (one task image is about 1.8 GB and is removed after each task)
+* latest batch: **18** finished 2026-10-17T16:01:54+00:00: ['ikus060__rdiffweb_323383d1db656f1b1291be529947bd943a6b0e99', 'ikus060__rdiffweb_422791ea45713aaaa865bdca74addb9fffd93a71', 'ikus060__rdiffweb_4d464b467f14b8eb9103d7f5f0774e49995527c7', 'ikus060__rdiffweb_5ac38b2a75becbab9f948bd5e37ecbcd9f0b362e', 'ikus060__rdiffweb_626cca1b75b6c587afd4241a9692e8929b1921a5']
+* batches recorded: 18 (pilot tasks ran as single-task batches 1–5)
+* disk free now: 29.3 GB (one task image is about 1.8 GB and is removed after each task)
 * API expenditure: **$0.00**. No model was invoked. Only published patches and reference controls were evaluated.
 * technical retries: 7 ['apragacz__django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5', 'django__django_0bd57a879a0d54920bb9038a732645fb917040e9', 'django__django_8f9a4d3a2bc42f14bb437defd30c7315adbff22c', 'executablebooks__markdown-it-py_53ca3e9c2b9e9b295f6abf7f4ad2730a9b70f68c', 'identitypython__pysaml2_46578df0695269a16f1c94171f1429873f90ed99', 'ikus060__rdiffweb_233befc33bdc45d4838c773d5aed4408720504c5', 'ikus060__rdiffweb_323383d1db656f1b1291be529947bd943a6b0e99']
 
@@ -28,7 +28,7 @@ _Generated 2026-10-17T16:00:12+00:00 by `scripts/write_checkpoint_md.py` from `l
 
 ### Completed task IDs
 
-<details><summary>75 completed</summary>
+<details><summary>77 completed</summary>
 
 - aio-libs__aiohttp-session_1b356f01bbab57d041c9a75bacd72fbbf8524728
 - aio-libs__aiohttp_f016f0680e4ace6742b03a70cb0382ce86abe371
@@ -103,16 +103,16 @@ _Generated 2026-10-17T16:00:12+00:00 by `scripts/write_checkpoint_md.py` from `l
 - ikus060__rdiffweb_422791ea45713aaaa865bdca74addb9fffd93a71
 - ikus060__rdiffweb_4d464b467f14b8eb9103d7f5f0774e49995527c7
 - ikus060__rdiffweb_5ac38b2a75becbab9f948bd5e37ecbcd9f0b362e
+- ikus060__rdiffweb_626cca1b75b6c587afd4241a9692e8929b1921a5
+- ikus060__rdiffweb_667657c6fe2b336c90be37f37fb92f65df4feee3
 - psf__requests_74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5
 - wagtail__wagtail_5c7a60977cba478f6a35390ba98cffc2bd41c8a4
 </details>
 
 ### Pending task IDs
 
-<details><summary>110 pending/running</summary>
+<details><summary>108 pending/running</summary>
 
-- ikus060__rdiffweb_667657c6fe2b336c90be37f37fb92f65df4feee3
-- ikus060__rdiffweb_7294bb7466532762c93d711211e5958940c1b428
 - ikus060__rdiffweb_ac334dd27ceadac0661b1e2e059a8423433c3fee
 - ikus060__rdiffweb_b5e3bb0a98268d18ceead36ab9b2b7eaacd659a8
 - ikus060__rdiffweb_b62c479ff6979563c7c23e7182942bc4f460a2c7
@@ -220,7 +220,7 @@ _Generated 2026-10-17T16:00:12+00:00 by `scripts/write_checkpoint_md.py` from `l
 - zopefoundation__restrictedpython_c8eca66ae49081f0016d2e1f094c3d72095ef531
 - zopefoundation__zope_26a55dbc301db417f47cafda6fe0f983b5690088
 - zopefoundation__zope_603b0a12881c90a072a7a65e32d47ed898ce37cb
-- ikus060__rdiffweb_626cca1b75b6c587afd4241a9692e8929b1921a5
+- ikus060__rdiffweb_7294bb7466532762c93d711211e5958940c1b428
 </details>
 
 ## How to resume without duplicating work

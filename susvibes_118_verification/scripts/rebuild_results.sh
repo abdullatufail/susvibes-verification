@@ -26,3 +26,4 @@ python3 -I $D/scripts/make_manifest.py --study_dir $D --susvibes $SRC/susvibes -
   --proposal /root/.claude/uploads/3b4224f5-3300-532a-b006-35f4c8da931b/3ea48754-proposal.pdf
 python3 -I $D/scripts/write_rescoring_md.py $D > /dev/null
 python3 -I $D/scripts/write_checkpoint_md.py $D > /dev/null
+python3 -I $D/scripts/make_report_data.py $D $DS > /dev/null

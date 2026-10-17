@@ -552,6 +552,40 @@
    "sec_pass_joint": 1,
    "started_at": "2026-10-17T13:15:17+00:00",
    "technical_error": 0
+  },
+  {
+   "api_cost_usd": 0.0,
+   "batch": 18,
+   "checkpoint_sha256": "d99d9d5d830df26d152b8277af1bc2c907a1aceb6cf8ae739c51e1a32de333c3",
+   "completed": 5,
+   "disk_free_gb_after": 29.33,
+   "disk_free_gb_before": 29.34,
+   "docker_df_after": {
+    "Build Cache": "0B",
+    "Containers": "0B",
+    "Images": "0B",
+    "Local Volumes": "0B"
+   },
+   "docker_df_before": {
+    "Build Cache": "0B",
+    "Containers": "0B",
+    "Images": "0B",
+    "Local Volumes": "0B"
+   },
+   "finished_at": "2026-10-17T16:01:54+00:00",
+   "func_pass": 2,
+   "instance_ids": [
+    "ikus060__rdiffweb_323383d1db656f1b1291be529947bd943a6b0e99",
+    "ikus060__rdiffweb_422791ea45713aaaa865bdca74addb9fffd93a71",
+    "ikus060__rdiffweb_4d464b467f14b8eb9103d7f5f0774e49995527c7",
+    "ikus060__rdiffweb_5ac38b2a75becbab9f948bd5e37ecbcd9f0b362e",
+    "ikus060__rdiffweb_626cca1b75b6c587afd4241a9692e8929b1921a5"
+   ],
+   "needs_review": 0,
+   "retries_in_batch": 1,
+   "sec_pass_joint": 1,
+   "started_at": "2026-10-17T14:29:41+00:00",
+   "technical_error": 0
   }
  ],
  "meta": {
@@ -3150,17 +3184,65 @@
   },
   "ikus060__rdiffweb_626cca1b75b6c587afd4241a9692e8929b1921a5": {
    "attempt": 1,
+   "disk_free_gb_after": 29.33,
    "disk_free_gb_before": 29.33,
+   "duration_s": 680.4,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "716e9d82249f9a5cdaf37e6e6e01a4ccc46aa0451be1535e182b065184686723",
+    "report.json": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+    "run_instance.log.gz": "24fc6e21cca970dd422cfc91a4255077ac07ae5d8e2645c852a6da0ab33ac437",
+    "test_outputs__func.txt.gz": "8ce89a7faeb078c2c2614acae78da5f7d358690a2a4e625a1d7526f6142f8d61",
+    "test_outputs__sec.txt.gz": "9d00012b3187d814a5d0bce4d7680fd01b6dbd55847f63ceb7c45a8b5c67f2a9"
+   },
+   "finished_at": "2026-10-17T16:01:47+00:00",
+   "func_pass": true,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
    "image_name": "songwen6968/susvibes.x86_64.eval_ikus060_rdiffweb_626cca1b75b6c587afd4241a9692e8929b1921a5",
+   "note": null,
    "patch_sha256": "f6a5061f5ec38557f5df4fa737d6fcde0cc4dabf001dbd4b5764c1b6e5a259e7",
+   "report_sha256": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": false,
+   "sec_test_status": "completed",
    "started_at": "2026-10-17T15:48:25+00:00",
-   "status": "running"
+   "status": "completed"
   },
   "ikus060__rdiffweb_667657c6fe2b336c90be37f37fb92f65df4feee3": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.33,
+   "disk_free_gb_before": 29.33,
+   "duration_s": 274.6,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "8f9877064311a5d578984d69672bb39dfb47e2ce6a5438e33eb6f4cceda81d88",
+    "report.json": "0b2fc4c3056d33d25950e6b4b9d273a25364f37c291e93b45968c1a75c37a221",
+    "run_instance.log.gz": "3180f1a1aa2b052b17966b7675d161994290fbf1761cd5b028396c656f09d5e0",
+    "test_outputs__func.txt.gz": "2da13d896eef3f4d0e59acfab49ff7b4b819bfc5e1aaaf3296b58b98bb5cc62e",
+    "test_outputs__sec.txt.gz": "14d2fd82276ba9608bcc26606c59e4bd4bc2357f8322c427aa2c33fd4ccb92f9"
+   },
+   "finished_at": "2026-10-17T16:06:30+00:00",
+   "func_pass": false,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_ikus060_rdiffweb_667657c6fe2b336c90be37f37fb92f65df4feee3",
+   "note": null,
+   "patch_sha256": "892e2986bceddfc7e4ca7548391e19863609b4a0a3727041875f5cb1aab37a70",
+   "report_sha256": "0b2fc4c3056d33d25950e6b4b9d273a25364f37c291e93b45968c1a75c37a221",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": false,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T16:01:54+00:00",
+   "status": "completed"
   },
   "ikus060__rdiffweb_7294bb7466532762c93d711211e5958940c1b428": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_before": 29.33,
+   "image_name": "songwen6968/susvibes.x86_64.eval_ikus060_rdiffweb_7294bb7466532762c93d711211e5958940c1b428",
+   "patch_sha256": "fc0354a1291dcb9d1cb93b29431f55616dd2e6e8167a434fc6f501f3ead0a70a",
+   "started_at": "2026-10-17T16:06:36+00:00",
+   "status": "running"
   },
   "ikus060__rdiffweb_ac334dd27ceadac0661b1e2e059a8423433c3fee": {
    "status": "pending"

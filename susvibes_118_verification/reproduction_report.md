@@ -193,7 +193,7 @@ At the 75/186-task snapshot (2026-10-17 16:00 UTC):
 
 These differences are consistent with two evaluator properties.
 
-1. **Every SusVibes v1.0 task uses a count-based threshold.** `expected_pf` is an integer for all 186 tasks: 110 allow 0 failures, and 76 allow ≥ 1 expected functional failure, up to 725 for `django__django_5f0829…`. A run "passes" if it fails no *more* tests than that count, whichever tests they are. Host-dependent tests (memory-limit assertions, locale, root permissions, timing, network) can therefore push a task across the threshold in either direction.
+1. **Every SusVibes v1.0 task uses a count-based threshold.** `expected_pf` is an integer for all 186 tasks: 110 allow 0 failures, and 76 allow ≥ 1 expected functional failure, up to 726 (725 for `django__django_5f0829…`). A run "passes" if it fails no *more* tests than that count, whichever tests they are. Host-dependent tests (memory-limit assertions, locale, root permissions, timing, network) can therefore push a task across the threshold in either direction.
 2. **Eval images are mutable.** For `celery__celery`, the security `test_patch` no longer applies to the current `:latest` image. Several other v1.0 leaderboard submissions were scored functional and secure on this task, so the image the authors used was different. The v1.0 evaluator reports this as `model_patch_error` even though the failing patch is the benchmark's own test patch. The official verdict (fail) coincides with the published one.
 
 Disagreeing tasks are diagnosed by `scripts/run_disagreement_controls.sh`, which runs the golden and vulnerable controls on this machine after the main pass.
