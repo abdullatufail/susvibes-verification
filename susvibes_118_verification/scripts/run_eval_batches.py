@@ -119,6 +119,61 @@ def remove_task_image(image_name: str, log):
     log(f"  removed {image_name}")
 
 
+def evaluate_prediction(pred, run_id, args, harness_root, tdir, tmp_dir, log):
+    """Evaluate one prediction with the official entry point; copy evidence to tdir; return the
+    record fields. The official report is taken verbatim."""
+    iid = pred["instance_id"]
+    model_key = pred["model_name_or_path"].replace("/", "__")
+    hdir = harness_root / "logs/eval" / run_id / args.strategy / model_key / iid
+    # Remove any stale harness report for this run/task so the evaluator cannot reuse it.
+    if hdir.exists():
+        shutil.rmtree(hdir)
+    one = tmp_dir / f"{iid}.{model_key}.jsonl"
+    one.write_text(json.dumps(pred) + "\n")
+    cmd = [args.harness_python, "-m", "susvibes.eval.core", "--run_id", run_id,
+           "--strategy", args.strategy, "--max_workers", "1",
+           "--predictions_path", str(one), "--instance_ids", json.dumps([iid])]
+    t0 = time.time()
+    try:
+        cp = subprocess.run(cmd, cwd=harness_root, capture_output=True, text=True,
+                            timeout=args.task_timeout)
+        rc, stdout, stderr = cp.returncode, cp.stdout, cp.stderr
+    except subprocess.TimeoutExpired as e:
+        rc, stdout, stderr = "wrapper_timeout", str(e.stdout or ""), str(e.stderr or "")
+    dur = round(time.time() - t0, 1)
+    one.unlink(missing_ok=True)
+
+    if tdir.exists():
+        shutil.rmtree(tdir)
+    tdir.mkdir(parents=True)
+    (tdir / "harness_stdout_stderr.txt.gz").write_bytes(
+        gzip.compress(f"$ {' '.join(cmd)}\nreturncode={rc}\n--- stdout\n{stdout}\n--- stderr\n{stderr}".encode()))
+    report = None
+    if (hdir / "report.json").exists():
+        shutil.copy2(hdir / "report.json", tdir / "report.json")
+        report = json.loads((tdir / "report.json").read_text())
+    for rel in ["run_instance.log", "test_outputs/func.txt", "test_outputs/sec.txt"]:
+        src = hdir / rel
+        if src.exists():
+            (tdir / (rel.replace("/", "__") + ".gz")).write_bytes(gzip.compress(src.read_bytes()))
+    status, note = classify(report)
+    if rc != 0 and report is None:
+        note = f"harness returncode={rc}; " + (note or "")
+    run = (report or {}).get("run", {})
+    return {
+        "status": status, "note": note, "finished_at": now(), "duration_s": dur,
+        "harness_returncode": rc, "run_id": run_id,
+        "patch_sha256": sha256_str(pred["model_patch"]),
+        "eval_status": (report or {}).get("eval_status"),
+        "func_pass": run.get("func", {}).get("pass"),
+        "func_test_status": run.get("func", {}).get("test_status"),
+        "sec_pass": run.get("sec", {}).get("pass"),
+        "sec_test_status": run.get("sec", {}).get("test_status"),
+        "report_sha256": sha256_file(tdir / "report.json") if report else None,
+        "evidence_files": {p.name: sha256_file(p) for p in sorted(tdir.iterdir())},
+    }
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--predictions", required=True, type=Path)
@@ -137,6 +192,9 @@ def main():
                     help="Re-run tasks whose status is technical_error/needs_review (original "
                          "record is preserved under `previous_attempts`).")
     ap.add_argument("--task_timeout", type=int, default=2 * 1800 + 1800)
+    ap.add_argument("--control", action="append", default=[], metavar="NAME=PATH",
+                    help="Per-task control predictions evaluated on the same cached image before "
+                         "the main prediction (e.g. golden=predictions/control_golden.jsonl).")
     args = ap.parse_args()
 
     out_dir = args.out_dir.resolve()
@@ -182,8 +240,12 @@ def main():
         ck["tasks"].setdefault(i, {"status": "pending"})
     atomic_write_json(ck_path, ck)
 
-    model_key = model.replace("/", "__")
-    harness_task_root = harness_root / "logs/eval" / args.run_id / args.strategy / model_key
+    controls = {}
+    for spec in args.control:
+        name, path = spec.split("=", 1)
+        controls[name] = {json.loads(l)["instance_id"]: json.loads(l) for l in Path(path).open()}
+    ck["meta"].setdefault("controls", {}).update({n: sha256_file(Path(p)) for n, p in
+                                                  (c.split("=", 1) for c in args.control)})
     tmp_dir = out_dir / "_tmp"
     tmp_dir.mkdir(exist_ok=True)
 
@@ -224,62 +286,23 @@ def main():
                         "disk_free_gb_before": disk_free_gb()})
             atomic_write_json(ck_path, ck)
 
-            # Remove any stale harness report for this run/task so the evaluator cannot reuse it.
-            hdir = harness_task_root / i
-            if hdir.exists():
-                shutil.rmtree(hdir)
-            one = tmp_dir / f"{i}.jsonl"
-            one.write_text(json.dumps(pred) + "\n")
-            cmd = [args.harness_python, "-m", "susvibes.eval.core", "--run_id", args.run_id,
-                   "--strategy", args.strategy, "--max_workers", "1",
-                   "--predictions_path", str(one), "--instance_ids", json.dumps([i])]
-            t0 = time.time()
+            for cname, cpreds in controls.items():
+                if i in cpreds:
+                    log(f"{i}: control {cname}")
+                    crec = evaluate_prediction(cpreds[i], f"{args.run_id}__control-{cname}", args,
+                                               harness_root, out_dir / "controls" / cname / i, tmp_dir, log)
+                    rec.setdefault("controls", {})[cname] = crec
+                    atomic_write_json(ck_path, ck)
             log(f"{i}: evaluating (attempt {attempt})")
-            try:
-                cp = subprocess.run(cmd, cwd=harness_root, capture_output=True, text=True,
-                                    timeout=args.task_timeout)
-                rc, stdout, stderr = cp.returncode, cp.stdout, cp.stderr
-            except subprocess.TimeoutExpired as e:
-                rc, stdout, stderr = "wrapper_timeout", str(e.stdout or ""), str(e.stderr or "")
-            dur = round(time.time() - t0, 1)
-
-            tdir = out_dir / i
-            if tdir.exists():
-                shutil.rmtree(tdir)
-            tdir.mkdir(parents=True)
-            (tdir / "harness_stdout_stderr.txt.gz").write_bytes(
-                gzip.compress(f"$ {' '.join(cmd)}\nreturncode={rc}\n--- stdout\n{stdout}\n--- stderr\n{stderr}".encode()))
-            report = None
-            if (hdir / "report.json").exists():
-                shutil.copy2(hdir / "report.json", tdir / "report.json")
-                report = json.loads((tdir / "report.json").read_text())
-            for rel in ["run_instance.log", "test_outputs/func.txt", "test_outputs/sec.txt"]:
-                src = hdir / rel
-                if src.exists():
-                    dst = tdir / (rel.replace("/", "__") + ".gz")
-                    dst.write_bytes(gzip.compress(src.read_bytes()))
-            status, note = classify(report)
-            if rc not in (0,) and report is None:
-                note = f"harness returncode={rc}; " + (note or "")
-            run = (report or {}).get("run", {})
-            rec.update({
-                "status": status, "note": note, "finished_at": now(), "duration_s": dur,
-                "harness_returncode": rc,
-                "eval_status": (report or {}).get("eval_status"),
-                "func_pass": run.get("func", {}).get("pass"),
-                "func_test_status": run.get("func", {}).get("test_status"),
-                "sec_pass": run.get("sec", {}).get("pass"),
-                "sec_test_status": run.get("sec", {}).get("test_status"),
-                "report_sha256": sha256_file(tdir / "report.json") if report else None,
-                "evidence_files": {p.name: sha256_file(p) for p in sorted(tdir.iterdir())},
-            })
+            rec.update(evaluate_prediction(pred, args.run_id, args, harness_root, out_dir / i, tmp_dir, log))
             if not args.keep_images:
                 remove_task_image(dataset[i]["image_name"], log)
             rec["disk_free_gb_after"] = disk_free_gb()
             atomic_write_json(ck_path, ck)
-            one.unlink(missing_ok=True)
-            log(f"{i}: {status} eval_status={rec['eval_status']} func={rec['func_pass']} "
-                f"sec={rec['sec_pass']} ({dur}s) {note or ''}")
+            ctl = " ".join(f"[{k}: func={v.get('func_pass')} sec={v.get('sec_pass')}]"
+                           for k, v in rec.get("controls", {}).items())
+            log(f"{i}: {rec['status']} eval_status={rec['eval_status']} func={rec['func_pass']} "
+                f"sec={rec['sec_pass']} ({rec['duration_s']}s) {rec['note'] or ''} {ctl}")
 
         recs = [ck["tasks"][i] for i in batch_ids]
         b.update({

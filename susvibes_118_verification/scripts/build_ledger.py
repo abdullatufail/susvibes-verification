@@ -9,6 +9,8 @@ Inputs (all read-only):
                    each v1.0 patch is byte-identical to the Dec-2025 one
   --screen         output of screen_trajectories.py (prompt variant / git-history flags)
   --reeval_ckpt    optional checkpoint.json from run_eval_batches.py (independent re-scoring)
+  --control        optional NAME=checkpoint.json (repeatable) for golden / vulnerable controls run on
+                   this machine; several checkpoints may share a NAME (pilot + disagreement runs)
 
 The published outcome columns come from the official per-task lists in the submission's
 summary.json (details.completed.func_pass / sec_pass and the error lists); nothing is copied from
@@ -29,6 +31,8 @@ FIELDS = [
     "reeval_status", "reeval_eval_status", "reeval_func_pass", "reeval_sec_pass",
     "reeval_joint_secure", "reeval_func_test_status", "reeval_sec_test_status",
     "reeval_attempts", "reeval_matches_published",
+    "control_golden_func", "control_golden_sec", "control_vulnerable_func", "control_vulnerable_sec",
+    "env_valid_here", "reeval_disagreement_cause",
     "retry_status", "patch_identical_to_dec2025_record", "git_history_commands_in_trajectory",
     "needs_manual_review", "review_note",
     "patch_artifact", "patch_sha256", "trajectory_artifact",
@@ -48,6 +52,7 @@ def main():
     ap.add_argument("--dec2025_digest", required=True, type=Path)
     ap.add_argument("--screen", required=True, type=Path)
     ap.add_argument("--reeval_ckpt", type=Path)
+    ap.add_argument("--control", action="append", default=[], metavar="NAME=PATH")
     ap.add_argument("--out", required=True, type=Path)
     args = ap.parse_args()
 
@@ -58,6 +63,14 @@ def main():
     dec = json.load(args.dec2025_digest.open())["dec2025_patch_sha256"]
     screen = json.load(args.screen.open())
     reeval = json.load(args.reeval_ckpt.open())["tasks"] if args.reeval_ckpt and args.reeval_ckpt.exists() else {}
+
+    controls = {}
+    for spec in args.control:
+        name, path = spec.split("=", 1)
+        if Path(path).exists():
+            for iid, rec in json.load(open(path))["tasks"].items():
+                if rec.get("status") in ("completed", "needs_review", "technical_error"):
+                    controls.setdefault(name, {})[iid] = rec
 
     d = summary["details"]
     func = set(d["completed"]["func_pass"])
@@ -101,6 +114,16 @@ def main():
         matches = ""
         if rv.get("status") == "completed":
             matches = str(bool(rv.get("func_pass")) == pf and rv_joint == ps)
+        cg = controls.get("golden", {}).get(iid, {})
+        cv = controls.get("vulnerable", {}).get(iid, {})
+        env_valid = ""
+        if cg.get("eval_status") == "completed":
+            env_valid = str(bool(cg.get("func_pass")) and bool(cg.get("sec_pass")))
+        cause = ""
+        if matches == "False":
+            cause = ("environment: golden patch also fails here" if env_valid == "False" else
+                     "unexplained: golden patch passes here" if env_valid == "True" else
+                     "undiagnosed: no golden control run")
         notes, review = [], False
         if ps and not pf:
             notes.append("sec_pass without func_pass in published summary"); review = True
@@ -109,7 +132,7 @@ def main():
         if rv.get("status") in ("technical_error", "needs_review"):
             notes.append(f"re-eval {rv['status']}: {rv.get('note')}"); review = True
         if matches == "False":
-            notes.append("re-eval verdict differs from published"); review = True
+            notes.append(f"re-eval verdict differs from published ({cause})"); review = True
         if iid in rh:
             notes.append("listed as reward_hack_removed"); review = True
         if sc.get("git_history_commands"):
@@ -132,6 +155,9 @@ def main():
             "reeval_func_test_status": rv.get("func_test_status") or "",
             "reeval_sec_test_status": rv.get("sec_test_status") or "",
             "reeval_attempts": rv.get("attempt", 0), "reeval_matches_published": matches,
+            "control_golden_func": yn(cg.get("func_pass")), "control_golden_sec": yn(cg.get("sec_pass")),
+            "control_vulnerable_func": yn(cv.get("func_pass")), "control_vulnerable_sec": yn(cv.get("sec_pass")),
+            "env_valid_here": env_valid, "reeval_disagreement_cause": cause,
             "retry_status": "technical_retry" if rv.get("attempt", 1) > 1 else "none",
             "patch_identical_to_dec2025_record": str(dec.get(iid) == hashlib.sha256(t["model_patch"].encode()).hexdigest()),
             "git_history_commands_in_trajectory": len(sc.get("git_history_commands", [])),

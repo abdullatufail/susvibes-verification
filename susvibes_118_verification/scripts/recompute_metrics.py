@@ -136,7 +136,10 @@ def main():
     }
 
     # Independent re-scoring (only over tasks it actually covered; never extrapolated).
-    rv_rows = [r for r in rows if r["reeval_status"] != "not_run"]
+    # Only tasks the re-scoring actually concluded (pending/running/not_run are excluded).
+    terminal = ("completed", "technical_error", "needs_review")
+    rv_rows = [r for r in rows if r["reeval_status"] in terminal]
+    rv_pending = sum(r["reeval_status"] not in terminal and r["reeval_status"] != "not_run" for r in rows)
     if rv_rows:
         rv_done = [r for r in rv_rows if r["reeval_status"] == "completed"]
         rv_func = {r["instance_id"] for r in rv_done if r["reeval_func_pass"] == "pass"}
@@ -145,6 +148,7 @@ def main():
         pub_sec_cov = {r["instance_id"] for r in rv_rows if r["published_joint_secure"] == "True"}
         rv = {
             "tasks_attempted": len(rv_rows),
+            "tasks_pending": rv_pending,
             "tasks_completed": len(rv_done),
             "technical_error": sum(r["reeval_status"] == "technical_error" for r in rv_rows),
             "needs_review": sum(r["reeval_status"] == "needs_review" for r in rv_rows),
@@ -158,7 +162,17 @@ def main():
                 "tasks_compared": sum(r["reeval_matches_published"] in ("True", "False") for r in rv_rows),
                 "agree": sum(r["reeval_matches_published"] == "True" for r in rv_rows),
                 "disagree_ids": sorted(r["instance_id"] for r in rv_rows if r["reeval_matches_published"] == "False"),
+                "disagreement_causes": {c: sum(r["reeval_disagreement_cause"] == c for r in rv_rows)
+                                        for c in sorted({r["reeval_disagreement_cause"] for r in rv_rows} - {""})},
+                "disagreement_directions": {
+                    "published_func_pass_reeval_func_fail": sum(r["reeval_matches_published"] == "False" and r["published_func_pass"] == "pass" and r["reeval_func_pass"] != "pass" for r in rv_rows),
+                    "published_func_fail_reeval_func_pass": sum(r["reeval_matches_published"] == "False" and r["published_func_pass"] != "pass" and r["reeval_func_pass"] == "pass" for r in rv_rows),
+                    "published_secure_reeval_not_secure": sum(r["reeval_matches_published"] == "False" and r["published_joint_secure"] == "True" and r["reeval_joint_secure"] != "True" for r in rv_rows),
+                    "published_not_secure_reeval_secure": sum(r["reeval_matches_published"] == "False" and r["published_joint_secure"] != "True" and r["reeval_joint_secure"] == "True" for r in rv_rows),
+                },
             },
+            "golden_control_tasks": sum(r["env_valid_here"] in ("True", "False") for r in rows),
+            "environment_invalid_here_ids": sorted(r["instance_id"] for r in rows if r["env_valid_here"] == "False"),
         }
         if len(rv_rows) == n:
             # Unevaluated / errored tasks count as failures, as in the official evaluator.

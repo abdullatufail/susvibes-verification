@@ -1,0 +1,3 @@
+[2026-10-17T07:12:15+00:00] run_id=reeval_published_v1.0 model=claude-sonnet-4-20250514 targets=186 todo=181 free=29.41GB
+[2026-10-17T07:12:15+00:00] === batch 6: 5 tasks
+[2026-10-17T07:12:15+00:00] aio-libs__aiohttp_f016f0680e4ace6742b03a70cb0382ce86abe371: evaluating (attempt 1)

@@ -1,0 +1,233 @@
+# CHECKPOINT — experiment state
+
+_Generated 2026-10-17T07:15:57+00:00 by `scripts/write_checkpoint_md.py` from `logs/eval/*/checkpoint.json`. Do not edit by hand._
+
+## Experiments
+
+| Experiment | State |
+|---|---|
+| Stage 1 — artifact audit and recomputation (no Docker, no API) | **complete** |
+| Stage 2 — evaluator pilot (5 tasks × golden / vulnerable / empty / published) | **complete** |
+| Stage 2b — re-score all 186 published patches (`reeval_published_v1.0`) | 5/186 completed; 181 pending/running; 0 technical_error; 0 needs_review |
+| Stage 2c — golden/vulnerable controls on disagreeing tasks | {"pilot_control_empty": {"completed": 5}, "pilot_control_golden": {"completed": 5}, "pilot_control_vulnerable": {"completed": 5}} |
+| Stage 3/4 — fresh SWE-agent + Claude 4 Sonnet run | **not started**. No API budget was established and no model credentials were provisioned. Requires the unpublished `susvibes_eval` SWE-agent config. See `reproduction_report.md` §8 |
+
+## Re-scoring run `reeval_published_v1.0`
+
+* predictions: `claude-sonnet-4-20250514_published.jsonl` sha256 `60d7f26c8da7adc10233f4da60d7cf619828cee71ebee8539bac3434fd41f13d`
+* dataset sha256 `0cb5fbffe7ba59a8e16d42c293944bdd8e1e23795941a4b496ac1043722b9550`; harness commit `7e1b4b05240e56dc2b4e8253b2cc5c9481d016f3` (tag v1.0)
+* latest batch: **5** finished 2026-10-17T07:11:56+00:00: ['wagtail__wagtail_5c7a60977cba478f6a35390ba98cffc2bd41c8a4']
+* batches recorded: 5 (pilot tasks ran as single-task batches 1–5)
+* disk free now: 26.9 GB (one task image is about 1.8 GB and is removed after each task)
+* API expenditure: **$0.00**. No model was invoked. Only published patches and reference controls were evaluated.
+* technical retries: 0 
+
+### Errors / needs review
+
+* none
+
+### Completed task IDs
+
+<details><summary>5 completed</summary>
+
+- aio-libs__aiohttp-session_1b356f01bbab57d041c9a75bacd72fbbf8524728
+- buildbot__buildbot_e781f110933e05ecdb30abc64327a2c7c9ff9c5a
+- django__django_07cefdee4a9d1fcd9a3a631cbd07c78defd1923b
+- psf__requests_74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5
+- wagtail__wagtail_5c7a60977cba478f6a35390ba98cffc2bd41c8a4
+</details>
+
+### Pending task IDs
+
+<details><summary>181 pending/running</summary>
+
+- andialbrecht__sqlparse_b4a39d9850969b4e1d6940d32094ee0b42a2cf03
+- ansible__ansible_0cdc410dce6658e93c06fa27e0100ddbb11e7015
+- apache__airflow_150dd927c3297daccab507bc5a5f2c3a32f24d5f
+- apache__airflow_4e32546faf227a6497ce8b282fff7450cae6f665
+- apache__airflow_6724eeb6210d5965937eaf9dae3e476eb30f8268
+- apache__airflow_89e7f3e7bdf2126bbbcd959dc10d65ef92773cca
+- apache__airflow_ac65b82eeeeaa670e09a83c7da65cbac7e89f8db
+- apache__airflow_d9dea5ce17f0c5859dc705bba8e6ef22e5659955
+- apache__airflow_f18f48492dc69f392e45567580b6ddb0c070ea58
+- apache__superset_ccf73b2608f3f3d1f3d31b927e094fcf50b86a03
+- apragacz__django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5
+- borgbackup__borg_3eb070191da10c2d3f7bc6484cf3d51c3045f884
+- bottlepy__bottle_6d7e13da0f998820800ecb3fe9ccee4189aefb54
+- canonical__cloud-init_a378b7e4f47375458651c0972e7cd813f6fe0a6b
+- canonical__operator_fea6d2072435a62170d4c01272572f1a7e916e61
+- celery__celery_1f7ad7e6df1e02039b6ab9eec617d283598cad6b
+- ceph__ceph_0443e40c11280ba3b7efcba61522afa70c4f8158
+- ckan__ckan_4c22c135fa486afa13855d1cdb9765eaf418d2aa
+- cobbler__cobbler_d8f60bbf14a838c8c8a1dba98086b223e35fe70a
+- cyface__django-termsandconditions_03396a1c2e0af95e12a45c5faef7e47a4b513e1a
+- dask__distributed_afce4be8e05fb180e50a9d9e38465f1a82295e1b
+- dgilland__pydash_6ff0831ad285fff937cafd2a853f20cc9ae92021
+- django__django_00b0fc50e1738c7174c495464a5ef069408a4402
+- django__django_0268b855f9eab3377f2821164ef3e66037789e09
+- django__django_048a9ebb6ea468426cb4e57c71572cbbd975517f
+- django__django_0bd57a879a0d54920bb9038a732645fb917040e9
+- django__django_0dc9c016fadb71a067e5a42be30164e3f96c0492
+- django__django_1828f4341ec53a8684112d24031b767eba557663
+- django__django_1853724acaf17ed7414d54c7d2b5563a25025a71
+- django__django_1f2dd37f6fcefdd10ed44cb233b2e62b520afb38
+- django__django_2044dac5c6968441be6f534c4139bcf48c5c7e48
+- django__django_2654e1b93923bac55f12b4e66c5e39b16695ace5
+- django__django_32ebcbf2e1fe3e5ba79a6554a167efce81f7422d
+- django__django_454f2fb93437f98917283336201b4048293f7582
+- django__django_5447709a571cd5d95971f1d5d21d4a7edcf85bbd
+- django__django_5f0829a27e85d89ad8c433f5c6a7a7d17c9e9292
+- django__django_601107524523bca02376a0ddc1a06c6fdb8f22f3
+- django__django_8c660fb59239828583f17cdede3b64f208b8752c
+- django__django_8f9a4d3a2bc42f14bb437defd30c7315adbff22c
+- django__django_ad0410ec4f458aa39803e5f6b9a3736527062dcd
+- django__django_c5544d289233f501917e25970c03ed444abbd4f0
+- django__django_d4dcd5b9dd9e462fec8220e33e3e6c822b7e88a6
+- dpgaspar__flask-appbuilder_6af28521589599b1dbafd6313256229ee9a4fa74
+- encode__django-rest-framework_4bb9a3c48427867ef1e46f7dee945a4c25a4f9b8
+- encode__starlette_1797de464124b090f10cf570441e8292936d63e3
+- executablebooks__markdown-it-py_53ca3e9c2b9e9b295f6abf7f4ad2730a9b70f68c
+- flask-admin__flask-admin_8af10e0b022464fdcb2da3d0ea5bbd2f11c0acd1
+- fredrik-johansson__mpmath_46d44c3c8f3244017fe1eb102d564eb4ab8ef750
+- ghantoos__lshell_e72dfcd1f258193f9aaea3591ecbdaed207661a0
+- gitpython-developers__gitpython_ca965ecc81853bca7675261729143f54e5bf4cdd
+- goauthentik__authentik_aa874dd92a770d5f8cd8f265b7cdd31cd73a4599
+- gradio-app__gradio_37967617bd97615fb6f3b44e7750c0e0be58479a
+- gventuri__pandas-ai_3aac79be8fc1d18b53d66a566adddbbdd2b38ad5
+- healthchecks__healthchecks_359edbd2709e27b60687061a32e19322bc971c1f
+- home-assistant__core_598f093bf0fecdefaa3d95d1ddae71317a05321e
+- home-assistant__core_dbfc5ea8f96bde6cd165892f5a6a6f9a65731c76
+- home-assistant__home-assistant_dbfc5ea8f96bde6cd165892f5a6a6f9a65731c76
+- horazont__aioxmpp_29ff0838a40f58efe30a4bbcea95aa8dab7da475
+- identitypython__pysaml2_46578df0695269a16f1c94171f1429873f90ed99
+- identitypython__pysaml2_5e9d5acbcd8ae45c4e736ac521fd2df5b1c62e25
+- ierror__django-js-reverse_78d6aff2276f2d341f643b095515f8aaba5e67c2
+- ikus060__rdiffweb_18a5aabd48fa6d2d2771a25f95610c28a1a097ca
+- ikus060__rdiffweb_20fc0d304412cc569b21f31e52cb8b94094d6314
+- ikus060__rdiffweb_233befc33bdc45d4838c773d5aed4408720504c5
+- ikus060__rdiffweb_2406780831618405a13113377a784f3102465f40
+- ikus060__rdiffweb_2ffc2af65c8f8113b06e0b89929c604bcdf844b9
+- ikus060__rdiffweb_323383d1db656f1b1291be529947bd943a6b0e99
+- ikus060__rdiffweb_422791ea45713aaaa865bdca74addb9fffd93a71
+- ikus060__rdiffweb_4d464b467f14b8eb9103d7f5f0774e49995527c7
+- ikus060__rdiffweb_5ac38b2a75becbab9f948bd5e37ecbcd9f0b362e
+- ikus060__rdiffweb_626cca1b75b6c587afd4241a9692e8929b1921a5
+- ikus060__rdiffweb_667657c6fe2b336c90be37f37fb92f65df4feee3
+- ikus060__rdiffweb_7294bb7466532762c93d711211e5958940c1b428
+- ikus060__rdiffweb_ac334dd27ceadac0661b1e2e059a8423433c3fee
+- ikus060__rdiffweb_b5e3bb0a98268d18ceead36ab9b2b7eaacd659a8
+- ikus060__rdiffweb_b62c479ff6979563c7c23e7182942bc4f460a2c7
+- ikus060__rdiffweb_b78ec09f4582e363f6f449df6f987127e126c311
+- ikus060__rdiffweb_bc4bed89affcba71251fe54ed10639da9d392c1d
+- ikus060__rdiffweb_c4a19cf67d575c4886171b8efcbf4675d51f3929
+- ikus060__rdiffweb_f2a32f2a9f3fb8be1a9432ac3d81d3aacdb13095
+- jakubroztocil__httpie_df36d6255df5793129b02ac82f1010171bd8a0a8
+- jtesta__ssh-audit_8e972c5e94b460379fe0c7d20209c16df81538a5
+- jupyter-server__jupyter_server_3485007abbb459585357212dcaa20521989272e8
+- jupyter__jupyter_core_1118c8ce01800cb689d51f655f5ccef19516e283
+- jupyter__notebook_3cec4bbe21756de9f0c4bccf18cf61d840314d74
+- jupyterhub__firstuseauthenticator_953418e2450dbc2d854e332350849533b0ebc7ba
+- jupyterhub__jupyter-server-proxy_fd31930bacd12188c448c886e0783529436b99eb
+- jupyterhub__oauthenticator_5246b09675501b09fb6ed64022099b7644812f60
+- jupyterhub__oauthenticator_5cd2d1816f90dc5c946e6e38fd2d0ba535624c5c
+- jupyterhub__oauthenticator_a4aac191c16cf6281f3d346615aefa75702b02d7
+- labd__wagtail-2fa_ac23550d33b7436e90e3beea904647907eba5b74
+- langchain-ai__langchain_aad3d8bd47d7f5598156ff2bdcc8f736f24a7412
+- langchain-ai__langchain_bf0b3cc0b5ade1fb95a5b1b6fa260e99064c2e22
+- latchset__jwcrypto_90477a3b6e73da69740e00b8161f53fea19b831f
+- lektor__lektor_7393d87bd354e43120937789956175064e4610a0
+- lxml__lxml_12fa9669007180a7bb87d990c375cf91ca5b664a
+- lxml__lxml_f2330237440df7e8f39c3ad1b1aa8852be3b27c0
+- marshmallow-code__webargs_b9ee8b0aa668207a363d9fd21d967eeadb975c3e
+- matrix-org__synapse_03318a766cac9f8b053db2214d9c332a977d226c
+- matthiask__html-sanitizer_48db42fc5143d0140c32d929c46b802f96913550
+- mkomitee__requests-kerberos_9c1e08cc17bb6950455a85d33d391ecd2bce6eb6
+- mlflow__mlflow_1da75dfcecd4d169e34809ade55748384e8af6c1
+- mlflow__mlflow_400c226953b4568f4361bc0a0c223511652c2b9d
+- mlflow__mlflow_438a450714a3ca06285eeea34bdc6cf79d7f6cbc
+- mlflow__mlflow_4bd7f27c810ba7487d53ed5ef1038fca0f8dc28c
+- mlflow__mlflow_b9ab9ed77e1deda9697fe472fb1079fd428149ee
+- mlflow__mlflow_f8d51e21523238280ebcfdb378612afd7844eca8
+- mlflow__mlflow_fae77a525dd908c56d6204a4cef1c1c75b4e9857
+- mozilla__bleach_1334134d34397966a7f7cfebd38639e9ba2c680e
+- mozilla__bleach_175f67740e7951e1d80cefb7831e6c3e4efeb986
+- mozilla__bleach_d6018f2539d271963c3e7f54f36ef11900363c69
+- mozilla__bleach_f77e0f6392177a06e46a49abd61a4d9f035e57fd
+- nonebot__nonebot2_b65b3b438c95894654fd9081139989c757bdc6c1
+- numpy__numpy_49bcb1aba1ca32a38696ce5239392529430b2cc4
+- openedx__xblock-drag-and-drop-v2_68887d1b4a44325d2de7573d450e41129ba98b1a
+- openstack__aodh_149d3ad2193b4d17df801f82a0a6be62dba564db
+- openstack__neutron_01fc2b9195f999df4d810df4ee63f77ecbc81f7e
+- openstack__neutron_8c213e45902e21d2fe00639ef7d92b35304bde82
+- openstack__nova_8b289237ed6d53738c22878decf0c429301cf3d0
+- openstack__oslo.utils_6e17ae1f7959c64dfd20a5f67edf422e702426aa
+- pallets__flask_70f906c51ce49c485f1d355703e9cc3386b1cc2b
+- pallets__flask_afd63b16170b7c047f5758eb910c416511e9c965
+- pallets__jinja_0668239dc6b44ef38e7a6c9f91f312fd4ca581cb
+- pallets__jinja_716795349a41d4983a9a4771f7d883c96ea17be7
+- paramiko__paramiko_4c491e299c9b800358b16fa4886d8d94f45abe2e
+- piccolo-orm__piccolo_82679eb8cd1449cf31d87c9914a072e70168b6eb
+- planetlabs__planet-client-python_d71415a83119c5e89d7b80d5f940d162376ee3b7
+- plone__plone.namedfile_188f66a4577021cf8f2bf7c0f5150f9b9573f167
+- plone__plone.namedfile_f0f911f2a72b2e5c923dc2ab9179319cc47788f9
+- plone__plone.namedfile_ff5269fb4c79f4eb91dd934561b8824a49a03b60
+- plone__plone.rest_43b4a7e86206e237e1de5ca3817ed071575882f7
+- plone__products.isurlinportal_d4fd34990d18adf05a10dc5e2bb4b066798280ba
+- psf__black_f00093672628d212b8965a8993cee8bedf5fe9b8
+- psf__requests_a58d7f2ffb4d00b46dca2d70a3932a0b37e22fac
+- py-pdf__pypdf_c6c56f550bb384e05f0139c796ba1308837d6373
+- pylons__waitress_11d9e138125ad46e951027184b13242a3c1de017
+- pylons__waitress_575994cd42e83fd772a5f7ec98b2c56751bd3f65
+- python-babel__babel_3a700b5b8b53606fd98ef8294a56f9510f7290f8
+- python-mechanize__mechanize_dd05334448e9f39814bab044d2eaa5ef69b410d6
+- python-pillow__pillow_2444cddab2f83f28687c7c20871574acbb6dbcf3
+- rohe__pysaml2_6e09a25d9b4b7aa7a506853210a9a14100b8bc9b
+- sabnzbd__sabnzbd_3766ba54026eaa520dbee5b57a2f33d4954fb98b
+- saltstack__salt_2f612bd81ddf80145a9984396a7fd789f4c8ffec
+- saltstack__salt_cce7abad9c22d9d50ccee2813acabff8deca35dd
+- savon-noir__python-libnmap_c36fecde90017befeb4853396d0e2aac93c95b64
+- scrapy-plugins__scrapy-splash_2b253e57fe64ec575079c8cdc99fe2013502ea31
+- scrapy__scrapy_b01d69a1bf48060daec8f751368622352d8b85a6
+- sqlalchemy__mako_925760291d6efec64fda6e9dd1fd9cfbd5be068c
+- streamlit__streamlit_80d9979d5f4a00217743d607078a1d867fad8acf
+- streamlit__streamlit_afcf880c60e5d7538936cc2d9721b9e1bc02b075
+- sybrenstuvel__python-rsa_3283b1284475cf6c79a7329aee8bd7443cc72672
+- tensorflow__tensorflow_afac8158d43691661ad083f6dd9e56f327c1dcb7
+- tensorflow__tensorflow_dbdd98c37bc25249e8f288bd30d01e118a7b4498
+- tiangolo__fastapi_fa7e3c996edf2d5482fff8f9d890ac2390dede4d
+- tryton__trytond_30e978593733385db3144f8c583eeb4679575cf0
+- twisted__twisted_6c61fc4503ae39ab8ecee52d10f10ee2c371d7e2
+- ubernostrum__django-registration_2db0bb7ec35636ea46b07b146328b87b2cb13ca5
+- urllib3__urllib3_01220354d389cd05474713f8c982d05c9b17aafb
+- urllib3__urllib3_8d65ea1ecf6e2cdc27d42124e587c1b83a3118b0
+- urllib3__urllib3_a74c9cfbaed9f811e7563cfc3dce894928e0221a
+- vyperlang__vyper_019a37ab98ff53f04fecfadf602b6cd5ac748f7f
+- vyperlang__vyper_049dbdc647b2ce838fae7c188e6bb09cf16e470b
+- vyperlang__vyper_0bb7203b584e771b23536ba065a6efda457161bb
+- vyperlang__vyper_2c73f8352635c0a433423a5b94740de1a118e508
+- vyperlang__vyper_3de1415ee77a9244eb04bdb695e249d3ec9ed868
+- vyperlang__vyper_4f8289a81206f767df1900ac48f485d90fc87edb
+- vyperlang__vyper_851f7a1b3aa2a36fd041e3d0ed38f9355a58c8ae
+- vyperlang__vyper_a2df08888c318713742c57f71465f32a1c27ed72
+- wagtail__wagtail_284f75a6f91f7ab18cc304d7d34f33b559ae37b1
+- wagtail__wagtail_5be2b1ed55fd7259dfdf2c82e7701dba407b8b62
+- wagtail__wagtail_5fe901e5d86ed02dbbb63039a897582951266afd
+- wagtail__wagtail_bc96aed6ac53f998b2f4c4bf97e2d4f5fe337e5b
+- wagtail__wagtail_d9a41e7f24d08c024acc9a3094940199df94db34
+- wagtail__wagtail_ff806ab173a504395fdfb3139eb0a29444ab4b91
+- xi__django-mfa3_32f656e22df120b84bdf010e014bb19bd97971de
+- yt-dlp__yt-dlp_f04b5bedad7b281bee9814686bba1762bae092eb
+- zopefoundation__products.genericsetup_700319512b3615b3871a1f24e096cf66dc488c57
+- zopefoundation__restrictedpython_c8eca66ae49081f0016d2e1f094c3d72095ef531
+- zopefoundation__zope_26a55dbc301db417f47cafda6fe0f983b5690088
+- zopefoundation__zope_603b0a12881c90a072a7a65e32d47ed898ce37cb
+- aio-libs__aiohttp_f016f0680e4ace6742b03a70cb0382ce86abe371
+</details>
+
+## How to resume without duplicating work
+
+1. Start Docker if it is not running: `dockerd > /tmp/dockerd.log 2>&1 &`. Check it with `docker info`.
+2. Make sure the pinned harness exists at `/home/user/sources/susvibes-v1.0` (tag `v1.0`) with its venv `/home/user/sources/sv-venv` (see README §Reproduction).
+3. Run `scripts/run_full_reeval.sh` with the same arguments. `run_eval_batches.py` reloads `logs/eval/reeval_published_v1.0/checkpoint.json`. It refuses to continue if the predictions, dataset, run_id or harness commit differ. It skips every `completed` task whose saved `report.json` checksum and patch hash still validate. It re-queues a task left in `running` state, which is treated as interrupted. It does **not** retry `technical_error`/`needs_review` tasks unless `--retry_errors` is given. With that flag the original record is kept under `previous_attempts`.
+4. Then run `scripts/run_disagreement_controls.sh` and `scripts/rebuild_results.sh`, and regenerate this file with `python -I scripts/write_checkpoint_md.py .`.
+

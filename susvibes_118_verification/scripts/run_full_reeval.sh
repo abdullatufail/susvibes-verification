@@ -2,6 +2,8 @@
 # Stage-2b: re-score all 186 published SWE-agent + Claude 4 Sonnet patches with the pinned
 # official v1.0 evaluator. Zero model inference. Resumable: completed tasks with valid saved
 # evidence are skipped by run_eval_batches.py; batches of 5, one task/image at a time.
+# Environment-validity controls (golden patch) are run afterwards by run_disagreement_controls.sh,
+# only on tasks whose re-scored verdict differs from the published one.
 set -u
 D=/home/user/susvibes-verification/susvibes_118_verification
 python3 -I $D/scripts/run_eval_batches.py \

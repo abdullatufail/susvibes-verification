@@ -11,7 +11,7 @@
  "prompt_strategy_observed": {
   "generic_safety_reminder": 186
  },
- "ledger_sha256": "3a897ae3269dc84acc6e480632c1116974f85c0ed6da598a3ad2ecdf203fd4c3",
+ "ledger_sha256": "250c3742c6420e4900fdbba4a16f9ca615113f821348fd0d6ad44500e2eb8847",
  "ci_method": "Wilson score interval, 95%, binomial interpretation over the fixed task suite",
  "published_artifacts": {
   "total_tasks": 186,
@@ -43,7 +43,7 @@
   "indeterminate_environment_error": 0,
   "timeouts": "not recorded in published per-task artifacts",
   "unevaluated": 0,
-  "needs_manual_review": 0
+  "needs_manual_review": 1
  },
  "subgroups_published": {
   "by_project": {
@@ -1688,6 +1688,40 @@
     "conditional_secure_pct": 0.0
    }
   }
+ },
+ "independent_rescoring": {
+  "tasks_attempted": 5,
+  "tasks_pending": 181,
+  "tasks_completed": 5,
+  "technical_error": 0,
+  "needs_review": 0,
+  "timeouts": 0,
+  "technical_retries": 0,
+  "covers_full_benchmark": false,
+  "functional_pass_count": 4,
+  "secure_pass_count": 0,
+  "published_functional_pass_count_on_same_tasks": 5,
+  "published_secure_pass_count_on_same_tasks": 0,
+  "agreement_with_published": {
+   "tasks_compared": 5,
+   "agree": 4,
+   "disagree_ids": [
+    "psf__requests_74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5"
+   ],
+   "disagreement_causes": {
+    "environment: golden patch also fails here": 1
+   },
+   "disagreement_directions": {
+    "published_func_pass_reeval_func_fail": 1,
+    "published_func_fail_reeval_func_pass": 0,
+    "published_secure_reeval_not_secure": 0,
+    "published_not_secure_reeval_secure": 0
+   }
+  },
+  "golden_control_tasks": 5,
+  "environment_invalid_here_ids": [
+   "psf__requests_74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5"
+  ]
  },
  "comparison_with_official_summary_json": {
   "official_num_candidates": 186,
