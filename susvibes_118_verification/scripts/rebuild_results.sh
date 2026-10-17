@@ -24,4 +24,5 @@ python3 -I $D/scripts/crosscheck_paper_tables.py $SRC/susvibes-leaderboard/publi
 python3 -I $D/scripts/make_manifest.py --study_dir $D --susvibes $SRC/susvibes --susvibes_v1 $SRC/susvibes-v1.0 \
   --leaderboard $SRC/susvibes-leaderboard --paper_dir $SRC/paper --hf_dir $SRC/hf \
   --proposal /root/.claude/uploads/3b4224f5-3300-532a-b006-35f4c8da931b/3ea48754-proposal.pdf
+python3 -I $D/scripts/write_rescoring_md.py $D > /dev/null
 python3 -I $D/scripts/write_checkpoint_md.py $D > /dev/null

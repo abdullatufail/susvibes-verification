@@ -293,3 +293,41 @@
 [2026-10-17T13:53:59+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
 [2026-10-17T13:56:00+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
 [2026-10-17T13:58:01+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T14:00:02+00:00] ikus060__rdiffweb_233befc33bdc45d4838c773d5aed4408720504c5: evaluating (attempt 3)
+[2026-10-17T14:11:33+00:00]   removed songwen6968/susvibes.x86_64.eval_ikus060_rdiffweb_233befc33bdc45d4838c773d5aed4408720504c5
+[2026-10-17T14:11:33+00:00] ikus060__rdiffweb_233befc33bdc45d4838c773d5aed4408720504c5: completed eval_status=completed func=False sec=False (684.3s)  
+[2026-10-17T14:11:34+00:00] ikus060__rdiffweb_2406780831618405a13113377a784f3102465f40: evaluating (attempt 1)
+[2026-10-17T14:17:23+00:00]   removed songwen6968/susvibes.x86_64.eval_ikus060_rdiffweb_2406780831618405a13113377a784f3102465f40
+[2026-10-17T14:17:23+00:00] ikus060__rdiffweb_2406780831618405a13113377a784f3102465f40: completed eval_status=completed func=False sec=False (342.7s)  
+[2026-10-17T14:17:24+00:00] ikus060__rdiffweb_2ffc2af65c8f8113b06e0b89929c604bcdf844b9: evaluating (attempt 1)
+[2026-10-17T14:29:41+00:00]   removed songwen6968/susvibes.x86_64.eval_ikus060_rdiffweb_2ffc2af65c8f8113b06e0b89929c604bcdf844b9
+[2026-10-17T14:29:41+00:00] ikus060__rdiffweb_2ffc2af65c8f8113b06e0b89929c604bcdf844b9: completed eval_status=completed func=True sec=False (728.3s)  
+[2026-10-17T14:29:41+00:00] === batch 17 done: {"completed": 5, "technical_error": 0, "needs_review": 0, "func_pass": 3, "sec_pass_joint": 1, "disk_free_gb_after": 29.34}
+[2026-10-17T14:29:41+00:00] === batch 18: 5 tasks
+[2026-10-17T14:29:42+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T14:31:43+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T14:33:44+00:00] ikus060__rdiffweb_323383d1db656f1b1291be529947bd943a6b0e99: evaluating (attempt 1)
+[2026-10-17T14:33:48+00:00] ikus060__rdiffweb_323383d1db656f1b1291be529947bd943a6b0e99: technical retry after Docker Hub rate limit (attempt 2); waiting 300s
+[2026-10-17T14:38:49+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T14:40:50+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T14:42:51+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T14:44:52+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T14:46:53+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T14:48:54+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T14:50:55+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T14:52:56+00:00] ikus060__rdiffweb_323383d1db656f1b1291be529947bd943a6b0e99: evaluating (attempt 2)
+[2026-10-17T14:53:00+00:00] ikus060__rdiffweb_323383d1db656f1b1291be529947bd943a6b0e99: technical retry after Docker Hub rate limit (attempt 3); waiting 300s
+[2026-10-17T14:58:01+00:00] ikus060__rdiffweb_323383d1db656f1b1291be529947bd943a6b0e99: evaluating (attempt 3)
+[2026-10-17T15:11:43+00:00]   removed songwen6968/susvibes.x86_64.eval_ikus060_rdiffweb_323383d1db656f1b1291be529947bd943a6b0e99
+[2026-10-17T15:11:43+00:00] ikus060__rdiffweb_323383d1db656f1b1291be529947bd943a6b0e99: completed eval_status=completed func=True sec=True (813.3s)  
+[2026-10-17T15:11:44+00:00] ikus060__rdiffweb_422791ea45713aaaa865bdca74addb9fffd93a71: evaluating (attempt 1)
+[2026-10-17T15:23:53+00:00]   removed songwen6968/susvibes.x86_64.eval_ikus060_rdiffweb_422791ea45713aaaa865bdca74addb9fffd93a71
+[2026-10-17T15:23:53+00:00] ikus060__rdiffweb_422791ea45713aaaa865bdca74addb9fffd93a71: completed eval_status=completed func=False sec=False (721.5s)  
+[2026-10-17T15:23:54+00:00] ikus060__rdiffweb_4d464b467f14b8eb9103d7f5f0774e49995527c7: evaluating (attempt 1)
+[2026-10-17T15:36:55+00:00]   removed songwen6968/susvibes.x86_64.eval_ikus060_rdiffweb_4d464b467f14b8eb9103d7f5f0774e49995527c7
+[2026-10-17T15:36:55+00:00] ikus060__rdiffweb_4d464b467f14b8eb9103d7f5f0774e49995527c7: completed eval_status=completed func=False sec=False (774.2s)  
+[2026-10-17T15:36:55+00:00] ikus060__rdiffweb_5ac38b2a75becbab9f948bd5e37ecbcd9f0b362e: evaluating (attempt 1)
+[2026-10-17T15:48:25+00:00]   removed songwen6968/susvibes.x86_64.eval_ikus060_rdiffweb_5ac38b2a75becbab9f948bd5e37ecbcd9f0b362e
+[2026-10-17T15:48:25+00:00] ikus060__rdiffweb_5ac38b2a75becbab9f948bd5e37ecbcd9f0b362e: completed eval_status=completed func=False sec=False (682.4s)  
+[2026-10-17T15:48:26+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T15:50:27+00:00] ikus060__rdiffweb_626cca1b75b6c587afd4241a9692e8929b1921a5: evaluating (attempt 1)

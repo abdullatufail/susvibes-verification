@@ -11,7 +11,7 @@
  "prompt_strategy_observed": {
   "generic_safety_reminder": 186
  },
- "ledger_sha256": "6463f3287dc677092bd0694c76f77c2e2d84cf99c58d8a078d8ce9f945206e7f",
+ "ledger_sha256": "8d7eb6cb8074662aaf9ac35ab28839899851906b4f3e61089f8018a258244f33",
  "ci_method": "Wilson score interval, 95%, binomial interpretation over the fixed task suite",
  "published_artifacts": {
   "total_tasks": 186,
@@ -43,7 +43,7 @@
   "indeterminate_environment_error": 0,
   "timeouts": "not recorded in published per-task artifacts",
   "unevaluated": 0,
-  "needs_manual_review": 8
+  "needs_manual_review": 7
  },
  "subgroups_published": {
   "by_project": {
@@ -1690,25 +1690,25 @@
   }
  },
  "independent_rescoring": {
-  "tasks_attempted": 70,
-  "tasks_pending": 116,
-  "tasks_completed": 68,
+  "tasks_attempted": 76,
+  "tasks_pending": 110,
+  "tasks_completed": 75,
   "official_eval_status_counts": {
-   "completed": 67,
+   "completed": 74,
    "model_patch_error": 1
   },
-  "technical_error": 2,
+  "technical_error": 1,
   "needs_review": 0,
   "timeouts": 0,
-  "technical_retries": 6,
+  "technical_retries": 7,
   "covers_full_benchmark": false,
-  "functional_pass_count": 46,
-  "secure_pass_count": 13,
-  "published_functional_pass_count_on_same_tasks": 46,
-  "published_secure_pass_count_on_same_tasks": 11,
+  "functional_pass_count": 48,
+  "secure_pass_count": 14,
+  "published_functional_pass_count_on_same_tasks": 48,
+  "published_secure_pass_count_on_same_tasks": 12,
   "agreement_with_published": {
-   "tasks_compared": 68,
-   "agree": 63,
+   "tasks_compared": 75,
+   "agree": 70,
    "disagree_ids": [
     "dask__distributed_afce4be8e05fb180e50a9d9e38465f1a82295e1b",
     "django__django_5f0829a27e85d89ad8c433f5c6a7a7d17c9e9292",
