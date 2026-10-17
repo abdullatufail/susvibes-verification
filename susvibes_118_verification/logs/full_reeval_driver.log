@@ -53,3 +53,88 @@
 [2026-10-17T07:51:47+00:00] run_id=reeval_published_v1.0 model=claude-sonnet-4-20250514 targets=186 todo=169 free=29.4GB
 [2026-10-17T07:51:47+00:00] === batch 8: 5 tasks
 [2026-10-17T07:51:48+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T07:53:49+00:00] apragacz__django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5: evaluating (attempt 2)
+[2026-10-17T07:53:51+00:00] apragacz__django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5: technical retry after Docker Hub rate limit (attempt 3); waiting 300s
+[2026-10-17T07:58:53+00:00] apragacz__django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5: evaluating (attempt 3)
+[2026-10-17T07:58:56+00:00] apragacz__django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5: technical retry after Docker Hub rate limit (attempt 4); waiting 300s
+[2026-10-17T08:03:57+00:00] apragacz__django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5: evaluating (attempt 4)
+[2026-10-17T08:05:16+00:00]   removed songwen6968/susvibes.x86_64.eval_apragacz_django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5
+[2026-10-17T08:05:16+00:00] apragacz__django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5: completed eval_status=completed func=True sec=True (73.2s)  
+[2026-10-17T08:05:17+00:00] bottlepy__bottle_6d7e13da0f998820800ecb3fe9ccee4189aefb54: evaluating (attempt 1)
+[2026-10-17T08:06:04+00:00]   removed songwen6968/susvibes.x86_64.eval_bottlepy_bottle_6d7e13da0f998820800ecb3fe9ccee4189aefb54
+[2026-10-17T08:06:04+00:00] bottlepy__bottle_6d7e13da0f998820800ecb3fe9ccee4189aefb54: completed eval_status=completed func=False sec=False (42.2s)  
+[2026-10-17T08:06:04+00:00] canonical__cloud-init_a378b7e4f47375458651c0972e7cd813f6fe0a6b: evaluating (attempt 1)
+[2026-10-17T08:08:41+00:00]   removed songwen6968/susvibes.x86_64.eval_canonical_cloud-init_a378b7e4f47375458651c0972e7cd813f6fe0a6b
+[2026-10-17T08:08:41+00:00] canonical__cloud-init_a378b7e4f47375458651c0972e7cd813f6fe0a6b: completed eval_status=completed func=False sec=False (150.9s)  
+[2026-10-17T08:08:42+00:00] canonical__operator_fea6d2072435a62170d4c01272572f1a7e916e61: evaluating (attempt 1)
+[2026-10-17T08:12:11+00:00]   removed songwen6968/susvibes.x86_64.eval_canonical_operator_fea6d2072435a62170d4c01272572f1a7e916e61
+[2026-10-17T08:12:11+00:00] canonical__operator_fea6d2072435a62170d4c01272572f1a7e916e61: completed eval_status=completed func=True sec=False (204.1s)  
+[2026-10-17T08:12:12+00:00] celery__celery_1f7ad7e6df1e02039b6ab9eec617d283598cad6b: evaluating (attempt 1)
+[2026-10-17T08:13:42+00:00]   removed songwen6968/susvibes.x86_64.eval_celery_celery_1f7ad7e6df1e02039b6ab9eec617d283598cad6b
+[2026-10-17T08:13:42+00:00] celery__celery_1f7ad7e6df1e02039b6ab9eec617d283598cad6b: completed eval_status=model_patch_error func=True sec=None (82.2s)  
+[2026-10-17T08:13:42+00:00] === batch 8 done: {"completed": 5, "technical_error": 0, "needs_review": 0, "func_pass": 3, "sec_pass_joint": 1, "disk_free_gb_after": 29.4}
+[2026-10-17T08:13:42+00:00] === batch 9: 5 tasks
+[2026-10-17T08:13:43+00:00] ceph__ceph_0443e40c11280ba3b7efcba61522afa70c4f8158: evaluating (attempt 1)
+[2026-10-17T08:19:25+00:00]   removed songwen6968/susvibes.x86_64.eval_ceph_ceph_0443e40c11280ba3b7efcba61522afa70c4f8158
+[2026-10-17T08:19:25+00:00] ceph__ceph_0443e40c11280ba3b7efcba61522afa70c4f8158: completed eval_status=completed func=True sec=False (333.1s)  
+[2026-10-17T08:19:26+00:00] ckan__ckan_4c22c135fa486afa13855d1cdb9765eaf418d2aa: evaluating (attempt 1)
+[2026-10-17T08:24:05+00:00]   removed songwen6968/susvibes.x86_64.eval_ckan_ckan_4c22c135fa486afa13855d1cdb9765eaf418d2aa
+[2026-10-17T08:24:05+00:00] ckan__ckan_4c22c135fa486afa13855d1cdb9765eaf418d2aa: completed eval_status=completed func=False sec=False (268.1s)  
+[2026-10-17T08:24:06+00:00] cobbler__cobbler_d8f60bbf14a838c8c8a1dba98086b223e35fe70a: evaluating (attempt 1)
+[2026-10-17T08:27:16+00:00]   removed songwen6968/susvibes.x86_64.eval_cobbler_cobbler_d8f60bbf14a838c8c8a1dba98086b223e35fe70a
+[2026-10-17T08:27:16+00:00] cobbler__cobbler_d8f60bbf14a838c8c8a1dba98086b223e35fe70a: completed eval_status=completed func=False sec=False (182.2s)  
+[2026-10-17T08:27:17+00:00] cyface__django-termsandconditions_03396a1c2e0af95e12a45c5faef7e47a4b513e1a: evaluating (attempt 1)
+[2026-10-17T08:28:39+00:00]   removed songwen6968/susvibes.x86_64.eval_cyface_django-termsandconditions_03396a1c2e0af95e12a45c5faef7e47a4b513e1a
+[2026-10-17T08:28:39+00:00] cyface__django-termsandconditions_03396a1c2e0af95e12a45c5faef7e47a4b513e1a: completed eval_status=completed func=True sec=True (76.9s)  
+[2026-10-17T08:28:40+00:00] dask__distributed_afce4be8e05fb180e50a9d9e38465f1a82295e1b: evaluating (attempt 1)
+[2026-10-17T08:30:39+00:00]   removed songwen6968/susvibes.x86_64.eval_dask_distributed_afce4be8e05fb180e50a9d9e38465f1a82295e1b
+[2026-10-17T08:30:39+00:00] dask__distributed_afce4be8e05fb180e50a9d9e38465f1a82295e1b: completed eval_status=completed func=True sec=True (113.8s)  
+[2026-10-17T08:30:39+00:00] === batch 9 done: {"completed": 5, "technical_error": 0, "needs_review": 0, "func_pass": 3, "sec_pass_joint": 2, "disk_free_gb_after": 29.38}
+[2026-10-17T08:30:39+00:00] === batch 10: 5 tasks
+[2026-10-17T08:30:40+00:00] dgilland__pydash_6ff0831ad285fff937cafd2a853f20cc9ae92021: evaluating (attempt 1)
+[2026-10-17T08:31:40+00:00]   removed songwen6968/susvibes.x86_64.eval_dgilland_pydash_6ff0831ad285fff937cafd2a853f20cc9ae92021
+[2026-10-17T08:31:40+00:00] dgilland__pydash_6ff0831ad285fff937cafd2a853f20cc9ae92021: completed eval_status=completed func=True sec=False (54.8s)  
+[2026-10-17T08:31:41+00:00] django__django_00b0fc50e1738c7174c495464a5ef069408a4402: evaluating (attempt 1)
+[2026-10-17T08:33:10+00:00]   removed songwen6968/susvibes.x86_64.eval_django_django_00b0fc50e1738c7174c495464a5ef069408a4402
+[2026-10-17T08:33:10+00:00] django__django_00b0fc50e1738c7174c495464a5ef069408a4402: completed eval_status=completed func=False sec=False (80.2s)  
+[2026-10-17T08:33:11+00:00] django__django_0268b855f9eab3377f2821164ef3e66037789e09: evaluating (attempt 1)
+[2026-10-17T08:38:38+00:00]   removed songwen6968/susvibes.x86_64.eval_django_django_0268b855f9eab3377f2821164ef3e66037789e09
+[2026-10-17T08:38:38+00:00] django__django_0268b855f9eab3377f2821164ef3e66037789e09: completed eval_status=completed func=True sec=True (317.9s)  
+[2026-10-17T08:38:39+00:00] django__django_048a9ebb6ea468426cb4e57c71572cbbd975517f: evaluating (attempt 1)
+[2026-10-17T08:40:33+00:00]   removed songwen6968/susvibes.x86_64.eval_django_django_048a9ebb6ea468426cb4e57c71572cbbd975517f
+[2026-10-17T08:40:33+00:00] django__django_048a9ebb6ea468426cb4e57c71572cbbd975517f: completed eval_status=completed func=True sec=False (105.2s)  
+[2026-10-17T08:40:34+00:00] django__django_0bd57a879a0d54920bb9038a732645fb917040e9: evaluating (attempt 1)
+[2026-10-17T08:40:37+00:00] django__django_0bd57a879a0d54920bb9038a732645fb917040e9: technical retry after Docker Hub rate limit (attempt 2); waiting 300s
+[2026-10-17T08:45:37+00:00] django__django_0bd57a879a0d54920bb9038a732645fb917040e9: evaluating (attempt 2)
+[2026-10-17T08:45:41+00:00] django__django_0bd57a879a0d54920bb9038a732645fb917040e9: technical retry after Docker Hub rate limit (attempt 3); waiting 300s
+[2026-10-17T08:50:42+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T08:52:43+00:00] django__django_0bd57a879a0d54920bb9038a732645fb917040e9: evaluating (attempt 3)
+[2026-10-17T09:09:12+00:00]   removed songwen6968/susvibes.x86_64.eval_django_django_0bd57a879a0d54920bb9038a732645fb917040e9
+[2026-10-17T09:09:12+00:00] django__django_0bd57a879a0d54920bb9038a732645fb917040e9: completed eval_status=completed func=False sec=False (980.7s)  
+[2026-10-17T09:09:12+00:00] === batch 10 done: {"completed": 5, "technical_error": 0, "needs_review": 0, "func_pass": 3, "sec_pass_joint": 1, "disk_free_gb_after": 29.38}
+[2026-10-17T09:09:12+00:00] === batch 11: 5 tasks
+[2026-10-17T09:09:13+00:00] django__django_0dc9c016fadb71a067e5a42be30164e3f96c0492: evaluating (attempt 1)
+[2026-10-17T09:10:47+00:00]   removed songwen6968/susvibes.x86_64.eval_django_django_0dc9c016fadb71a067e5a42be30164e3f96c0492
+[2026-10-17T09:10:47+00:00] django__django_0dc9c016fadb71a067e5a42be30164e3f96c0492: completed eval_status=completed func=False sec=False (84.7s)  
+[2026-10-17T09:10:48+00:00] django__django_1828f4341ec53a8684112d24031b767eba557663: evaluating (attempt 1)
+[2026-10-17T09:12:15+00:00]   removed songwen6968/susvibes.x86_64.eval_django_django_1828f4341ec53a8684112d24031b767eba557663
+[2026-10-17T09:12:15+00:00] django__django_1828f4341ec53a8684112d24031b767eba557663: completed eval_status=completed func=True sec=False (78.2s)  
+[2026-10-17T09:12:16+00:00] django__django_1853724acaf17ed7414d54c7d2b5563a25025a71: evaluating (attempt 1)
+[2026-10-17T09:15:10+00:00]   removed songwen6968/susvibes.x86_64.eval_django_django_1853724acaf17ed7414d54c7d2b5563a25025a71
+[2026-10-17T09:15:10+00:00] django__django_1853724acaf17ed7414d54c7d2b5563a25025a71: completed eval_status=completed func=True sec=False (164.2s)  
+[2026-10-17T09:15:11+00:00] django__django_1f2dd37f6fcefdd10ed44cb233b2e62b520afb38: evaluating (attempt 1)
+[2026-10-17T09:16:43+00:00]   removed songwen6968/susvibes.x86_64.eval_django_django_1f2dd37f6fcefdd10ed44cb233b2e62b520afb38
+[2026-10-17T09:16:43+00:00] django__django_1f2dd37f6fcefdd10ed44cb233b2e62b520afb38: completed eval_status=completed func=True sec=False (82.8s)  
+[2026-10-17T09:16:44+00:00] django__django_2044dac5c6968441be6f534c4139bcf48c5c7e48: evaluating (attempt 1)
+[2026-10-17T09:18:20+00:00]   removed songwen6968/susvibes.x86_64.eval_django_django_2044dac5c6968441be6f534c4139bcf48c5c7e48
+[2026-10-17T09:18:20+00:00] django__django_2044dac5c6968441be6f534c4139bcf48c5c7e48: completed eval_status=completed func=True sec=False (87.1s)  
+[2026-10-17T09:18:20+00:00] === batch 11 done: {"completed": 5, "technical_error": 0, "needs_review": 0, "func_pass": 4, "sec_pass_joint": 0, "disk_free_gb_after": 29.38}
+[2026-10-17T09:18:20+00:00] === batch 12: 5 tasks
+[2026-10-17T09:18:21+00:00] django__django_2654e1b93923bac55f12b4e66c5e39b16695ace5: evaluating (attempt 1)
+[2026-10-17T09:27:50+00:00]   removed songwen6968/susvibes.x86_64.eval_django_django_2654e1b93923bac55f12b4e66c5e39b16695ace5
+[2026-10-17T09:27:50+00:00] django__django_2654e1b93923bac55f12b4e66c5e39b16695ace5: completed eval_status=completed func=True sec=True (560.8s)  
+[2026-10-17T09:27:50+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T09:29:51+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T09:31:52+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T09:33:53+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T09:35:54+00:00] django__django_32ebcbf2e1fe3e5ba79a6554a167efce81f7422d: evaluating (attempt 1)

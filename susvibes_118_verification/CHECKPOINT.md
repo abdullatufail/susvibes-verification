@@ -1,6 +1,6 @@
 # CHECKPOINT — experiment state
 
-_Generated 2026-10-17T07:52:35+00:00 by `scripts/write_checkpoint_md.py` from `logs/eval/*/checkpoint.json`. Do not edit by hand._
+_Generated 2026-10-17T09:53:07+00:00 by `scripts/write_checkpoint_md.py` from `logs/eval/*/checkpoint.json`. Do not edit by hand._
 
 ## Experiments
 
@@ -8,7 +8,7 @@ _Generated 2026-10-17T07:52:35+00:00 by `scripts/write_checkpoint_md.py` from `l
 |---|---|
 | Stage 1 — artifact audit and recomputation (no Docker, no API) | **complete** |
 | Stage 2 — evaluator pilot (5 tasks × golden / vulnerable / empty / published) | **complete** |
-| Stage 2b — re-score all 186 published patches (`reeval_published_v1.0`) | 17/186 completed; 169 pending/running; 0 technical_error; 0 needs_review |
+| Stage 2b — re-score all 186 published patches (`reeval_published_v1.0`) | 38/186 completed; 148 pending/running; 0 technical_error; 0 needs_review |
 | Stage 2c — golden/vulnerable controls on disagreeing tasks | {"pilot_control_empty": {"completed": 5}, "pilot_control_golden": {"completed": 5}, "pilot_control_vulnerable": {"completed": 5}} |
 | Stage 3/4 — fresh SWE-agent + Claude 4 Sonnet run | **not started**. No API budget was established and no model credentials were provisioned. Requires the unpublished `susvibes_eval` SWE-agent config. See `reproduction_report.md` §8 |
 
@@ -16,11 +16,11 @@ _Generated 2026-10-17T07:52:35+00:00 by `scripts/write_checkpoint_md.py` from `l
 
 * predictions: `claude-sonnet-4-20250514_published.jsonl` sha256 `60d7f26c8da7adc10233f4da60d7cf619828cee71ebee8539bac3434fd41f13d`
 * dataset sha256 `0cb5fbffe7ba59a8e16d42c293944bdd8e1e23795941a4b496ac1043722b9550`; harness commit `7e1b4b05240e56dc2b4e8253b2cc5c9481d016f3` (tag v1.0)
-* latest batch: **7** finished 2026-10-17T07:37:09+00:00: ['apache__airflow_6724eeb6210d5965937eaf9dae3e476eb30f8268', 'apache__airflow_89e7f3e7bdf2126bbbcd959dc10d65ef92773cca', 'apache__airflow_ac65b82eeeeaa670e09a83c7da65cbac7e89f8db', 'apache__airflow_d9dea5ce17f0c5859dc705bba8e6ef22e5659955', 'apache__airflow_f18f48492dc69f392e45567580b6ddb0c070ea58']
-* batches recorded: 7 (pilot tasks ran as single-task batches 1–5)
-* disk free now: 29.4 GB (one task image is about 1.8 GB and is removed after each task)
+* latest batch: **11** finished 2026-10-17T09:18:20+00:00: ['django__django_0dc9c016fadb71a067e5a42be30164e3f96c0492', 'django__django_1828f4341ec53a8684112d24031b767eba557663', 'django__django_1853724acaf17ed7414d54c7d2b5563a25025a71', 'django__django_1f2dd37f6fcefdd10ed44cb233b2e62b520afb38', 'django__django_2044dac5c6968441be6f534c4139bcf48c5c7e48']
+* batches recorded: 11 (pilot tasks ran as single-task batches 1–5)
+* disk free now: 25.7 GB (one task image is about 1.8 GB and is removed after each task)
 * API expenditure: **$0.00**. No model was invoked. Only published patches and reference controls were evaluated.
-* technical retries: 1 ['apragacz__django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5']
+* technical retries: 2 ['apragacz__django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5', 'django__django_0bd57a879a0d54920bb9038a732645fb917040e9']
 
 ### Errors / needs review
 
@@ -28,7 +28,7 @@ _Generated 2026-10-17T07:52:35+00:00 by `scripts/write_checkpoint_md.py` from `l
 
 ### Completed task IDs
 
-<details><summary>17 completed</summary>
+<details><summary>38 completed</summary>
 
 - aio-libs__aiohttp-session_1b356f01bbab57d041c9a75bacd72fbbf8524728
 - aio-libs__aiohttp_f016f0680e4ace6742b03a70cb0382ce86abe371
@@ -42,17 +42,10 @@ _Generated 2026-10-17T07:52:35+00:00 by `scripts/write_checkpoint_md.py` from `l
 - apache__airflow_d9dea5ce17f0c5859dc705bba8e6ef22e5659955
 - apache__airflow_f18f48492dc69f392e45567580b6ddb0c070ea58
 - apache__superset_ccf73b2608f3f3d1f3d31b927e094fcf50b86a03
+- apragacz__django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5
 - borgbackup__borg_3eb070191da10c2d3f7bc6484cf3d51c3045f884
+- bottlepy__bottle_6d7e13da0f998820800ecb3fe9ccee4189aefb54
 - buildbot__buildbot_e781f110933e05ecdb30abc64327a2c7c9ff9c5a
-- django__django_07cefdee4a9d1fcd9a3a631cbd07c78defd1923b
-- psf__requests_74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5
-- wagtail__wagtail_5c7a60977cba478f6a35390ba98cffc2bd41c8a4
-</details>
-
-### Pending task IDs
-
-<details><summary>169 pending/running</summary>
-
 - canonical__cloud-init_a378b7e4f47375458651c0972e7cd813f6fe0a6b
 - canonical__operator_fea6d2072435a62170d4c01272572f1a7e916e61
 - celery__celery_1f7ad7e6df1e02039b6ab9eec617d283598cad6b
@@ -65,6 +58,7 @@ _Generated 2026-10-17T07:52:35+00:00 by `scripts/write_checkpoint_md.py` from `l
 - django__django_00b0fc50e1738c7174c495464a5ef069408a4402
 - django__django_0268b855f9eab3377f2821164ef3e66037789e09
 - django__django_048a9ebb6ea468426cb4e57c71572cbbd975517f
+- django__django_07cefdee4a9d1fcd9a3a631cbd07c78defd1923b
 - django__django_0bd57a879a0d54920bb9038a732645fb917040e9
 - django__django_0dc9c016fadb71a067e5a42be30164e3f96c0492
 - django__django_1828f4341ec53a8684112d24031b767eba557663
@@ -72,7 +66,14 @@ _Generated 2026-10-17T07:52:35+00:00 by `scripts/write_checkpoint_md.py` from `l
 - django__django_1f2dd37f6fcefdd10ed44cb233b2e62b520afb38
 - django__django_2044dac5c6968441be6f534c4139bcf48c5c7e48
 - django__django_2654e1b93923bac55f12b4e66c5e39b16695ace5
-- django__django_32ebcbf2e1fe3e5ba79a6554a167efce81f7422d
+- psf__requests_74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5
+- wagtail__wagtail_5c7a60977cba478f6a35390ba98cffc2bd41c8a4
+</details>
+
+### Pending task IDs
+
+<details><summary>148 pending/running</summary>
+
 - django__django_454f2fb93437f98917283336201b4048293f7582
 - django__django_5447709a571cd5d95971f1d5d21d4a7edcf85bbd
 - django__django_5f0829a27e85d89ad8c433f5c6a7a7d17c9e9292
@@ -220,8 +221,7 @@ _Generated 2026-10-17T07:52:35+00:00 by `scripts/write_checkpoint_md.py` from `l
 - zopefoundation__restrictedpython_c8eca66ae49081f0016d2e1f094c3d72095ef531
 - zopefoundation__zope_26a55dbc301db417f47cafda6fe0f983b5690088
 - zopefoundation__zope_603b0a12881c90a072a7a65e32d47ed898ce37cb
-- apragacz__django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5
-- bottlepy__bottle_6d7e13da0f998820800ecb3fe9ccee4189aefb54
+- django__django_32ebcbf2e1fe3e5ba79a6554a167efce81f7422d
 </details>
 
 ## How to resume without duplicating work

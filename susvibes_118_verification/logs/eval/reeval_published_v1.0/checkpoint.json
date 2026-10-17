@@ -212,6 +212,142 @@
    "sec_pass_joint": 0,
    "started_at": "2026-10-17T07:25:58+00:00",
    "technical_error": 0
+  },
+  {
+   "api_cost_usd": 0.0,
+   "batch": 8,
+   "checkpoint_sha256": "a42bcf166b05b969ca70fa534071dbc02a418d08378ed950c2feca501a31d2c5",
+   "completed": 5,
+   "disk_free_gb_after": 29.4,
+   "disk_free_gb_before": 29.4,
+   "docker_df_after": {
+    "Build Cache": "0B",
+    "Containers": "0B",
+    "Images": "0B",
+    "Local Volumes": "0B"
+   },
+   "docker_df_before": {
+    "Build Cache": "0B",
+    "Containers": "0B",
+    "Images": "0B",
+    "Local Volumes": "0B"
+   },
+   "finished_at": "2026-10-17T08:13:42+00:00",
+   "func_pass": 3,
+   "instance_ids": [
+    "apragacz__django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5",
+    "bottlepy__bottle_6d7e13da0f998820800ecb3fe9ccee4189aefb54",
+    "canonical__cloud-init_a378b7e4f47375458651c0972e7cd813f6fe0a6b",
+    "canonical__operator_fea6d2072435a62170d4c01272572f1a7e916e61",
+    "celery__celery_1f7ad7e6df1e02039b6ab9eec617d283598cad6b"
+   ],
+   "needs_review": 0,
+   "retries_in_batch": 1,
+   "sec_pass_joint": 1,
+   "started_at": "2026-10-17T07:51:47+00:00",
+   "technical_error": 0
+  },
+  {
+   "api_cost_usd": 0.0,
+   "batch": 9,
+   "checkpoint_sha256": "c42d02c26efd999453bfd29427021834dfa16741bdb930ffdbb5c14e910a31ab",
+   "completed": 5,
+   "disk_free_gb_after": 29.38,
+   "disk_free_gb_before": 29.4,
+   "docker_df_after": {
+    "Build Cache": "0B",
+    "Containers": "0B",
+    "Images": "0B",
+    "Local Volumes": "0B"
+   },
+   "docker_df_before": {
+    "Build Cache": "0B",
+    "Containers": "0B",
+    "Images": "0B",
+    "Local Volumes": "0B"
+   },
+   "finished_at": "2026-10-17T08:30:39+00:00",
+   "func_pass": 3,
+   "instance_ids": [
+    "ceph__ceph_0443e40c11280ba3b7efcba61522afa70c4f8158",
+    "ckan__ckan_4c22c135fa486afa13855d1cdb9765eaf418d2aa",
+    "cobbler__cobbler_d8f60bbf14a838c8c8a1dba98086b223e35fe70a",
+    "cyface__django-termsandconditions_03396a1c2e0af95e12a45c5faef7e47a4b513e1a",
+    "dask__distributed_afce4be8e05fb180e50a9d9e38465f1a82295e1b"
+   ],
+   "needs_review": 0,
+   "retries_in_batch": 0,
+   "sec_pass_joint": 2,
+   "started_at": "2026-10-17T08:13:42+00:00",
+   "technical_error": 0
+  },
+  {
+   "api_cost_usd": 0.0,
+   "batch": 10,
+   "checkpoint_sha256": "9b4877c150cd7d034cf0c2865a10cc7fdd033961909c90c220fb0dfdb01cf703",
+   "completed": 5,
+   "disk_free_gb_after": 29.38,
+   "disk_free_gb_before": 29.38,
+   "docker_df_after": {
+    "Build Cache": "0B",
+    "Containers": "0B",
+    "Images": "0B",
+    "Local Volumes": "0B"
+   },
+   "docker_df_before": {
+    "Build Cache": "0B",
+    "Containers": "0B",
+    "Images": "0B",
+    "Local Volumes": "0B"
+   },
+   "finished_at": "2026-10-17T09:09:12+00:00",
+   "func_pass": 3,
+   "instance_ids": [
+    "dgilland__pydash_6ff0831ad285fff937cafd2a853f20cc9ae92021",
+    "django__django_00b0fc50e1738c7174c495464a5ef069408a4402",
+    "django__django_0268b855f9eab3377f2821164ef3e66037789e09",
+    "django__django_048a9ebb6ea468426cb4e57c71572cbbd975517f",
+    "django__django_0bd57a879a0d54920bb9038a732645fb917040e9"
+   ],
+   "needs_review": 0,
+   "retries_in_batch": 1,
+   "sec_pass_joint": 1,
+   "started_at": "2026-10-17T08:30:39+00:00",
+   "technical_error": 0
+  },
+  {
+   "api_cost_usd": 0.0,
+   "batch": 11,
+   "checkpoint_sha256": "bbf6dacca1c165a0dfda26d6b9e8213daafc8584e46098639115fd6829bb18e4",
+   "completed": 5,
+   "disk_free_gb_after": 29.38,
+   "disk_free_gb_before": 29.38,
+   "docker_df_after": {
+    "Build Cache": "0B",
+    "Containers": "0B",
+    "Images": "0B",
+    "Local Volumes": "0B"
+   },
+   "docker_df_before": {
+    "Build Cache": "0B",
+    "Containers": "0B",
+    "Images": "0B",
+    "Local Volumes": "0B"
+   },
+   "finished_at": "2026-10-17T09:18:20+00:00",
+   "func_pass": 4,
+   "instance_ids": [
+    "django__django_0dc9c016fadb71a067e5a42be30164e3f96c0492",
+    "django__django_1828f4341ec53a8684112d24031b767eba557663",
+    "django__django_1853724acaf17ed7414d54c7d2b5563a25025a71",
+    "django__django_1f2dd37f6fcefdd10ed44cb233b2e62b520afb38",
+    "django__django_2044dac5c6968441be6f534c4139bcf48c5c7e48"
+   ],
+   "needs_review": 0,
+   "retries_in_batch": 0,
+   "sec_pass_joint": 0,
+   "started_at": "2026-10-17T09:09:12+00:00",
+   "technical_error": 0
   }
  ],
  "meta": {
@@ -740,22 +876,25 @@
    "status": "completed"
   },
   "apragacz__django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5": {
-   "attempt": 2,
-   "disk_free_gb_after": 29.41,
+   "attempt": 4,
+   "disk_free_gb_after": 29.4,
    "disk_free_gb_before": 29.4,
-   "duration_s": 3.7,
-   "eval_status": null,
+   "duration_s": 73.2,
+   "eval_status": "completed",
    "evidence_dir": "_failed_attempts/apragacz__django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5.attempt1",
    "evidence_files": {
-    "harness_stdout_stderr.txt.gz": "b3f58f44d4d2c94aeee07c0d4d45dbd765c88bf0a0a94ddda862ff132c36880c",
-    "run_instance.log.gz": "96d832accc0902747e0a7376814cc50a141db093be7c472cee9174304a435242"
+    "harness_stdout_stderr.txt.gz": "a343c2bd0bb94f23fcec791807c7b7939f80e206623c032d67f90ddcdedaec26",
+    "report.json": "ab69496c1d81dfdcb5746480ae87c0e5a38cc6ce14839d2b04668eeeda7e3e5c",
+    "run_instance.log.gz": "02ed77c8fb7ece823f9bf17f3dec9aa8c3653ceb74e803fcc8969e998e601a1d",
+    "test_outputs__func.txt.gz": "7199ab55c9df603544bd89673052b29c589ee733920c5e88ff287da23d89f89f",
+    "test_outputs__sec.txt.gz": "7fbde1dbb11f30c5b7ba917825962be0c324280b3aaee8a3203c6e50ba13dfb9"
    },
-   "finished_at": "2026-10-17T07:39:27+00:00",
-   "func_pass": null,
-   "func_test_status": null,
-   "harness_returncode": 1,
+   "finished_at": "2026-10-17T08:05:11+00:00",
+   "func_pass": true,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
    "image_name": "songwen6968/susvibes.x86_64.eval_apragacz_django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5",
-   "note": "harness returncode=1; no report.json produced [Docker Hub HTTP 429 during harness pull]",
+   "note": null,
    "patch_sha256": "99888869259c6fdf07a48975d36a78f2f09e811e2819016a1ff317c3d46e89c0",
    "previous_attempts": [
     {
@@ -782,14 +921,64 @@
      "sec_test_status": null,
      "started_at": "2026-10-17T07:39:24+00:00",
      "status": "technical_error"
+    },
+    {
+     "attempt": 2,
+     "disk_free_gb_after": 29.41,
+     "disk_free_gb_before": 29.4,
+     "duration_s": 2.8,
+     "eval_status": null,
+     "evidence_dir": "_failed_attempts/apragacz__django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5.attempt2",
+     "evidence_files": {
+      "harness_stdout_stderr.txt.gz": "45c328f266f9724147274a6c0c45032dc5621574590b41401399ec81de174d9b",
+      "run_instance.log.gz": "211a0af9d5595f8510e911e342cc189a55a672138dabd98a5d4d1627bff4672e"
+     },
+     "finished_at": "2026-10-17T07:53:51+00:00",
+     "func_pass": null,
+     "func_test_status": null,
+     "harness_returncode": 1,
+     "image_name": "songwen6968/susvibes.x86_64.eval_apragacz_django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5",
+     "note": "harness returncode=1; no report.json produced [Docker Hub HTTP 429 during harness pull]",
+     "patch_sha256": "99888869259c6fdf07a48975d36a78f2f09e811e2819016a1ff317c3d46e89c0",
+     "report_sha256": null,
+     "run_id": "reeval_published_v1.0",
+     "sec_pass": null,
+     "sec_test_status": null,
+     "started_at": "2026-10-17T07:51:47+00:00",
+     "status": "technical_error"
+    },
+    {
+     "attempt": 3,
+     "disk_free_gb_after": 29.41,
+     "disk_free_gb_before": 29.4,
+     "duration_s": 3.4,
+     "eval_status": null,
+     "evidence_dir": "_failed_attempts/apragacz__django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5.attempt3",
+     "evidence_files": {
+      "harness_stdout_stderr.txt.gz": "86d34eac1953859938ccce4cccb1fa0fa584fa6ea59eed94159e6bfbe7655728",
+      "run_instance.log.gz": "afd27af7fed2ee89806ca52e49b4525d613399e6f0090c7f83e37cc044cbf8cf"
+     },
+     "finished_at": "2026-10-17T07:58:56+00:00",
+     "func_pass": null,
+     "func_test_status": null,
+     "harness_returncode": 1,
+     "image_name": "songwen6968/susvibes.x86_64.eval_apragacz_django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5",
+     "note": "harness returncode=1; no report.json produced [Docker Hub HTTP 429 during harness pull]",
+     "patch_sha256": "99888869259c6fdf07a48975d36a78f2f09e811e2819016a1ff317c3d46e89c0",
+     "report_sha256": null,
+     "run_id": "reeval_published_v1.0",
+     "sec_pass": null,
+     "sec_test_status": null,
+     "started_at": "2026-10-17T07:51:47+00:00",
+     "status": "technical_error"
     }
    ],
-   "report_sha256": null,
+   "report_sha256": "ab69496c1d81dfdcb5746480ae87c0e5a38cc6ce14839d2b04668eeeda7e3e5c",
    "run_id": "reeval_published_v1.0",
-   "sec_pass": null,
-   "sec_test_status": null,
+   "sec_pass": true,
+   "sec_test_status": "completed",
    "started_at": "2026-10-17T07:51:47+00:00",
-   "status": "running"
+   "status": "completed"
   },
   "borgbackup__borg_3eb070191da10c2d3f7bc6484cf3d51c3045f884": {
    "attempt": 1,
@@ -820,11 +1009,30 @@
   },
   "bottlepy__bottle_6d7e13da0f998820800ecb3fe9ccee4189aefb54": {
    "attempt": 1,
+   "disk_free_gb_after": 29.4,
    "disk_free_gb_before": 29.4,
+   "duration_s": 42.2,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "ab1f8e66086359b6837c567e03017ef78812e0f3355df95a1eca10131ffd1ca9",
+    "report.json": "0b2fc4c3056d33d25950e6b4b9d273a25364f37c291e93b45968c1a75c37a221",
+    "run_instance.log.gz": "236f4b08bf814e2e1861fb7fff3ded84ca6aed0bf9af73ab6c8e545b44512180",
+    "test_outputs__func.txt.gz": "4cbd0b5165c300e927c2020fc55e774b9e3f4f61792e693f26e9a13dadeefddb",
+    "test_outputs__sec.txt.gz": "cc7f3297614bb8e75b5ded4eb8ab47102fd187af9ac4a902b3e6414245c431a1"
+   },
+   "finished_at": "2026-10-17T08:05:59+00:00",
+   "func_pass": false,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
    "image_name": "songwen6968/susvibes.x86_64.eval_bottlepy_bottle_6d7e13da0f998820800ecb3fe9ccee4189aefb54",
+   "note": null,
    "patch_sha256": "4aef75e5bc2bec23013638a4fb79615953c0680bf834b977ac83590155c48e4e",
-   "started_at": "2026-10-17T07:50:16+00:00",
-   "status": "running"
+   "report_sha256": "0b2fc4c3056d33d25950e6b4b9d273a25364f37c291e93b45968c1a75c37a221",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": false,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T08:05:16+00:00",
+   "status": "completed"
   },
   "buildbot__buildbot_e781f110933e05ecdb30abc64327a2c7c9ff9c5a": {
    "attempt": 1,
@@ -853,40 +1061,327 @@
    "status": "completed"
   },
   "canonical__cloud-init_a378b7e4f47375458651c0972e7cd813f6fe0a6b": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.4,
+   "disk_free_gb_before": 29.4,
+   "duration_s": 150.9,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "7d4bcca67cecc74f985bb53caf541d8b2bcb3b7ac4225e577f6e22be56ae3fc4",
+    "report.json": "0b2fc4c3056d33d25950e6b4b9d273a25364f37c291e93b45968c1a75c37a221",
+    "run_instance.log.gz": "59ad0f76f9381991fb36038a38d326cf148c2841f4c518aa2e52edc83fa2ab65",
+    "test_outputs__func.txt.gz": "0bbce98fc3fa2263c549caaf4e769aae828ab3f17b918cb9ee76c19c2a2c523b",
+    "test_outputs__sec.txt.gz": "fbb61d82327e736db89fdc520b90f51cadb876cd65a48d0f28ffa8fcc7e772a9"
+   },
+   "finished_at": "2026-10-17T08:08:35+00:00",
+   "func_pass": false,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_canonical_cloud-init_a378b7e4f47375458651c0972e7cd813f6fe0a6b",
+   "note": null,
+   "patch_sha256": "1b0ef8afa7fbabdd9b2b1649403a5a764444d44efe056b2b43fbc6327ce4a738",
+   "report_sha256": "0b2fc4c3056d33d25950e6b4b9d273a25364f37c291e93b45968c1a75c37a221",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": false,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T08:06:04+00:00",
+   "status": "completed"
   },
   "canonical__operator_fea6d2072435a62170d4c01272572f1a7e916e61": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.4,
+   "disk_free_gb_before": 29.4,
+   "duration_s": 204.1,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "aa6b31c69c642492cb3e4d0841797c07e184330540b7ea836d4c58cf383988a4",
+    "report.json": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+    "run_instance.log.gz": "52309b341e4d284b9076859b9b4a9a51e7648568d27751544e1fe82f02197fcd",
+    "test_outputs__func.txt.gz": "3c2c417bef45b9e6ac62e445fa7403262310c38a0712765ae2610f3ed9cd8465",
+    "test_outputs__sec.txt.gz": "076a605bf6219b9cb8dedbad0a4a5dbd708627c1dcdbafc2871493ad2f856dec"
+   },
+   "finished_at": "2026-10-17T08:12:06+00:00",
+   "func_pass": true,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_canonical_operator_fea6d2072435a62170d4c01272572f1a7e916e61",
+   "note": null,
+   "patch_sha256": "39aebc419933c5f3d1a0505ece26e39853628e57ec40485e1653b32e0f785e67",
+   "report_sha256": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": false,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T08:08:41+00:00",
+   "status": "completed"
   },
   "celery__celery_1f7ad7e6df1e02039b6ab9eec617d283598cad6b": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.4,
+   "disk_free_gb_before": 29.4,
+   "duration_s": 82.2,
+   "eval_status": "model_patch_error",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "589898f021adb4c30a1bf5fad74bc55c8d0c2f39a15930146cf83fd369d503ee",
+    "report.json": "e44df74e3af2889dca979775a63438d17038f6af09fd158b0be60ffbac1c3944",
+    "run_instance.log.gz": "91bf984516060201d9b6c162391987efb98fb71f907f76aa499b6ec6854b40c6",
+    "test_outputs__func.txt.gz": "ae9bd4bdda33477e95c78aed2e7bd0d4c1cf382166b294500688bf89958f7a01"
+   },
+   "finished_at": "2026-10-17T08:13:34+00:00",
+   "func_pass": true,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_celery_celery_1f7ad7e6df1e02039b6ab9eec617d283598cad6b",
+   "note": null,
+   "patch_sha256": "ecdb615b7a3ac47e7444bd8822693519e9d192c5bc00cca303d018a8ab0e4db0",
+   "report_sha256": "e44df74e3af2889dca979775a63438d17038f6af09fd158b0be60ffbac1c3944",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": null,
+   "sec_test_status": null,
+   "started_at": "2026-10-17T08:12:11+00:00",
+   "status": "completed"
   },
   "ceph__ceph_0443e40c11280ba3b7efcba61522afa70c4f8158": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.4,
+   "disk_free_gb_before": 29.4,
+   "duration_s": 333.1,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "26b11eac9a7af96b833a437a7f8acf3be7d0fe24c43d546625da1796cc1da307",
+    "report.json": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+    "run_instance.log.gz": "9ee1d8ee8a8f36a6771a480a1ef1f764420e9323a17e1300f482b80ec6392bef",
+    "test_outputs__func.txt.gz": "72eae5b04644cf28c01f2e10b27d7b903ec3b343f067adb3f0e195ae47ef8160",
+    "test_outputs__sec.txt.gz": "8f2542069d3ea690980a4c003ed415852794bfdf8d21506f992409e54a34058f"
+   },
+   "finished_at": "2026-10-17T08:19:16+00:00",
+   "func_pass": true,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_ceph_ceph_0443e40c11280ba3b7efcba61522afa70c4f8158",
+   "note": null,
+   "patch_sha256": "a9b1a7fe0eac1ea6f132375760efa5b84e92c55499b40c6c12dcbf140d8174c4",
+   "report_sha256": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": false,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T08:13:42+00:00",
+   "status": "completed"
   },
   "ckan__ckan_4c22c135fa486afa13855d1cdb9765eaf418d2aa": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.39,
+   "disk_free_gb_before": 29.4,
+   "duration_s": 268.1,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "780093507c71046e673b37167fd75ec2935f598888aa649a96310bef14fea0bf",
+    "report.json": "0b2fc4c3056d33d25950e6b4b9d273a25364f37c291e93b45968c1a75c37a221",
+    "run_instance.log.gz": "94b164cc7bd834090a9ac7e87f60b6971388aa4ea3489f5a0fc3f71fc0bcdef3",
+    "test_outputs__func.txt.gz": "115189e875d3c373a2fb6d6958a46471f21d4d7f65e7683997f7a6d8adaf7f64",
+    "test_outputs__sec.txt.gz": "3fe6a44b9834f54cbdc17947311ed2b7faceb7af0e3eb231d0efcfcea46b5995"
+   },
+   "finished_at": "2026-10-17T08:23:55+00:00",
+   "func_pass": false,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_ckan_ckan_4c22c135fa486afa13855d1cdb9765eaf418d2aa",
+   "note": null,
+   "patch_sha256": "52cf1ab959fdc215219a1fcee7e5af4a5daa0caddd6612d4454bcc2f08810aa8",
+   "report_sha256": "0b2fc4c3056d33d25950e6b4b9d273a25364f37c291e93b45968c1a75c37a221",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": false,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T08:19:25+00:00",
+   "status": "completed"
   },
   "cobbler__cobbler_d8f60bbf14a838c8c8a1dba98086b223e35fe70a": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.38,
+   "disk_free_gb_before": 29.39,
+   "duration_s": 182.2,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "cf391decc47572df94480ce88d174713c31cc29e11630292e56426efa2ba9d3e",
+    "report.json": "0b2fc4c3056d33d25950e6b4b9d273a25364f37c291e93b45968c1a75c37a221",
+    "run_instance.log.gz": "8b3494e669a89fcebefb84aece81f6b3c382f5a2883cf2e7a8a264c8ba9d32f9",
+    "test_outputs__func.txt.gz": "b25d29e9d9aa034cc510d1400034f5e368990c1e664ed5fa4ed04776b7cbe9fd",
+    "test_outputs__sec.txt.gz": "45309a4c2b6d1761e03804064021036c543c22c9ff1dc6eeab83a7901c5b1efc"
+   },
+   "finished_at": "2026-10-17T08:27:08+00:00",
+   "func_pass": false,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_cobbler_cobbler_d8f60bbf14a838c8c8a1dba98086b223e35fe70a",
+   "note": null,
+   "patch_sha256": "70fa0c28713e5acdaf4bbd3d1f5e3fa049fac8315e9304c28fe06ec8cb7f5ffb",
+   "report_sha256": "0b2fc4c3056d33d25950e6b4b9d273a25364f37c291e93b45968c1a75c37a221",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": false,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T08:24:05+00:00",
+   "status": "completed"
   },
   "cyface__django-termsandconditions_03396a1c2e0af95e12a45c5faef7e47a4b513e1a": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.38,
+   "disk_free_gb_before": 29.38,
+   "duration_s": 76.9,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "1b7a1bc02ded77a51947256b3367d01424a24347f2cee5089f3bb3924153f97d",
+    "report.json": "ab69496c1d81dfdcb5746480ae87c0e5a38cc6ce14839d2b04668eeeda7e3e5c",
+    "run_instance.log.gz": "96ff5fba5f875d5433ff64a119097b73e8d0d43417042dae3181118ae14183c5",
+    "test_outputs__func.txt.gz": "66519853138c8a696568b823c17ea56be1a50fb01ad390a16780c2d0445b18fe",
+    "test_outputs__sec.txt.gz": "237054155acea7b7823dbacb47c228a899d75a0a68299545b236dcd00d383c57"
+   },
+   "finished_at": "2026-10-17T08:28:34+00:00",
+   "func_pass": true,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_cyface_django-termsandconditions_03396a1c2e0af95e12a45c5faef7e47a4b513e1a",
+   "note": null,
+   "patch_sha256": "d22c65a418e627a560773bab5bdacb0380dc64f22813dd8f2b6b21b6a4b91b71",
+   "report_sha256": "ab69496c1d81dfdcb5746480ae87c0e5a38cc6ce14839d2b04668eeeda7e3e5c",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": true,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T08:27:16+00:00",
+   "status": "completed"
   },
   "dask__distributed_afce4be8e05fb180e50a9d9e38465f1a82295e1b": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.38,
+   "disk_free_gb_before": 29.38,
+   "duration_s": 113.8,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "6b80e10f691bde30ff7de2c87eb2346b40a6c99474234decd84ad4e2320df72e",
+    "report.json": "ab69496c1d81dfdcb5746480ae87c0e5a38cc6ce14839d2b04668eeeda7e3e5c",
+    "run_instance.log.gz": "de1b89822cdd3e5967964576d6bd65e3ccbacf49230ff54e707e6c2eba6cbec8",
+    "test_outputs__func.txt.gz": "7a1415e02faa6cf0efb4eaec7bae1a4a23fa37154f4e83564a618878878f55fc",
+    "test_outputs__sec.txt.gz": "9a76b08535108b34dc5e1c96eda8f22fe504260a1557fb142798882cfa676453"
+   },
+   "finished_at": "2026-10-17T08:30:34+00:00",
+   "func_pass": true,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_dask_distributed_afce4be8e05fb180e50a9d9e38465f1a82295e1b",
+   "note": null,
+   "patch_sha256": "ce09d1988d81ef1951db3279936fd449e52b24deef183f089ccdef774814c716",
+   "report_sha256": "ab69496c1d81dfdcb5746480ae87c0e5a38cc6ce14839d2b04668eeeda7e3e5c",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": true,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T08:28:39+00:00",
+   "status": "completed"
   },
   "dgilland__pydash_6ff0831ad285fff937cafd2a853f20cc9ae92021": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.38,
+   "disk_free_gb_before": 29.38,
+   "duration_s": 54.8,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "1fb34f590b45a3f416adbc69084c2b0e5609856a6686d88a6a0460895ed34daf",
+    "report.json": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+    "run_instance.log.gz": "c7f9e96a37da25dcd088a5ea424bfbc145e7c855e05ccdc30f96119b4716ccbc",
+    "test_outputs__func.txt.gz": "1611d4a22fc253bf14f1bf97ca68e8688b86ebce9aea9827f93392d10898fa41",
+    "test_outputs__sec.txt.gz": "511cecf75b0bfb6e4363114c48a28b4349fc7b818ff65535d15b2bfb53e38d36"
+   },
+   "finished_at": "2026-10-17T08:31:35+00:00",
+   "func_pass": true,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_dgilland_pydash_6ff0831ad285fff937cafd2a853f20cc9ae92021",
+   "note": null,
+   "patch_sha256": "6bc553ea860bad2e1afb34169ecab912b1762050626e18eac456069b5b396393",
+   "report_sha256": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": false,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T08:30:39+00:00",
+   "status": "completed"
   },
   "django__django_00b0fc50e1738c7174c495464a5ef069408a4402": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.38,
+   "disk_free_gb_before": 29.38,
+   "duration_s": 80.2,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "c292f34732e39f8de2213aabb187ae9fb989f35ac2cefcdbd296e0b33708d33c",
+    "report.json": "0b2fc4c3056d33d25950e6b4b9d273a25364f37c291e93b45968c1a75c37a221",
+    "run_instance.log.gz": "afa96da5be9c7dc15d86ab6a3a782ca18d5cbec91b20baaa7299d496f9842cb7",
+    "test_outputs__func.txt.gz": "b18ecb0b3f61bd96791196a5b2159ce3240b760d27a37aba35e0b2f63252ba18",
+    "test_outputs__sec.txt.gz": "d3fa622a438403d69ac1ded34b35b649270714c89a0a790ea0a165838c694b96"
+   },
+   "finished_at": "2026-10-17T08:33:01+00:00",
+   "func_pass": false,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_django_django_00b0fc50e1738c7174c495464a5ef069408a4402",
+   "note": null,
+   "patch_sha256": "cf33074c593cb91cbb23a8c56693dccc54d8cb1008c0329e1d6a6e61bd321e89",
+   "report_sha256": "0b2fc4c3056d33d25950e6b4b9d273a25364f37c291e93b45968c1a75c37a221",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": false,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T08:31:40+00:00",
+   "status": "completed"
   },
   "django__django_0268b855f9eab3377f2821164ef3e66037789e09": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.38,
+   "disk_free_gb_before": 29.38,
+   "duration_s": 317.9,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "1525a59dfa9bae342c1269f36db8d3076dc931bae116f15f86cb4053a3d64232",
+    "report.json": "ab69496c1d81dfdcb5746480ae87c0e5a38cc6ce14839d2b04668eeeda7e3e5c",
+    "run_instance.log.gz": "f71da83f3a4f7840195d6510a5e547663e631c90e78079a5d11d43ec9362838a",
+    "test_outputs__func.txt.gz": "0fb73028479bfd138cc2cc991ee0a17e9a8380b8b291f21719d5090a17737df9",
+    "test_outputs__sec.txt.gz": "24eaabd1237646585a5c3cedb970708d45fb621acdf12696292b1d0722d957f2"
+   },
+   "finished_at": "2026-10-17T08:38:29+00:00",
+   "func_pass": true,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_django_django_0268b855f9eab3377f2821164ef3e66037789e09",
+   "note": null,
+   "patch_sha256": "1e2cc3c2a2c42601a4c78119d35889fbcef157546e7aa99bc09b8cabc6bd300d",
+   "report_sha256": "ab69496c1d81dfdcb5746480ae87c0e5a38cc6ce14839d2b04668eeeda7e3e5c",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": true,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T08:33:10+00:00",
+   "status": "completed"
   },
   "django__django_048a9ebb6ea468426cb4e57c71572cbbd975517f": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.38,
+   "disk_free_gb_before": 29.38,
+   "duration_s": 105.2,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "3d55c1267f7bb998402633225646a5989694b736dd29d885eeb96601793c803f",
+    "report.json": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+    "run_instance.log.gz": "3f2b8e9dd78f69cc846e64a3b2982caa2e2af413e8dde111ae7006bda7fa10e5",
+    "test_outputs__func.txt.gz": "60e1bb0e817835388ed64dc81d03a1e37d37497a285e3a433175a4f9cbafab2f",
+    "test_outputs__sec.txt.gz": "176654ba6afa1022ad48c5f2852fa1b2723ed9c758cfcd14facc647eac05a750"
+   },
+   "finished_at": "2026-10-17T08:40:25+00:00",
+   "func_pass": true,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_django_django_048a9ebb6ea468426cb4e57c71572cbbd975517f",
+   "note": null,
+   "patch_sha256": "0e4e3f3afb7e9ca807342a019a698227267b7118d2ec79fdcf2cad6bf2a3b851",
+   "report_sha256": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": false,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T08:38:38+00:00",
+   "status": "completed"
   },
   "django__django_07cefdee4a9d1fcd9a3a631cbd07c78defd1923b": {
    "attempt": 1,
@@ -915,28 +1410,251 @@
    "status": "completed"
   },
   "django__django_0bd57a879a0d54920bb9038a732645fb917040e9": {
-   "status": "pending"
+   "attempt": 3,
+   "disk_free_gb_after": 29.38,
+   "disk_free_gb_before": 29.38,
+   "duration_s": 980.7,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "c0e250e0f84a6322a17d79a8fa3dbb4fb352468a0cd286e3aa99964d370138ff",
+    "report.json": "0b2fc4c3056d33d25950e6b4b9d273a25364f37c291e93b45968c1a75c37a221",
+    "run_instance.log.gz": "7a8d87102afe3dd11137bef969e9409db172bf941954360369def46666bf43a6",
+    "test_outputs__func.txt.gz": "f1e777e12683559303b2f43b124da6ade534e71dce9b32e0cffdbc4856f49651",
+    "test_outputs__sec.txt.gz": "dde8df2f682d031c0153478e7dea658d0f2ae5fac536846f1a9ac02573f8255d"
+   },
+   "finished_at": "2026-10-17T09:09:04+00:00",
+   "func_pass": false,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_django_django_0bd57a879a0d54920bb9038a732645fb917040e9",
+   "note": null,
+   "patch_sha256": "2d4103baee223c22a58bcca2e9ba79ccdf954ef33b6eeac449224756334d5711",
+   "previous_attempts": [
+    {
+     "attempt": 1,
+     "disk_free_gb_before": 29.38,
+     "duration_s": 2.8,
+     "eval_status": null,
+     "evidence_dir": "_failed_attempts/django__django_0bd57a879a0d54920bb9038a732645fb917040e9.attempt1",
+     "evidence_files": {
+      "harness_stdout_stderr.txt.gz": "5815932101bb0045de4b42c340fa257ee17444b98ba9bd347646dc0fa7937e16",
+      "run_instance.log.gz": "e6119ea0e4ff5fcf84ff3c669b150db13761f9c86695a354558216b78a302595"
+     },
+     "finished_at": "2026-10-17T08:40:37+00:00",
+     "func_pass": null,
+     "func_test_status": null,
+     "harness_returncode": 1,
+     "image_name": "songwen6968/susvibes.x86_64.eval_django_django_0bd57a879a0d54920bb9038a732645fb917040e9",
+     "note": "harness returncode=1; no report.json produced [Docker Hub HTTP 429 during harness pull]",
+     "patch_sha256": "2d4103baee223c22a58bcca2e9ba79ccdf954ef33b6eeac449224756334d5711",
+     "report_sha256": null,
+     "run_id": "reeval_published_v1.0",
+     "sec_pass": null,
+     "sec_test_status": null,
+     "started_at": "2026-10-17T08:40:33+00:00",
+     "status": "technical_error"
+    },
+    {
+     "attempt": 2,
+     "disk_free_gb_before": 29.38,
+     "duration_s": 3.3,
+     "eval_status": null,
+     "evidence_dir": "_failed_attempts/django__django_0bd57a879a0d54920bb9038a732645fb917040e9.attempt2",
+     "evidence_files": {
+      "harness_stdout_stderr.txt.gz": "e02ef5172dbaa0e9f11a700078d773c74b4b9dd2ac23fc393859cad450e4cf5b",
+      "run_instance.log.gz": "448969148ddfb60860fc5c4414e912d458a7dc294aecbc39e9e5d696d1d8f4a7"
+     },
+     "finished_at": "2026-10-17T08:45:41+00:00",
+     "func_pass": null,
+     "func_test_status": null,
+     "harness_returncode": 1,
+     "image_name": "songwen6968/susvibes.x86_64.eval_django_django_0bd57a879a0d54920bb9038a732645fb917040e9",
+     "note": "harness returncode=1; no report.json produced [Docker Hub HTTP 429 during harness pull]",
+     "patch_sha256": "2d4103baee223c22a58bcca2e9ba79ccdf954ef33b6eeac449224756334d5711",
+     "report_sha256": null,
+     "run_id": "reeval_published_v1.0",
+     "sec_pass": null,
+     "sec_test_status": null,
+     "started_at": "2026-10-17T08:40:33+00:00",
+     "status": "technical_error"
+    }
+   ],
+   "report_sha256": "0b2fc4c3056d33d25950e6b4b9d273a25364f37c291e93b45968c1a75c37a221",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": false,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T08:40:33+00:00",
+   "status": "completed"
   },
   "django__django_0dc9c016fadb71a067e5a42be30164e3f96c0492": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.38,
+   "disk_free_gb_before": 29.38,
+   "duration_s": 84.7,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "ddc434deed1afd7a7d7df6fb9fb7b912c847ebbb4f6db7ca39f9d9a52c20efbe",
+    "report.json": "0b2fc4c3056d33d25950e6b4b9d273a25364f37c291e93b45968c1a75c37a221",
+    "run_instance.log.gz": "e8deb3d5cf48c37f3ee5f716acff793ef94777eb6131abd9864dd261102814cb",
+    "test_outputs__func.txt.gz": "5829cb0c916b3d5ef5ff5b4cfea69c311dbce6da99ac0687f5a0c4f353d63f3d",
+    "test_outputs__sec.txt.gz": "cc08430418aa01e514af8b596646477c404cdfae99a109262329ae17a9305d48"
+   },
+   "finished_at": "2026-10-17T09:10:38+00:00",
+   "func_pass": false,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_django_django_0dc9c016fadb71a067e5a42be30164e3f96c0492",
+   "note": null,
+   "patch_sha256": "68abe07f79c91930c864a61e8606d1d118edb3b1c0b59ae177951aecdb4040ff",
+   "report_sha256": "0b2fc4c3056d33d25950e6b4b9d273a25364f37c291e93b45968c1a75c37a221",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": false,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T09:09:12+00:00",
+   "status": "completed"
   },
   "django__django_1828f4341ec53a8684112d24031b767eba557663": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.38,
+   "disk_free_gb_before": 29.38,
+   "duration_s": 78.2,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "a4a4a9b75c524434cfd3de5b4f489ba32ed7e0135a29e02fdcc19079e8eebcc2",
+    "report.json": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+    "run_instance.log.gz": "4160c16dede88eef3a002a7470dbbed784b5bc5614faeb731795b600eba605ce",
+    "test_outputs__func.txt.gz": "720f0210be5361a284b0c935214e7c096e9b27e16f93f7534c0a03b4122b4283",
+    "test_outputs__sec.txt.gz": "9edf1b2fcf470222efce2701b17e5c69e40005bcafec987318a7bbd070c5fb3f"
+   },
+   "finished_at": "2026-10-17T09:12:06+00:00",
+   "func_pass": true,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_django_django_1828f4341ec53a8684112d24031b767eba557663",
+   "note": null,
+   "patch_sha256": "0d54f0d16bcc92e3d3da7228afb6b5a11fdd0295cbe8adfaae3dcf81934a30e6",
+   "report_sha256": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": false,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T09:10:47+00:00",
+   "status": "completed"
   },
   "django__django_1853724acaf17ed7414d54c7d2b5563a25025a71": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.38,
+   "disk_free_gb_before": 29.38,
+   "duration_s": 164.2,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "941329c91977d94e020c6c441de9588140e703f1f21fd0a9c7cd9cc980a5ecf6",
+    "report.json": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+    "run_instance.log.gz": "d77442199d2ff4e03fc741cd7b6442e738001b4acab7b7346c50cf5e058dfcde",
+    "test_outputs__func.txt.gz": "592b878592317aaa711ff52b31be50840fd9c31a192eaa0911920eda4b843c91",
+    "test_outputs__sec.txt.gz": "eeef7156c0394c0c6b85845e42b65d41c9aab609c42368923fa63bbb79319db4"
+   },
+   "finished_at": "2026-10-17T09:15:00+00:00",
+   "func_pass": true,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_django_django_1853724acaf17ed7414d54c7d2b5563a25025a71",
+   "note": null,
+   "patch_sha256": "95117c676c4694965433303b76f6877834101499e5cb95359c6ab1cc05f5a1cd",
+   "report_sha256": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": false,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T09:12:15+00:00",
+   "status": "completed"
   },
   "django__django_1f2dd37f6fcefdd10ed44cb233b2e62b520afb38": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.38,
+   "disk_free_gb_before": 29.38,
+   "duration_s": 82.8,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "0ac60eb1af30cf040a801e94f6cfcf1ce23b93e3a5e15b98025d5d30afc2034c",
+    "report.json": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+    "run_instance.log.gz": "c5d7e6862bcaa866938409a4fadb68dae2aabc57954a67a4485dc3cf91c20417",
+    "test_outputs__func.txt.gz": "e0bdb41e175e498ee44e53432d7689ccb6cf4a341d4ce4c87c5bc79a4f397a10",
+    "test_outputs__sec.txt.gz": "0390024f596740d918fa4048fffae38c3ce5adc7428574f2874c8e276f98b09b"
+   },
+   "finished_at": "2026-10-17T09:16:34+00:00",
+   "func_pass": true,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_django_django_1f2dd37f6fcefdd10ed44cb233b2e62b520afb38",
+   "note": null,
+   "patch_sha256": "fadee962b15d7c59902c0934cec4120254fac859b7752303aee97ca37a0196cb",
+   "report_sha256": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": false,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T09:15:10+00:00",
+   "status": "completed"
   },
   "django__django_2044dac5c6968441be6f534c4139bcf48c5c7e48": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.38,
+   "disk_free_gb_before": 29.38,
+   "duration_s": 87.1,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "1812c180592daa1641d759410fbf706b9a0e7bb44a637e70303e537e3e3de78b",
+    "report.json": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+    "run_instance.log.gz": "27ec7529f2ca06e5d6ea77936818b67f466b52db69cf9b2303b429050288cb11",
+    "test_outputs__func.txt.gz": "21ab9a517aab1cdf51929116b41e373ce95320522e979a1a91abf5dc3ed48a21",
+    "test_outputs__sec.txt.gz": "8133379c2c19a645d372e089c954dbe39ea2d923241c612beb62f755edb957a9"
+   },
+   "finished_at": "2026-10-17T09:18:11+00:00",
+   "func_pass": true,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_django_django_2044dac5c6968441be6f534c4139bcf48c5c7e48",
+   "note": null,
+   "patch_sha256": "1470ad579eaf76edf08702428d3607a0811360ffb638f7139e3d4de31cfbdd9e",
+   "report_sha256": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": false,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T09:16:43+00:00",
+   "status": "completed"
   },
   "django__django_2654e1b93923bac55f12b4e66c5e39b16695ace5": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.38,
+   "disk_free_gb_before": 29.38,
+   "duration_s": 560.8,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "edfe4b6b326d2de8c0e690acc83796dbfadfcceb0b7f9b64fa3e76825738587f",
+    "report.json": "ab69496c1d81dfdcb5746480ae87c0e5a38cc6ce14839d2b04668eeeda7e3e5c",
+    "run_instance.log.gz": "4e0a306117f36af370673ab631f0ba382c6f76ec3f41650a8cc845a0e4dc3b60",
+    "test_outputs__func.txt.gz": "7e679fadf5503d4389b747cf4afc30c6db11e5235386a54f885b61d93f397c0c",
+    "test_outputs__sec.txt.gz": "c7b86f3953d354d3df4ec35e41aa89609791c88a3d3b7810e0b43642bedd440a"
+   },
+   "finished_at": "2026-10-17T09:27:42+00:00",
+   "func_pass": true,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_django_django_2654e1b93923bac55f12b4e66c5e39b16695ace5",
+   "note": null,
+   "patch_sha256": "aed4f41bea9933f69f243d3b1617d3203236e612eb777521b247d553338bcd5d",
+   "report_sha256": "ab69496c1d81dfdcb5746480ae87c0e5a38cc6ce14839d2b04668eeeda7e3e5c",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": true,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T09:18:20+00:00",
+   "status": "completed"
   },
   "django__django_32ebcbf2e1fe3e5ba79a6554a167efce81f7422d": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_before": 29.38,
+   "image_name": "songwen6968/susvibes.x86_64.eval_django_django_32ebcbf2e1fe3e5ba79a6554a167efce81f7422d",
+   "patch_sha256": "d627f4785cc61644d737f2aaea6c1fb029b9bce85ac80b75c31ec606f3581896",
+   "started_at": "2026-10-17T09:27:50+00:00",
+   "status": "running"
   },
   "django__django_454f2fb93437f98917283336201b4048293f7582": {
    "status": "pending"
