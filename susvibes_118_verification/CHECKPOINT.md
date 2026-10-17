@@ -1,6 +1,6 @@
 # CHECKPOINT — experiment state
 
-_Generated 2026-10-17T09:54:36+00:00 by `scripts/write_checkpoint_md.py` from `logs/eval/*/checkpoint.json`. Do not edit by hand._
+_Generated 2026-10-17T11:55:52+00:00 by `scripts/write_checkpoint_md.py` from `logs/eval/*/checkpoint.json`. Do not edit by hand._
 
 ## Experiments
 
@@ -8,7 +8,7 @@ _Generated 2026-10-17T09:54:36+00:00 by `scripts/write_checkpoint_md.py` from `l
 |---|---|
 | Stage 1 — artifact audit and recomputation (no Docker, no API) | **complete** |
 | Stage 2 — evaluator pilot (5 tasks × golden / vulnerable / empty / published) | **complete** |
-| Stage 2b — re-score all 186 published patches (`reeval_published_v1.0`) | 38/186 completed; 148 pending/running; 0 technical_error; 0 needs_review |
+| Stage 2b — re-score all 186 published patches (`reeval_published_v1.0`) | 51/186 completed; 134 pending/running; 1 technical_error; 0 needs_review |
 | Stage 2c — golden/vulnerable controls on disagreeing tasks | {"pilot_control_empty": {"completed": 5}, "pilot_control_golden": {"completed": 5}, "pilot_control_vulnerable": {"completed": 5}} |
 | Stage 3/4 — fresh SWE-agent + Claude 4 Sonnet run | **not started**. No API budget was established and no model credentials were provisioned. Requires the unpublished `susvibes_eval` SWE-agent config. See `reproduction_report.md` §8 |
 
@@ -16,19 +16,19 @@ _Generated 2026-10-17T09:54:36+00:00 by `scripts/write_checkpoint_md.py` from `l
 
 * predictions: `claude-sonnet-4-20250514_published.jsonl` sha256 `60d7f26c8da7adc10233f4da60d7cf619828cee71ebee8539bac3434fd41f13d`
 * dataset sha256 `0cb5fbffe7ba59a8e16d42c293944bdd8e1e23795941a4b496ac1043722b9550`; harness commit `7e1b4b05240e56dc2b4e8253b2cc5c9481d016f3` (tag v1.0)
-* latest batch: **11** finished 2026-10-17T09:18:20+00:00: ['django__django_0dc9c016fadb71a067e5a42be30164e3f96c0492', 'django__django_1828f4341ec53a8684112d24031b767eba557663', 'django__django_1853724acaf17ed7414d54c7d2b5563a25025a71', 'django__django_1f2dd37f6fcefdd10ed44cb233b2e62b520afb38', 'django__django_2044dac5c6968441be6f534c4139bcf48c5c7e48']
-* batches recorded: 11 (pilot tasks ran as single-task batches 1–5)
-* disk free now: 25.7 GB (one task image is about 1.8 GB and is removed after each task)
+* latest batch: **13** finished 2026-10-17T11:17:01+00:00: ['django__django_601107524523bca02376a0ddc1a06c6fdb8f22f3', 'django__django_8c660fb59239828583f17cdede3b64f208b8752c', 'django__django_8f9a4d3a2bc42f14bb437defd30c7315adbff22c', 'django__django_ad0410ec4f458aa39803e5f6b9a3736527062dcd', 'django__django_c5544d289233f501917e25970c03ed444abbd4f0']
+* batches recorded: 13 (pilot tasks ran as single-task batches 1–5)
+* disk free now: 29.4 GB (one task image is about 1.8 GB and is removed after each task)
 * API expenditure: **$0.00**. No model was invoked. Only published patches and reference controls were evaluated.
-* technical retries: 2 ['apragacz__django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5', 'django__django_0bd57a879a0d54920bb9038a732645fb917040e9']
+* technical retries: 4 ['apragacz__django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5', 'django__django_0bd57a879a0d54920bb9038a732645fb917040e9', 'django__django_8f9a4d3a2bc42f14bb437defd30c7315adbff22c', 'executablebooks__markdown-it-py_53ca3e9c2b9e9b295f6abf7f4ad2730a9b70f68c']
 
 ### Errors / needs review
 
-* none
+* `executablebooks__markdown-it-py_53ca3e9c2b9e9b295f6abf7f4ad2730a9b70f68c`: harness returncode=1; no report.json produced
 
 ### Completed task IDs
 
-<details><summary>38 completed</summary>
+<details><summary>51 completed</summary>
 
 - aio-libs__aiohttp-session_1b356f01bbab57d041c9a75bacd72fbbf8524728
 - aio-libs__aiohttp_f016f0680e4ace6742b03a70cb0382ce86abe371
@@ -66,14 +66,7 @@ _Generated 2026-10-17T09:54:36+00:00 by `scripts/write_checkpoint_md.py` from `l
 - django__django_1f2dd37f6fcefdd10ed44cb233b2e62b520afb38
 - django__django_2044dac5c6968441be6f534c4139bcf48c5c7e48
 - django__django_2654e1b93923bac55f12b4e66c5e39b16695ace5
-- psf__requests_74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5
-- wagtail__wagtail_5c7a60977cba478f6a35390ba98cffc2bd41c8a4
-</details>
-
-### Pending task IDs
-
-<details><summary>148 pending/running</summary>
-
+- django__django_32ebcbf2e1fe3e5ba79a6554a167efce81f7422d
 - django__django_454f2fb93437f98917283336201b4048293f7582
 - django__django_5447709a571cd5d95971f1d5d21d4a7edcf85bbd
 - django__django_5f0829a27e85d89ad8c433f5c6a7a7d17c9e9292
@@ -86,7 +79,14 @@ _Generated 2026-10-17T09:54:36+00:00 by `scripts/write_checkpoint_md.py` from `l
 - dpgaspar__flask-appbuilder_6af28521589599b1dbafd6313256229ee9a4fa74
 - encode__django-rest-framework_4bb9a3c48427867ef1e46f7dee945a4c25a4f9b8
 - encode__starlette_1797de464124b090f10cf570441e8292936d63e3
-- executablebooks__markdown-it-py_53ca3e9c2b9e9b295f6abf7f4ad2730a9b70f68c
+- psf__requests_74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5
+- wagtail__wagtail_5c7a60977cba478f6a35390ba98cffc2bd41c8a4
+</details>
+
+### Pending task IDs
+
+<details><summary>134 pending/running</summary>
+
 - flask-admin__flask-admin_8af10e0b022464fdcb2da3d0ea5bbd2f11c0acd1
 - fredrik-johansson__mpmath_46d44c3c8f3244017fe1eb102d564eb4ab8ef750
 - ghantoos__lshell_e72dfcd1f258193f9aaea3591ecbdaed207661a0
@@ -221,7 +221,6 @@ _Generated 2026-10-17T09:54:36+00:00 by `scripts/write_checkpoint_md.py` from `l
 - zopefoundation__restrictedpython_c8eca66ae49081f0016d2e1f094c3d72095ef531
 - zopefoundation__zope_26a55dbc301db417f47cafda6fe0f983b5690088
 - zopefoundation__zope_603b0a12881c90a072a7a65e32d47ed898ce37cb
-- django__django_32ebcbf2e1fe3e5ba79a6554a167efce81f7422d
 </details>
 
 ## How to resume without duplicating work

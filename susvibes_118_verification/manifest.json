@@ -484,10 +484,48 @@
    "checkpoint_sha256": "bbf6dacca1c165a0dfda26d6b9e8213daafc8584e46098639115fd6829bb18e4",
    "started_at": "2026-10-17T09:09:12+00:00",
    "finished_at": "2026-10-17T09:18:20+00:00"
+  },
+  {
+   "run": "reeval_published_v1.0",
+   "batch": 12,
+   "instance_ids": [
+    "django__django_2654e1b93923bac55f12b4e66c5e39b16695ace5",
+    "django__django_32ebcbf2e1fe3e5ba79a6554a167efce81f7422d",
+    "django__django_454f2fb93437f98917283336201b4048293f7582",
+    "django__django_5447709a571cd5d95971f1d5d21d4a7edcf85bbd",
+    "django__django_5f0829a27e85d89ad8c433f5c6a7a7d17c9e9292"
+   ],
+   "completed": 5,
+   "technical_error": 0,
+   "needs_review": 0,
+   "func_pass": 4,
+   "sec_pass_joint": 2,
+   "checkpoint_sha256": "daf8f2491656787130e3551b46375d2694f40d5f2370f331207b6a8e871ce634",
+   "started_at": "2026-10-17T09:18:20+00:00",
+   "finished_at": "2026-10-17T10:20:08+00:00"
+  },
+  {
+   "run": "reeval_published_v1.0",
+   "batch": 13,
+   "instance_ids": [
+    "django__django_601107524523bca02376a0ddc1a06c6fdb8f22f3",
+    "django__django_8c660fb59239828583f17cdede3b64f208b8752c",
+    "django__django_8f9a4d3a2bc42f14bb437defd30c7315adbff22c",
+    "django__django_ad0410ec4f458aa39803e5f6b9a3736527062dcd",
+    "django__django_c5544d289233f501917e25970c03ed444abbd4f0"
+   ],
+   "completed": 5,
+   "technical_error": 0,
+   "needs_review": 0,
+   "func_pass": 4,
+   "sec_pass_joint": 2,
+   "checkpoint_sha256": "a62a39deaa5cd02e5ec6876d48a3de39b4447eef478ba8e9bea8298c575d57b2",
+   "started_at": "2026-10-17T10:20:08+00:00",
+   "finished_at": "2026-10-17T11:17:01+00:00"
   }
  ],
  "study_file_sha256": {
-  "CHECKPOINT.md": "a811a93b60acd479a7c2269b5fab31672d9ef7f0da025d0d97f202f9ab2fa0d8",
+  "CHECKPOINT.md": "2bec6ce88de0a600a7dc6a4e8ddaf7dd0f96b6fc3bb837691fc96c6fb77786b3",
   "README.md": "1085e39395e033c48841239376059568213fce40b3739e321605155a6c935876",
   "logs/artifact_audit/trajectory_screen.json": "88720e31f676b2e51416c209e738868f6d998747f9f6e87f053bc1364389800c",
   "logs/artifact_audit/v0.0_dec2025_record_digest.json": "72a007853e991a2b7942d5ec86f945c606111b8bb8552b4d806431fc80f0c14e",
@@ -504,15 +542,15 @@
   "reproduction_report.md": "a9e6396575d1fb7638e5f0620e385541977384af9429692cb7ffb532e98906d9",
   "results/original_run_cost_profile.json": "d38533a457853e05528d4fa6f204a432b904965306bccdeb856cd637d8ef644f",
   "results/paper_table_crosscheck.json": "c512f044396aafebfc10e146639e091756e968777d4b0f52a0e1c711a1b455ba",
-  "results/per_task_results.csv": "c7711704c5f33bce8a8454668917987c683bd2feb02bf15389ca2e0862909632",
-  "results/summary.json": "12e5d41d84c44f83d7c207f8a318c3b0442709803ba6dbae66732ec9f0d59d02",
+  "results/per_task_results.csv": "2ed272c8833bdc4e8ad305e7fb119c6840feb749670a30ce81d0a755d14d7a53",
+  "results/summary.json": "7c6f9ffa5d27ba5c5f4bd5f144de755cf13d36071f1b7373adb754663e125536",
   "scripts/build_ledger.py": "17e09a8e35d5978bde4180f6271c518095e8b44124ba0776060921f4d1c385a6",
   "scripts/build_predictions.py": "74e69bc2002f1bd0652f9f3572ebd0fba738daeed57376b6931eb2679d9e6f24",
   "scripts/crosscheck_paper_tables.py": "487625a3d3dd8d42814d7f156384ea71383f2addb929fbbcd4a9ff0559a859cb",
   "scripts/make_manifest.py": "8c6927e86808561724e2d3c29f46ad6a3a4b37b9279c8a273f2531c74ec15f64",
   "scripts/rebuild_results.sh": "1fa3faa77865fb57bfe14eb658ba09903c109cf4ef4d92b06193e1993b7f9594",
   "scripts/recompute_metrics.py": "0e2bb812dc43475a14556f6d9b43aa98f78d26fe6251fdd64d6b21e7628cdb33",
-  "scripts/run_disagreement_controls.sh": "6ed6b57638038dc0a71c947bf27a9c0a5744484b827110670827d494319b099b",
+  "scripts/run_disagreement_controls.sh": "978f40c59977cc2ad68754c71ff81369752383fc9eea486bf22a5102bbd68674",
   "scripts/run_eval_batches.py": "32edfc561fbed742c7f79467fb4bc7f3ef2a541de88dadcca2cd4ac134007990",
   "scripts/run_full_reeval.sh": "b9cbd195c0301f32416bbd95ab026193edf162f79f3328b2be9db9089cdada6b",
   "scripts/run_pilot.sh": "7e159c7091bc45030773fe4ca88c7c29673f8f51348eed4b8ed02f08440d0b53",
@@ -522,10 +560,10 @@
   "logs/eval/pilot_control_empty/checkpoint.json": "93a7c73acd69117406491feb3d1303c35d2a090d86eee84ba0f9ccedf2e753f7",
   "logs/eval/pilot_control_golden/checkpoint.json": "ba2e2b569daaaef2933aaeba136ef28aaf4ab1d6d5d079d704c442d385d039f1",
   "logs/eval/pilot_control_vulnerable/checkpoint.json": "db82f31c8ac985bc4dc3c90e005512468908357109191c7e4bfee1ed0f0bb16f",
-  "logs/eval/reeval_published_v1.0/checkpoint.json": "71f82cce70d1309f89898edb2458ddf2353ad73f0172e3ae1fbaaca19e5ab14f",
+  "logs/eval/reeval_published_v1.0/checkpoint.json": "208faa9c6e095434d29891c783570d6db1890853678f5a82a94dc291ba8b8088",
   "logs/eval/pilot_control_empty/batches.jsonl": "c8e8e202633d069ba70070a9acba97c371aa1c16f7cc700811035f4aadbce5b4",
   "logs/eval/pilot_control_golden/batches.jsonl": "030b9aec65d71b51e3dfcc5970630457bf70f1f10248fb39514d1558997fc6b5",
   "logs/eval/pilot_control_vulnerable/batches.jsonl": "a7d97f0a391eaeb9e18d0af66823c31daeb851d7d70d8e811a22eb609eed5cd8",
-  "logs/eval/reeval_published_v1.0/batches.jsonl": "0bfe028d3676f6694962c3a412e035dc7fdb5ac58c7715cb781182a92731459c"
+  "logs/eval/reeval_published_v1.0/batches.jsonl": "b3f3e587730da6688afbee0db822ae9ea5dde2c53887b1d1bd3822fd917b49bf"
  }
 }

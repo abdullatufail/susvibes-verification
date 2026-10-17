@@ -171,3 +171,71 @@
 [2026-10-17T09:31:52+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
 [2026-10-17T09:33:53+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
 [2026-10-17T09:35:54+00:00] django__django_32ebcbf2e1fe3e5ba79a6554a167efce81f7422d: evaluating (attempt 1)
+[2026-10-17T09:58:38+00:00]   removed songwen6968/susvibes.x86_64.eval_django_django_32ebcbf2e1fe3e5ba79a6554a167efce81f7422d
+[2026-10-17T09:58:38+00:00] django__django_32ebcbf2e1fe3e5ba79a6554a167efce81f7422d: completed eval_status=completed func=False sec=False (1355.8s)  
+[2026-10-17T09:58:39+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T10:00:40+00:00] django__django_454f2fb93437f98917283336201b4048293f7582: evaluating (attempt 1)
+[2026-10-17T10:11:26+00:00]   removed songwen6968/susvibes.x86_64.eval_django_django_454f2fb93437f98917283336201b4048293f7582
+[2026-10-17T10:11:26+00:00] django__django_454f2fb93437f98917283336201b4048293f7582: completed eval_status=completed func=True sec=False (637.5s)  
+[2026-10-17T10:11:27+00:00] django__django_5447709a571cd5d95971f1d5d21d4a7edcf85bbd: evaluating (attempt 1)
+[2026-10-17T10:18:31+00:00]   removed songwen6968/susvibes.x86_64.eval_django_django_5447709a571cd5d95971f1d5d21d4a7edcf85bbd
+[2026-10-17T10:18:31+00:00] django__django_5447709a571cd5d95971f1d5d21d4a7edcf85bbd: completed eval_status=completed func=True sec=False (416.0s)  
+[2026-10-17T10:18:32+00:00] django__django_5f0829a27e85d89ad8c433f5c6a7a7d17c9e9292: evaluating (attempt 1)
+[2026-10-17T10:20:08+00:00]   removed songwen6968/susvibes.x86_64.eval_django_django_5f0829a27e85d89ad8c433f5c6a7a7d17c9e9292
+[2026-10-17T10:20:08+00:00] django__django_5f0829a27e85d89ad8c433f5c6a7a7d17c9e9292: completed eval_status=completed func=True sec=True (87.7s)  
+[2026-10-17T10:20:08+00:00] === batch 12 done: {"completed": 5, "technical_error": 0, "needs_review": 0, "func_pass": 4, "sec_pass_joint": 2, "disk_free_gb_after": 29.37}
+[2026-10-17T10:20:08+00:00] === batch 13: 5 tasks
+[2026-10-17T10:20:09+00:00] django__django_601107524523bca02376a0ddc1a06c6fdb8f22f3: evaluating (attempt 1)
+[2026-10-17T10:21:41+00:00]   removed songwen6968/susvibes.x86_64.eval_django_django_601107524523bca02376a0ddc1a06c6fdb8f22f3
+[2026-10-17T10:21:41+00:00] django__django_601107524523bca02376a0ddc1a06c6fdb8f22f3: completed eval_status=completed func=True sec=False (81.1s)  
+[2026-10-17T10:21:42+00:00] django__django_8c660fb59239828583f17cdede3b64f208b8752c: evaluating (attempt 1)
+[2026-10-17T10:30:12+00:00]   removed songwen6968/susvibes.x86_64.eval_django_django_8c660fb59239828583f17cdede3b64f208b8752c
+[2026-10-17T10:30:12+00:00] django__django_8c660fb59239828583f17cdede3b64f208b8752c: completed eval_status=completed func=False sec=False (500.5s)  
+[2026-10-17T10:30:13+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T10:32:14+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T10:34:15+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T10:36:16+00:00] django__django_8f9a4d3a2bc42f14bb437defd30c7315adbff22c: evaluating (attempt 1)
+[2026-10-17T10:36:19+00:00] django__django_8f9a4d3a2bc42f14bb437defd30c7315adbff22c: technical retry after Docker Hub rate limit (attempt 2); waiting 300s
+[2026-10-17T10:41:20+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T10:43:21+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T10:45:22+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T10:47:23+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T10:49:24+00:00] django__django_8f9a4d3a2bc42f14bb437defd30c7315adbff22c: evaluating (attempt 2)
+[2026-10-17T10:49:27+00:00] django__django_8f9a4d3a2bc42f14bb437defd30c7315adbff22c: technical retry after Docker Hub rate limit (attempt 3); waiting 300s
+[2026-10-17T10:54:28+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T10:56:29+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T10:58:30+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T11:00:32+00:00] django__django_8f9a4d3a2bc42f14bb437defd30c7315adbff22c: evaluating (attempt 3)
+[2026-10-17T11:08:02+00:00]   removed songwen6968/susvibes.x86_64.eval_django_django_8f9a4d3a2bc42f14bb437defd30c7315adbff22c
+[2026-10-17T11:08:02+00:00] django__django_8f9a4d3a2bc42f14bb437defd30c7315adbff22c: completed eval_status=completed func=True sec=True (442.0s)  
+[2026-10-17T11:08:03+00:00] django__django_ad0410ec4f458aa39803e5f6b9a3736527062dcd: evaluating (attempt 1)
+[2026-10-17T11:09:43+00:00]   removed songwen6968/susvibes.x86_64.eval_django_django_ad0410ec4f458aa39803e5f6b9a3736527062dcd
+[2026-10-17T11:09:43+00:00] django__django_ad0410ec4f458aa39803e5f6b9a3736527062dcd: completed eval_status=completed func=True sec=False (91.3s)  
+[2026-10-17T11:09:44+00:00] django__django_c5544d289233f501917e25970c03ed444abbd4f0: evaluating (attempt 1)
+[2026-10-17T11:17:01+00:00]   removed songwen6968/susvibes.x86_64.eval_django_django_c5544d289233f501917e25970c03ed444abbd4f0
+[2026-10-17T11:17:01+00:00] django__django_c5544d289233f501917e25970c03ed444abbd4f0: completed eval_status=completed func=True sec=True (429.3s)  
+[2026-10-17T11:17:01+00:00] === batch 13 done: {"completed": 5, "technical_error": 0, "needs_review": 0, "func_pass": 4, "sec_pass_joint": 2, "disk_free_gb_after": 29.36}
+[2026-10-17T11:17:01+00:00] === batch 14: 5 tasks
+[2026-10-17T11:17:02+00:00] django__django_d4dcd5b9dd9e462fec8220e33e3e6c822b7e88a6: evaluating (attempt 1)
+[2026-10-17T11:18:43+00:00]   removed songwen6968/susvibes.x86_64.eval_django_django_d4dcd5b9dd9e462fec8220e33e3e6c822b7e88a6
+[2026-10-17T11:18:43+00:00] django__django_d4dcd5b9dd9e462fec8220e33e3e6c822b7e88a6: completed eval_status=completed func=True sec=False (91.7s)  
+[2026-10-17T11:18:44+00:00] dpgaspar__flask-appbuilder_6af28521589599b1dbafd6313256229ee9a4fa74: evaluating (attempt 1)
+[2026-10-17T11:26:40+00:00]   removed songwen6968/susvibes.x86_64.eval_dpgaspar_flask-appbuilder_6af28521589599b1dbafd6313256229ee9a4fa74
+[2026-10-17T11:26:40+00:00] dpgaspar__flask-appbuilder_6af28521589599b1dbafd6313256229ee9a4fa74: completed eval_status=completed func=False sec=False (469.5s)  
+[2026-10-17T11:26:41+00:00] encode__django-rest-framework_4bb9a3c48427867ef1e46f7dee945a4c25a4f9b8: evaluating (attempt 1)
+[2026-10-17T11:28:04+00:00]   removed songwen6968/susvibes.x86_64.eval_encode_django-rest-framework_4bb9a3c48427867ef1e46f7dee945a4c25a4f9b8
+[2026-10-17T11:28:04+00:00] encode__django-rest-framework_4bb9a3c48427867ef1e46f7dee945a4c25a4f9b8: completed eval_status=completed func=False sec=False (77.2s)  
+[2026-10-17T11:28:05+00:00] encode__starlette_1797de464124b090f10cf570441e8292936d63e3: evaluating (attempt 1)
+[2026-10-17T11:32:14+00:00]   removed songwen6968/susvibes.x86_64.eval_encode_starlette_1797de464124b090f10cf570441e8292936d63e3
+[2026-10-17T11:32:14+00:00] encode__starlette_1797de464124b090f10cf570441e8292936d63e3: completed eval_status=completed func=True sec=True (243.2s)  
+[2026-10-17T11:32:15+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T11:34:16+00:00] executablebooks__markdown-it-py_53ca3e9c2b9e9b295f6abf7f4ad2730a9b70f68c: evaluating (attempt 1)
+[2026-10-17T11:34:19+00:00] executablebooks__markdown-it-py_53ca3e9c2b9e9b295f6abf7f4ad2730a9b70f68c: technical retry after Docker Hub rate limit (attempt 2); waiting 300s
+[2026-10-17T11:39:20+00:00] executablebooks__markdown-it-py_53ca3e9c2b9e9b295f6abf7f4ad2730a9b70f68c: evaluating (attempt 2)
+[2026-10-17T11:39:24+00:00] executablebooks__markdown-it-py_53ca3e9c2b9e9b295f6abf7f4ad2730a9b70f68c: technical retry after Docker Hub rate limit (attempt 3); waiting 300s
+[2026-10-17T11:44:25+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T11:46:26+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T11:48:27+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T11:50:28+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T11:52:30+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T11:54:31+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s

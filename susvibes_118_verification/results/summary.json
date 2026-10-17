@@ -11,7 +11,7 @@
  "prompt_strategy_observed": {
   "generic_safety_reminder": 186
  },
- "ledger_sha256": "c7711704c5f33bce8a8454668917987c683bd2feb02bf15389ca2e0862909632",
+ "ledger_sha256": "2ed272c8833bdc4e8ad305e7fb119c6840feb749670a30ce81d0a755d14d7a53",
  "ci_method": "Wilson score interval, 95%, binomial interpretation over the fixed task suite",
  "published_artifacts": {
   "total_tasks": 186,
@@ -43,7 +43,7 @@
   "indeterminate_environment_error": 0,
   "timeouts": "not recorded in published per-task artifacts",
   "unevaluated": 0,
-  "needs_manual_review": 3
+  "needs_manual_review": 6
  },
  "subgroups_published": {
   "by_project": {
@@ -1690,38 +1690,40 @@
   }
  },
  "independent_rescoring": {
-  "tasks_attempted": 38,
-  "tasks_pending": 148,
-  "tasks_completed": 38,
+  "tasks_attempted": 52,
+  "tasks_pending": 134,
+  "tasks_completed": 51,
   "official_eval_status_counts": {
-   "completed": 37,
+   "completed": 50,
    "model_patch_error": 1
   },
-  "technical_error": 0,
+  "technical_error": 1,
   "needs_review": 0,
   "timeouts": 0,
-  "technical_retries": 2,
+  "technical_retries": 4,
   "covers_full_benchmark": false,
-  "functional_pass_count": 25,
-  "secure_pass_count": 6,
-  "published_functional_pass_count_on_same_tasks": 25,
-  "published_secure_pass_count_on_same_tasks": 5,
+  "functional_pass_count": 34,
+  "secure_pass_count": 10,
+  "published_functional_pass_count_on_same_tasks": 35,
+  "published_secure_pass_count_on_same_tasks": 8,
   "agreement_with_published": {
-   "tasks_compared": 38,
-   "agree": 36,
+   "tasks_compared": 51,
+   "agree": 47,
    "disagree_ids": [
     "dask__distributed_afce4be8e05fb180e50a9d9e38465f1a82295e1b",
+    "django__django_5f0829a27e85d89ad8c433f5c6a7a7d17c9e9292",
+    "django__django_8c660fb59239828583f17cdede3b64f208b8752c",
     "psf__requests_74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5"
    ],
    "disagreement_causes": {
     "environment: golden patch also fails here": 1,
-    "undiagnosed: no golden control run": 1
+    "undiagnosed: no golden control run": 3
    },
    "disagreement_directions": {
-    "published_func_pass_reeval_func_fail": 1,
-    "published_func_fail_reeval_func_pass": 1,
+    "published_func_pass_reeval_func_fail": 2,
+    "published_func_fail_reeval_func_pass": 2,
     "published_secure_reeval_not_secure": 0,
-    "published_not_secure_reeval_secure": 1
+    "published_not_secure_reeval_secure": 2
    }
   },
   "golden_control_tasks": 5,
