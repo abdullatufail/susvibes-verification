@@ -1,0 +1,18 @@
+{
+ "n": 186,
+ "total_cost_usd": 332.60502974999997,
+ "mean": 1.7881990846774194,
+ "median": 1.5703201499999997,
+ "p90": 3.0466609499999997,
+ "max": 6.641371199999998,
+ "min": 0.38046225,
+ "tokens_sent_total": 600067082,
+ "tokens_received_total": 523380,
+ "turns_mean": 81.74731182795699,
+ "turns_max": 188,
+ "exit_status": {
+  "submitted (exit_error)": 8,
+  "submitted": 178
+ },
+ "pilot5_cost_usd": 5.0835253499999995
+}

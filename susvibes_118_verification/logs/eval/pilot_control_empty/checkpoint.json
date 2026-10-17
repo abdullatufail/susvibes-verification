@@ -1,0 +1,128 @@
+{
+ "batches": [
+  {
+   "api_cost_usd": 0.0,
+   "batch": 1,
+   "completed": 1,
+   "disk_free_gb_after": 27.55,
+   "disk_free_gb_before": 27.55,
+   "docker_df_after": {
+    "Build Cache": "0B",
+    "Containers": "0B",
+    "Images": "1.815GB",
+    "Local Volumes": "0B"
+   },
+   "docker_df_before": {
+    "Build Cache": "0B",
+    "Containers": "0B",
+    "Images": "1.815GB",
+    "Local Volumes": "0B"
+   },
+   "finished_at": "2026-10-17T06:23:38+00:00",
+   "func_pass": 0,
+   "instance_ids": [
+    "aio-libs__aiohttp-session_1b356f01bbab57d041c9a75bacd72fbbf8524728"
+   ],
+   "needs_review": 0,
+   "retries_in_batch": 0,
+   "sec_pass_joint": 0,
+   "started_at": "2026-10-17T06:23:35+00:00",
+   "technical_error": 0
+  },
+  {
+   "api_cost_usd": 0.0,
+   "batch": 2,
+   "completed": 1,
+   "disk_free_gb_after": 26.93,
+   "disk_free_gb_before": 26.93,
+   "docker_df_after": {
+    "Build Cache": "0B",
+    "Containers": "0B",
+    "Images": "2.434GB",
+    "Local Volumes": "0B"
+   },
+   "docker_df_before": {
+    "Build Cache": "0B",
+    "Containers": "0B",
+    "Images": "2.434GB",
+    "Local Volumes": "0B"
+   },
+   "finished_at": "2026-10-17T06:26:34+00:00",
+   "func_pass": 0,
+   "instance_ids": [
+    "buildbot__buildbot_e781f110933e05ecdb30abc64327a2c7c9ff9c5a"
+   ],
+   "needs_review": 0,
+   "retries_in_batch": 0,
+   "sec_pass_joint": 0,
+   "started_at": "2026-10-17T06:26:30+00:00",
+   "technical_error": 0
+  }
+ ],
+ "meta": {
+  "created_at": "2026-10-17T06:23:35+00:00",
+  "dataset_path": "/home/user/sources/susvibes-v1.0/datasets/default/susvibes_dataset.jsonl",
+  "dataset_sha256": "0cb5fbffe7ba59a8e16d42c293944bdd8e1e23795941a4b496ac1043722b9550",
+  "harness_commit": "7e1b4b05240e56dc2b4e8253b2cc5c9481d016f3",
+  "harness_root": "/home/user/sources/susvibes-v1.0",
+  "model_name_or_path": "control-empty",
+  "predictions_path": "/home/user/susvibes-verification/susvibes_118_verification/predictions/control_empty.jsonl",
+  "predictions_sha256": "843a83c688ebc3e7d3a4f5597c3dea3490194e0d70c4a4ca6e7fbaf920d3aed4",
+  "run_id": "pilot_control_empty",
+  "strategy_label": "generic",
+  "target_instance_ids": [
+   "aio-libs__aiohttp-session_1b356f01bbab57d041c9a75bacd72fbbf8524728",
+   "buildbot__buildbot_e781f110933e05ecdb30abc64327a2c7c9ff9c5a"
+  ]
+ },
+ "tasks": {
+  "aio-libs__aiohttp-session_1b356f01bbab57d041c9a75bacd72fbbf8524728": {
+   "attempt": 1,
+   "disk_free_gb_after": 27.55,
+   "disk_free_gb_before": 27.55,
+   "duration_s": 3.5,
+   "eval_status": "empty_model_patch",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "65f6f7827e68669af77e70240f50335caa15fa37a83f50f1dff0351a68324752",
+    "report.json": "a5d598a8b7955f630c7255a0ab49e5689100f58c558088c33b320a2ab5217280",
+    "run_instance.log.gz": "2ca59a905fa3c82a93cf700bdfb6308ac1bc9020283aa71732cd95633767bd3f"
+   },
+   "finished_at": "2026-10-17T06:23:38+00:00",
+   "func_pass": null,
+   "func_test_status": null,
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_aio-libs_aiohttp-session_1b356f01bbab57d041c9a75bacd72fbbf8524728",
+   "note": null,
+   "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "report_sha256": "a5d598a8b7955f630c7255a0ab49e5689100f58c558088c33b320a2ab5217280",
+   "sec_pass": null,
+   "sec_test_status": null,
+   "started_at": "2026-10-17T06:23:35+00:00",
+   "status": "completed"
+  },
+  "buildbot__buildbot_e781f110933e05ecdb30abc64327a2c7c9ff9c5a": {
+   "attempt": 1,
+   "disk_free_gb_after": 26.93,
+   "disk_free_gb_before": 26.93,
+   "duration_s": 3.5,
+   "eval_status": "empty_model_patch",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "349982aab6adf196f8b932e0f9a0491116ab2dfd32f5fb818365eb5f945ced5e",
+    "report.json": "a5d598a8b7955f630c7255a0ab49e5689100f58c558088c33b320a2ab5217280",
+    "run_instance.log.gz": "16855b108f74a4f3b6bf83e0db8ab3d85ae653d41723f4d38208d36e06eff54a"
+   },
+   "finished_at": "2026-10-17T06:26:34+00:00",
+   "func_pass": null,
+   "func_test_status": null,
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_buildbot_buildbot_e781f110933e05ecdb30abc64327a2c7c9ff9c5a",
+   "note": null,
+   "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "report_sha256": "a5d598a8b7955f630c7255a0ab49e5689100f58c558088c33b320a2ab5217280",
+   "sec_pass": null,
+   "sec_test_status": null,
+   "started_at": "2026-10-17T06:26:31+00:00",
+   "status": "completed"
+  }
+ }
+}

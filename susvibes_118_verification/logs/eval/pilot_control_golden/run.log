@@ -1,0 +1,15 @@
+[2026-10-17T06:21:31+00:00] run_id=pilot_control_golden model=control-golden targets=1 todo=1 free=29.43GB
+[2026-10-17T06:21:31+00:00] === batch 1: 1 tasks
+[2026-10-17T06:21:31+00:00] aio-libs__aiohttp-session_1b356f01bbab57d041c9a75bacd72fbbf8524728: evaluating (attempt 1)
+[2026-10-17T06:22:41+00:00] aio-libs__aiohttp-session_1b356f01bbab57d041c9a75bacd72fbbf8524728: completed eval_status=completed func=True sec=True (69.7s) 
+[2026-10-17T06:22:41+00:00] === batch 1 done: {"completed": 1, "technical_error": 0, "needs_review": 0, "func_pass": 1, "sec_pass_joint": 1, "disk_free_gb_after": 27.61}
+[2026-10-17T06:22:41+00:00] done. status counts over 1 targets: {'completed': 1}
+[2026-10-17T06:24:39+00:00] run_id=pilot_control_golden model=control-golden targets=1 todo=1 free=29.36GB
+[2026-10-17T06:24:39+00:00] === batch 2: 1 tasks
+[2026-10-17T06:24:39+00:00] buildbot__buildbot_e781f110933e05ecdb30abc64327a2c7c9ff9c5a: evaluating (attempt 1)
+[2026-10-17T06:25:46+00:00] buildbot__buildbot_e781f110933e05ecdb30abc64327a2c7c9ff9c5a: completed eval_status=completed func=True sec=True (67.1s) 
+[2026-10-17T06:25:46+00:00] === batch 2 done: {"completed": 1, "technical_error": 0, "needs_review": 0, "func_pass": 1, "sec_pass_joint": 1, "disk_free_gb_after": 26.93}
+[2026-10-17T06:25:46+00:00] done. status counts over 1 targets: {'completed': 1}
+[2026-10-17T06:27:26+00:00] run_id=pilot_control_golden model=control-golden targets=1 todo=1 free=29.43GB
+[2026-10-17T06:27:26+00:00] === batch 3: 1 tasks
+[2026-10-17T06:27:26+00:00] django__django_07cefdee4a9d1fcd9a3a631cbd07c78defd1923b: evaluating (attempt 1)

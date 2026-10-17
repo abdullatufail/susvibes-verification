@@ -1,0 +1,1702 @@
+{
+ "benchmark": "SusVibes",
+ "benchmark_version": "v1.0",
+ "total_tasks": 186,
+ "model_identifier": [
+  "claude-sonnet-4-20250514"
+ ],
+ "agent_configuration": [
+  "SWE-agent default (generic security reminder)"
+ ],
+ "prompt_strategy_observed": {
+  "generic_safety_reminder": 186
+ },
+ "ledger_sha256": "3a897ae3269dc84acc6e480632c1116974f85c0ed6da598a3ad2ecdf203fd4c3",
+ "ci_method": "Wilson score interval, 95%, binomial interpretation over the fixed task suite",
+ "published_artifacts": {
+  "total_tasks": 186,
+  "functional_pass_count": 106,
+  "secure_pass_count": 22,
+  "functional_but_insecure_count": 84,
+  "functional_fail_count": 80,
+  "FuncPass_pct": 56.98924731182796,
+  "SecPass_pct": 11.827956989247312,
+  "conditional_secure_given_functional_pct": 20.754716981132077,
+  "functional_only_insecure_pct": 45.16129032258065,
+  "insecure_share_of_functional_pct": 79.24528301886792,
+  "gap_pp": 45.16129032258065,
+  "FuncPass_wilson95_pct": [
+   49.803726077721194,
+   63.891912462729074
+  ],
+  "SecPass_wilson95_pct": [
+   7.942077966407831,
+   17.258665389594576
+  ],
+  "conditional_secure_wilson95_pct": [
+   14.124645532287674,
+   29.430364874839942
+  ],
+  "completed_evaluations": 186,
+  "empty_model_patch": 0,
+  "model_patch_error": 0,
+  "indeterminate_environment_error": 0,
+  "timeouts": "not recorded in published per-task artifacts",
+  "unevaluated": 0,
+  "needs_manual_review": 0
+ },
+ "subgroups_published": {
+  "by_project": {
+   "django/django": {
+    "n": 21,
+    "func_pass": 16,
+    "secure_pass": 4,
+    "functional_but_insecure": 12,
+    "FuncPass_pct": 76.19047619047619,
+    "SecPass_pct": 19.047619047619047,
+    "conditional_secure_pct": 25.0
+   },
+   "ikus060/rdiffweb": {
+    "n": 19,
+    "func_pass": 7,
+    "secure_pass": 2,
+    "functional_but_insecure": 5,
+    "FuncPass_pct": 36.8421052631579,
+    "SecPass_pct": 10.526315789473685,
+    "conditional_secure_pct": 28.571428571428573
+   },
+   "vyperlang/vyper": {
+    "n": 8,
+    "func_pass": 1,
+    "secure_pass": 1,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 12.5,
+    "SecPass_pct": 12.5,
+    "conditional_secure_pct": 100.0
+   },
+   "apache/airflow": {
+    "n": 7,
+    "func_pass": 4,
+    "secure_pass": 0,
+    "functional_but_insecure": 4,
+    "FuncPass_pct": 57.142857142857146,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "mlflow/mlflow": {
+    "n": 7,
+    "func_pass": 5,
+    "secure_pass": 1,
+    "functional_but_insecure": 4,
+    "FuncPass_pct": 71.42857142857143,
+    "SecPass_pct": 14.285714285714286,
+    "conditional_secure_pct": 20.0
+   },
+   "wagtail/wagtail": {
+    "n": 7,
+    "func_pass": 7,
+    "secure_pass": 2,
+    "functional_but_insecure": 5,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 28.571428571428573,
+    "conditional_secure_pct": 28.571428571428573
+   },
+   "mozilla/bleach": {
+    "n": 4,
+    "func_pass": 2,
+    "secure_pass": 0,
+    "functional_but_insecure": 2,
+    "FuncPass_pct": 50.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "jupyterhub/oauthenticator": {
+    "n": 3,
+    "func_pass": 2,
+    "secure_pass": 0,
+    "functional_but_insecure": 2,
+    "FuncPass_pct": 66.66666666666667,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "plone/plone.namedfile": {
+    "n": 3,
+    "func_pass": 2,
+    "secure_pass": 2,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 66.66666666666667,
+    "SecPass_pct": 66.66666666666667,
+    "conditional_secure_pct": 100.0
+   },
+   "urllib3/urllib3": {
+    "n": 3,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 33.333333333333336,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "home-assistant/core": {
+    "n": 2,
+    "func_pass": 2,
+    "secure_pass": 0,
+    "functional_but_insecure": 2,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "identitypython/pysaml2": {
+    "n": 2,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 50.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "langchain-ai/langchain": {
+    "n": 2,
+    "func_pass": 2,
+    "secure_pass": 0,
+    "functional_but_insecure": 2,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "lxml/lxml": {
+    "n": 2,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "openstack/neutron": {
+    "n": 2,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 50.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "pallets/flask": {
+    "n": 2,
+    "func_pass": 2,
+    "secure_pass": 0,
+    "functional_but_insecure": 2,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "pallets/jinja": {
+    "n": 2,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 50.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "psf/requests": {
+    "n": 2,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 50.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "pylons/waitress": {
+    "n": 2,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "saltstack/salt": {
+    "n": 2,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 50.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "streamlit/streamlit": {
+    "n": 2,
+    "func_pass": 2,
+    "secure_pass": 0,
+    "functional_but_insecure": 2,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "tensorflow/tensorflow": {
+    "n": 2,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 50.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "zopefoundation/zope": {
+    "n": 2,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "aio-libs/aiohttp": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "aio-libs/aiohttp-session": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "andialbrecht/sqlparse": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "ansible/ansible": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 1,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 100.0,
+    "conditional_secure_pct": 100.0
+   },
+   "apache/superset": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "apragacz/django-rest-registration": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 1,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 100.0,
+    "conditional_secure_pct": 100.0
+   },
+   "borgbackup/borg": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "bottlepy/bottle": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "buildbot/buildbot": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "canonical/cloud-init": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "canonical/operator": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "celery/celery": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "ceph/ceph": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "ckan/ckan": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "cobbler/cobbler": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "cyface/django-termsandconditions": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 1,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 100.0,
+    "conditional_secure_pct": 100.0
+   },
+   "dask/distributed": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "dgilland/pydash": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "dpgaspar/flask-appbuilder": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "encode/django-rest-framework": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "encode/starlette": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 1,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 100.0,
+    "conditional_secure_pct": 100.0
+   },
+   "executablebooks/markdown-it-py": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "flask-admin/flask-admin": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "fredrik-johansson/mpmath": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 1,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 100.0,
+    "conditional_secure_pct": 100.0
+   },
+   "ghantoos/lshell": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "gitpython-developers/gitpython": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "goauthentik/authentik": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 1,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 100.0,
+    "conditional_secure_pct": 100.0
+   },
+   "gradio-app/gradio": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "gventuri/pandas-ai": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "healthchecks/healthchecks": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "home-assistant/home-assistant": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "horazont/aioxmpp": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "ierror/django-js-reverse": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "jakubroztocil/httpie": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "jtesta/ssh-audit": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "jupyter-server/jupyter_server": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "jupyter/jupyter_core": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "jupyter/notebook": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "jupyterhub/firstuseauthenticator": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "jupyterhub/jupyter-server-proxy": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "labd/wagtail-2fa": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 1,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 100.0,
+    "conditional_secure_pct": 100.0
+   },
+   "latchset/jwcrypto": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "lektor/lektor": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "marshmallow-code/webargs": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "matrix-org/synapse": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "matthiask/html-sanitizer": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "mkomitee/requests-kerberos": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "nonebot/nonebot2": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "numpy/numpy": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "openedx/xblock-drag-and-drop-v2": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "openstack/aodh": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "openstack/nova": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "openstack/oslo.utils": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "paramiko/paramiko": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "piccolo-orm/piccolo": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "planetlabs/planet-client-python": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "plone/plone.rest": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "plone/products.isurlinportal": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "psf/black": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 1,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 100.0,
+    "conditional_secure_pct": 100.0
+   },
+   "py-pdf/pypdf": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "python-babel/babel": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "python-mechanize/mechanize": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "python-pillow/pillow": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "rohe/pysaml2": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "sabnzbd/sabnzbd": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "savon-noir/python-libnmap": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "scrapy-plugins/scrapy-splash": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "scrapy/scrapy": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "sqlalchemy/mako": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 1,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 100.0,
+    "conditional_secure_pct": 100.0
+   },
+   "sybrenstuvel/python-rsa": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "tiangolo/fastapi": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "tryton/trytond": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 1,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 100.0,
+    "conditional_secure_pct": 100.0
+   },
+   "twisted/twisted": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "ubernostrum/django-registration": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "xi/django-mfa3": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "yt-dlp/yt-dlp": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "zopefoundation/products.genericsetup": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "zopefoundation/restrictedpython": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   }
+  },
+  "by_cwe": {
+   "CWE-79": {
+    "n": 26,
+    "func_pass": 15,
+    "secure_pass": 5,
+    "functional_but_insecure": 10,
+    "FuncPass_pct": 57.69230769230769,
+    "SecPass_pct": 19.23076923076923,
+    "conditional_secure_pct": 33.333333333333336
+   },
+   "CWE-200": {
+    "n": 11,
+    "func_pass": 6,
+    "secure_pass": 0,
+    "functional_but_insecure": 6,
+    "FuncPass_pct": 54.54545454545455,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-770": {
+    "n": 10,
+    "func_pass": 6,
+    "secure_pass": 1,
+    "functional_but_insecure": 5,
+    "FuncPass_pct": 60.0,
+    "SecPass_pct": 10.0,
+    "conditional_secure_pct": 16.666666666666668
+   },
+   "CWE-22": {
+    "n": 9,
+    "func_pass": 6,
+    "secure_pass": 2,
+    "functional_but_insecure": 4,
+    "FuncPass_pct": 66.66666666666667,
+    "SecPass_pct": 22.22222222222222,
+    "conditional_secure_pct": 33.333333333333336
+   },
+   "CWE-1333": {
+    "n": 7,
+    "func_pass": 6,
+    "secure_pass": 3,
+    "functional_but_insecure": 3,
+    "FuncPass_pct": 85.71428571428571,
+    "SecPass_pct": 42.857142857142854,
+    "conditional_secure_pct": 50.0
+   },
+   "CWE-29": {
+    "n": 6,
+    "func_pass": 4,
+    "secure_pass": 0,
+    "functional_but_insecure": 4,
+    "FuncPass_pct": 66.66666666666667,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-601": {
+    "n": 6,
+    "func_pass": 4,
+    "secure_pass": 1,
+    "functional_but_insecure": 3,
+    "FuncPass_pct": 66.66666666666667,
+    "SecPass_pct": 16.666666666666668,
+    "conditional_secure_pct": 25.0
+   },
+   "CWE-89": {
+    "n": 6,
+    "func_pass": 2,
+    "secure_pass": 0,
+    "functional_but_insecure": 2,
+    "FuncPass_pct": 33.333333333333336,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-352": {
+    "n": 5,
+    "func_pass": 3,
+    "secure_pass": 1,
+    "functional_but_insecure": 2,
+    "FuncPass_pct": 60.0,
+    "SecPass_pct": 20.0,
+    "conditional_secure_pct": 33.333333333333336
+   },
+   "CWE-400": {
+    "n": 5,
+    "func_pass": 2,
+    "secure_pass": 0,
+    "functional_but_insecure": 2,
+    "FuncPass_pct": 40.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-80": {
+    "n": 5,
+    "func_pass": 2,
+    "secure_pass": 2,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 40.0,
+    "SecPass_pct": 40.0,
+    "conditional_secure_pct": 100.0
+   },
+   "CWE-863": {
+    "n": 5,
+    "func_pass": 4,
+    "secure_pass": 1,
+    "functional_but_insecure": 3,
+    "FuncPass_pct": 80.0,
+    "SecPass_pct": 20.0,
+    "conditional_secure_pct": 25.0
+   },
+   "CWE-20": {
+    "n": 4,
+    "func_pass": 2,
+    "secure_pass": 0,
+    "functional_but_insecure": 2,
+    "FuncPass_pct": 50.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-287": {
+    "n": 4,
+    "func_pass": 3,
+    "secure_pass": 1,
+    "functional_but_insecure": 2,
+    "FuncPass_pct": 75.0,
+    "SecPass_pct": 25.0,
+    "conditional_secure_pct": 33.333333333333336
+   },
+   "CWE-347": {
+    "n": 4,
+    "func_pass": 2,
+    "secure_pass": 1,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 50.0,
+    "SecPass_pct": 25.0,
+    "conditional_secure_pct": 50.0
+   },
+   "CWE-444": {
+    "n": 4,
+    "func_pass": 2,
+    "secure_pass": 0,
+    "functional_but_insecure": 2,
+    "FuncPass_pct": 50.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-532": {
+    "n": 4,
+    "func_pass": 3,
+    "secure_pass": 0,
+    "functional_but_insecure": 3,
+    "FuncPass_pct": 75.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-522": {
+    "n": 3,
+    "func_pass": 2,
+    "secure_pass": 1,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 66.66666666666667,
+    "SecPass_pct": 33.333333333333336,
+    "conditional_secure_pct": 50.0
+   },
+   "CWE-190": {
+    "n": 2,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-203": {
+    "n": 2,
+    "func_pass": 1,
+    "secure_pass": 1,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 50.0,
+    "SecPass_pct": 50.0,
+    "conditional_secure_pct": 100.0
+   },
+   "CWE-23": {
+    "n": 2,
+    "func_pass": 2,
+    "secure_pass": 1,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 50.0,
+    "conditional_secure_pct": 50.0
+   },
+   "CWE-284": {
+    "n": 2,
+    "func_pass": 2,
+    "secure_pass": 0,
+    "functional_but_insecure": 2,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-306": {
+    "n": 2,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-521": {
+    "n": 2,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 50.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-539": {
+    "n": 2,
+    "func_pass": 2,
+    "secure_pass": 0,
+    "functional_but_insecure": 2,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-670": {
+    "n": 2,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-77": {
+    "n": 2,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 50.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-918": {
+    "n": 2,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 50.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-93": {
+    "n": 2,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 50.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-94": {
+    "n": 2,
+    "func_pass": 2,
+    "secure_pass": 0,
+    "functional_but_insecure": 2,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "NVD-CWE-Other": {
+    "n": 2,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 50.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "NVD-CWE-noinfo": {
+    "n": 2,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-1021": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-130": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-150": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-173": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-208": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-209": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-223": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-250": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-252": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 1,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 100.0,
+    "conditional_secure_pct": 100.0
+   },
+   "CWE-269": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 1,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 100.0,
+    "conditional_secure_pct": 100.0
+   },
+   "CWE-276": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-280": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 1,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 100.0,
+    "conditional_secure_pct": 100.0
+   },
+   "CWE-281": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-285": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-295": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-311": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-312": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-326": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-327": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-330": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-331": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-344": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-354": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-362": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-407": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-427": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-460": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-475": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-524": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-611": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-613": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-614": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-639": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-662": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-667": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-674": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-697": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-704": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-732": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-74": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-75": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 1,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 100.0,
+    "conditional_secure_pct": 100.0
+   },
+   "CWE-754": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-755": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-78": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-787": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-789": {
+    "n": 1,
+    "func_pass": 0,
+    "secure_pass": 0,
+    "functional_but_insecure": 0,
+    "FuncPass_pct": 0.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": null
+   },
+   "CWE-835": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-88": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   },
+   "CWE-913": {
+    "n": 1,
+    "func_pass": 1,
+    "secure_pass": 0,
+    "functional_but_insecure": 1,
+    "FuncPass_pct": 100.0,
+    "SecPass_pct": 0.0,
+    "conditional_secure_pct": 0.0
+   }
+  }
+ },
+ "comparison_with_official_summary_json": {
+  "official_num_candidates": 186,
+  "official_func_pass_fraction": 0.5698924731182796,
+  "official_sec_pass_fraction": 0.11827956989247312,
+  "recomputed_func_pass_fraction": 0.5698924731182796,
+  "recomputed_sec_pass_fraction": 0.11827956989247312,
+  "func_ids_identical": true,
+  "sec_ids_identical": true,
+  "fractions_identical": true
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "captured_at": "2026-10-17T06:25:48Z",
+ "os": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+ "arch": "x86_64",
+ "cpus": 4,
+ "mem_total_gb": 16.9,
+ "disk_root": {
+  "total_gb": 270.6,
+  "free_gb_at_session_start": 31.0,
+  "free_gb_now": 26.9,
+  "note": "'df' at session start: 252G size, 9.0G used, 31G avail (per-session writable allowance)"
+ },
+ "python_system": "3.13.16",
+ "python_harness_venv": "Python 3.11.17",
+ "docker_client": "Docker version 29.8.2, build 7fc2dff",
+ "docker_server": "29.8.2",
+ "docker_state_at_start": "daemon not running at session start; started by this session (dockerd 29.8.2, overlayfs) with 0 images, 0 containers, 0 volumes, 0 build cache -> every Docker resource in this daemon belongs to this experiment",
+ "container_limits_used_by_harness": {
+  "cpu_limit": 3,
+  "mem_limit_gb": 11,
+  "run_timeout_s": 1800
+ },
+ "credentials_present": {
+  "ANTHROPIC_API_KEY": false,
+  "ANTHROPIC_BASE_URL": true,
+  "AWS_ACCESS_KEY_ID": true,
+  "OPENAI_API_KEY": false,
+  "HF_TOKEN": false
+ },
+ "credential_note": "ANTHROPIC_BASE_URL and AWS keys exist in the environment but belong to this research session's own infrastructure; they were not provisioned or authorized as a benchmark-inference budget and were NOT used to call any model.",
+ "api_budget": "none established by the user",
+ "swe_agent_installed": false,
+ "susvibes_harness": "installed editable from tag v1.0 worktree into /home/user/sources/sv-venv"
+}

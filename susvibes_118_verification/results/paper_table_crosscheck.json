@@ -1,0 +1,290 @@
+{
+ "table3": {
+  "claude-4-sonnet_swe-agent_default_2025-12-29": {
+   "n": 186,
+   "func": 106,
+   "sec": 22,
+   "FuncPass": 56.98924731182796,
+   "SecPass": 11.827956989247312,
+   "paper": [
+    57.0,
+    11.8
+   ],
+   "match_1dp": [
+    true,
+    true
+   ]
+  },
+  "kimi-k2_swe-agent_default_2025-12-29": {
+   "n": 186,
+   "func": 40,
+   "sec": 10,
+   "FuncPass": 21.50537634408602,
+   "SecPass": 5.376344086021505,
+   "paper": [
+    21.5,
+    5.4
+   ],
+   "match_1dp": [
+    true,
+    true
+   ]
+  },
+  "gemini-2.5-pro_swe-agent_default_2025-12-29": {
+   "n": 186,
+   "func": 34,
+   "sec": 12,
+   "FuncPass": 18.27956989247312,
+   "SecPass": 6.451612903225806,
+   "paper": [
+    18.3,
+    6.5
+   ],
+   "match_1dp": [
+    true,
+    true
+   ]
+  },
+  "gemini-3-pro_swe-agent_default_2025-12-29": {
+   "n": 186,
+   "func": 69,
+   "sec": 24,
+   "FuncPass": 37.096774193548384,
+   "SecPass": 12.903225806451612,
+   "paper": [
+    37.1,
+    12.9
+   ],
+   "match_1dp": [
+    true,
+    true
+   ]
+  },
+  "claude-4-sonnet_openhands_default_2025-12-29": {
+   "n": 186,
+   "func": 99,
+   "sec": 22,
+   "FuncPass": 53.225806451612904,
+   "SecPass": 11.827956989247312,
+   "paper": [
+    53.2,
+    11.8
+   ],
+   "match_1dp": [
+    true,
+    true
+   ]
+  },
+  "kimi-k2_openhands_default_2025-12-29": {
+   "n": 186,
+   "func": 67,
+   "sec": 17,
+   "FuncPass": 36.02150537634409,
+   "SecPass": 9.13978494623656,
+   "paper": [
+    36.0,
+    9.1
+   ],
+   "match_1dp": [
+    true,
+    true
+   ]
+  },
+  "gemini-2.5-pro_openhands_default_2025-12-29": {
+   "n": 186,
+   "func": 37,
+   "sec": 15,
+   "FuncPass": 19.892473118279568,
+   "SecPass": 8.064516129032258,
+   "paper": [
+    19.9,
+    8.1
+   ],
+   "match_1dp": [
+    true,
+    true
+   ]
+  },
+  "gemini-3-pro_openhands_default_2025-12-29": {
+   "n": 186,
+   "func": 94,
+   "sec": 20,
+   "FuncPass": 50.53763440860215,
+   "SecPass": 10.75268817204301,
+   "paper": [
+    50.5,
+    10.8
+   ],
+   "match_1dp": [
+    true,
+    true
+   ]
+  },
+  "claude-4-sonnet_claude-cli_default_2025-12-29": {
+   "n": 186,
+   "func": 77,
+   "sec": 11,
+   "FuncPass": 41.39784946236559,
+   "SecPass": 5.913978494623656,
+   "paper": [
+    41.4,
+    5.9
+   ],
+   "match_1dp": [
+    true,
+    true
+   ]
+  },
+  "kimi-k2_claude-cli_default_2025-12-29": {
+   "n": 186,
+   "func": 75,
+   "sec": 16,
+   "FuncPass": 40.32258064516129,
+   "SecPass": 8.602150537634408,
+   "paper": [
+    40.3,
+    8.6
+   ],
+   "match_1dp": [
+    true,
+    true
+   ]
+  },
+  "gemini-2.5-pro_claude-cli_default_2025-12-29": {
+   "n": 186,
+   "func": 24,
+   "sec": 7,
+   "FuncPass": 12.903225806451612,
+   "SecPass": 3.763440860215054,
+   "paper": [
+    12.9,
+    3.8
+   ],
+   "match_1dp": [
+    true,
+    true
+   ]
+  },
+  "gemini-3-pro_claude-cli_default_2025-12-29": {
+   "n": 186,
+   "func": 65,
+   "sec": 12,
+   "FuncPass": 34.946236559139784,
+   "SecPass": 6.451612903225806,
+   "paper": [
+    34.9,
+    6.5
+   ],
+   "match_1dp": [
+    true,
+    true
+   ]
+  }
+ },
+ "table5": {
+  "generic": {
+   "n": 186,
+   "func": 106,
+   "sec": 22,
+   "FuncPass": 56.98924731182796,
+   "SecPass": 11.827956989247312,
+   "paper": [
+    57.0,
+    11.8
+   ],
+   "match_1dp": [
+    true,
+    true
+   ]
+  },
+  "self-selection": {
+   "n": 186,
+   "func": 93,
+   "sec": 27,
+   "FuncPass": 50.0,
+   "SecPass": 14.516129032258064,
+   "paper": [
+    50.0,
+    14.5
+   ],
+   "match_1dp": [
+    true,
+    true
+   ]
+  },
+  "oracle": {
+   "n": 186,
+   "func": 103,
+   "sec": 28,
+   "FuncPass": 55.376344086021504,
+   "SecPass": 15.053763440860216,
+   "paper": [
+    55.4,
+    15.1
+   ],
+   "match_1dp": [
+    true,
+    true
+   ]
+  }
+ },
+ "figure5": {
+  "rows_generic_cols_selfselection": [
+   "Incorrect",
+   "Correct-Insecure",
+   "Correct-Secure"
+  ],
+  "counts": [
+   [
+    72,
+    5,
+    3
+   ],
+   [
+    15,
+    60,
+    9
+   ],
+   [
+    6,
+    1,
+    15
+   ]
+  ],
+  "pct": [
+   [
+    38.70967741935484,
+    2.6881720430107525,
+    1.6129032258064515
+   ],
+   [
+    8.064516129032258,
+    32.25806451612903,
+    4.838709677419355
+   ],
+   [
+    3.225806451612903,
+    0.5376344086021505,
+    8.064516129032258
+   ]
+  ],
+  "paper_pct": [
+   [
+    38.7,
+    2.7,
+    1.6
+   ],
+   [
+    8.1,
+    32.3,
+    4.8
+   ],
+   [
+    3.2,
+    0.5,
+    8.1
+   ]
+  ],
+  "cells_matching_1dp": 9
+ }
+}
