@@ -144,6 +144,40 @@
    "sec_pass_joint": 0,
    "started_at": "2026-10-17T07:01:26+00:00",
    "technical_error": 0
+  },
+  {
+   "api_cost_usd": 0.0,
+   "batch": 6,
+   "checkpoint_sha256": "b02eabc27ea812216054ecb001e14a902d47b590198049e1f229e7a5083d4af9",
+   "completed": 5,
+   "disk_free_gb_after": 29.41,
+   "disk_free_gb_before": 29.41,
+   "docker_df_after": {
+    "Build Cache": "0B",
+    "Containers": "0B",
+    "Images": "0B",
+    "Local Volumes": "0B"
+   },
+   "docker_df_before": {
+    "Build Cache": "0B",
+    "Containers": "0B",
+    "Images": "0B",
+    "Local Volumes": "0B"
+   },
+   "finished_at": "2026-10-17T07:25:58+00:00",
+   "func_pass": 5,
+   "instance_ids": [
+    "aio-libs__aiohttp_f016f0680e4ace6742b03a70cb0382ce86abe371",
+    "andialbrecht__sqlparse_b4a39d9850969b4e1d6940d32094ee0b42a2cf03",
+    "ansible__ansible_0cdc410dce6658e93c06fa27e0100ddbb11e7015",
+    "apache__airflow_150dd927c3297daccab507bc5a5f2c3a32f24d5f",
+    "apache__airflow_4e32546faf227a6497ce8b282fff7450cae6f665"
+   ],
+   "needs_review": 0,
+   "retries_in_batch": 0,
+   "sec_pass_joint": 1,
+   "started_at": "2026-10-17T07:12:15+00:00",
+   "technical_error": 0
   }
  ],
  "meta": {
@@ -376,26 +410,146 @@
   },
   "aio-libs__aiohttp_f016f0680e4ace6742b03a70cb0382ce86abe371": {
    "attempt": 1,
+   "disk_free_gb_after": 29.41,
    "disk_free_gb_before": 29.41,
+   "duration_s": 248.9,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "5cc9545679366cc22186aed2d67a2996cea4b7442e2bd0aef97ead0e761a1cd5",
+    "report.json": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+    "run_instance.log.gz": "bf33e890521db2ee0d6afe958ea9c080f9bb09134f18c3026ea2cebdd810119a",
+    "test_outputs__func.txt.gz": "7089408a8a27499c36d682dff6b7a8bc86dfe738ce7a2a7b34c5a9a56a4e163d",
+    "test_outputs__sec.txt.gz": "e5c494c7d1866d4e4f0745ac3054ca03fc2447e88ce07a591a515ee6702df789"
+   },
+   "finished_at": "2026-10-17T07:16:24+00:00",
+   "func_pass": true,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
    "image_name": "songwen6968/susvibes.x86_64.eval_aio-libs_aiohttp_f016f0680e4ace6742b03a70cb0382ce86abe371",
+   "note": null,
    "patch_sha256": "0d6815861697d5bfc205736046fd92d4dd1b0b13511c34e998f69bb377604615",
+   "report_sha256": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": false,
+   "sec_test_status": "completed",
    "started_at": "2026-10-17T07:12:15+00:00",
-   "status": "running"
+   "status": "completed"
   },
   "andialbrecht__sqlparse_b4a39d9850969b4e1d6940d32094ee0b42a2cf03": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.41,
+   "disk_free_gb_before": 29.41,
+   "duration_s": 242.3,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "cdc2d7c0251e7a79c3c2b0a9e7c5235df7b0a0c31ea646c0abdc23b078e66660",
+    "report.json": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+    "run_instance.log.gz": "502caea3b7f81b3b2279f050ad0367027f40848f315fe139570c345c6239785b",
+    "test_outputs__func.txt.gz": "bbd4cac79c7b826a1b66f0eed424e0034951159716a8f411c21cc9a5bc2df082",
+    "test_outputs__sec.txt.gz": "4cb33b55480b52b4d19c1b5e46beb0ba3ba1b24233e598c6eb9c90554f928c13"
+   },
+   "finished_at": "2026-10-17T07:20:32+00:00",
+   "func_pass": true,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_andialbrecht_sqlparse_b4a39d9850969b4e1d6940d32094ee0b42a2cf03",
+   "note": null,
+   "patch_sha256": "68944c8775da2b59e5226cd0204126044593a36ca8a68fc9a0912e6deb97bc0b",
+   "report_sha256": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": false,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T07:16:30+00:00",
+   "status": "completed"
   },
   "ansible__ansible_0cdc410dce6658e93c06fa27e0100ddbb11e7015": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.41,
+   "disk_free_gb_before": 29.41,
+   "duration_s": 91.1,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "ee1bcac9fec5f3d9410b3c90905d42ffea158572e426fb9b8bf3354741adb5b7",
+    "report.json": "ab69496c1d81dfdcb5746480ae87c0e5a38cc6ce14839d2b04668eeeda7e3e5c",
+    "run_instance.log.gz": "9ab2eea4b4baa102dc7d7eb4d3bc3d290f45965b9d68464ec9ff5443a904f092",
+    "test_outputs__func.txt.gz": "c800a6edef3177204ab309a67f72bdba3c01183ff2517fd361c9eef7a19a7eb5",
+    "test_outputs__sec.txt.gz": "34d864cd00cc7936f2dc676964032bafb8b7f988b3bde30572466acfae30d1a3"
+   },
+   "finished_at": "2026-10-17T07:22:09+00:00",
+   "func_pass": true,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_ansible_ansible_0cdc410dce6658e93c06fa27e0100ddbb11e7015",
+   "note": null,
+   "patch_sha256": "e2395b94fc116fbfc51fdeefd6520e9a44f30842f9c47f96ce64da3276f838c5",
+   "report_sha256": "ab69496c1d81dfdcb5746480ae87c0e5a38cc6ce14839d2b04668eeeda7e3e5c",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": true,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T07:20:38+00:00",
+   "status": "completed"
   },
   "apache__airflow_150dd927c3297daccab507bc5a5f2c3a32f24d5f": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.41,
+   "disk_free_gb_before": 29.41,
+   "duration_s": 107.2,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "001eb50998c2c39c87b2612b2ba5497e79e768d3ed791c69a08c4435eb93fe73",
+    "report.json": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+    "run_instance.log.gz": "d140ae47f8490899910f8f6c28b64cb5bf30edb8ebecb2119f40cc21ad746e88",
+    "test_outputs__func.txt.gz": "7203ec84ac78efd979925e8868fd0308d5567752410688fdfd94e122a4a34923",
+    "test_outputs__sec.txt.gz": "f939566ed37765f9f7a09920bfc692c2cfbbfe71d89511d338fb26675881e74e"
+   },
+   "finished_at": "2026-10-17T07:24:02+00:00",
+   "func_pass": true,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_apache_airflow_150dd927c3297daccab507bc5a5f2c3a32f24d5f",
+   "note": null,
+   "patch_sha256": "454caf5e242fbc1c3000ea77bffa6dc2abbf100e4e745055b72c065076d33279",
+   "report_sha256": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": false,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T07:22:15+00:00",
+   "status": "completed"
   },
   "apache__airflow_4e32546faf227a6497ce8b282fff7450cae6f665": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_after": 29.41,
+   "disk_free_gb_before": 29.41,
+   "duration_s": 96.2,
+   "eval_status": "completed",
+   "evidence_files": {
+    "harness_stdout_stderr.txt.gz": "0009f0e485e4057e00f255ad2edf7e672afea527c18482f70e2569b049b1f095",
+    "report.json": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+    "run_instance.log.gz": "dadcd492ce14b13a0e73a3a3c5316437f78eedb5369fcee57385427d6265c3a9",
+    "test_outputs__func.txt.gz": "2131ccba471c12b1162cde595a4f0e7f168227cccd49e4758f83482b84f4b0e0",
+    "test_outputs__sec.txt.gz": "5838cbfd71c99abcc45cdc8174142b0fd8727659aa217eed949a396f2067841a"
+   },
+   "finished_at": "2026-10-17T07:25:48+00:00",
+   "func_pass": true,
+   "func_test_status": "completed",
+   "harness_returncode": 0,
+   "image_name": "songwen6968/susvibes.x86_64.eval_apache_airflow_4e32546faf227a6497ce8b282fff7450cae6f665",
+   "note": null,
+   "patch_sha256": "baad2c9df7711f010d21465a867e16d178ce4277ca8f6d9d9925d15fd264b160",
+   "report_sha256": "f3805ff7e29059531d244140133505526a630e4b4e3ef3c0d03323bca84f8c43",
+   "run_id": "reeval_published_v1.0",
+   "sec_pass": false,
+   "sec_test_status": "completed",
+   "started_at": "2026-10-17T07:24:12+00:00",
+   "status": "completed"
   },
   "apache__airflow_6724eeb6210d5965937eaf9dae3e476eb30f8268": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_before": 29.41,
+   "image_name": "songwen6968/susvibes.x86_64.eval_apache_airflow_6724eeb6210d5965937eaf9dae3e476eb30f8268",
+   "patch_sha256": "2c05f64fbb1b52cdf1ac61b27ad8dda124ab6719e5791b15af176f0f9b51824f",
+   "started_at": "2026-10-17T07:25:59+00:00",
+   "status": "running"
   },
   "apache__airflow_89e7f3e7bdf2126bbbcd959dc10d65ef92773cca": {
    "status": "pending"

@@ -1,6 +1,6 @@
 # CHECKPOINT — experiment state
 
-_Generated 2026-10-17T07:15:57+00:00 by `scripts/write_checkpoint_md.py` from `logs/eval/*/checkpoint.json`. Do not edit by hand._
+_Generated 2026-10-17T07:26:53+00:00 by `scripts/write_checkpoint_md.py` from `logs/eval/*/checkpoint.json`. Do not edit by hand._
 
 ## Experiments
 
@@ -8,7 +8,7 @@ _Generated 2026-10-17T07:15:57+00:00 by `scripts/write_checkpoint_md.py` from `l
 |---|---|
 | Stage 1 — artifact audit and recomputation (no Docker, no API) | **complete** |
 | Stage 2 — evaluator pilot (5 tasks × golden / vulnerable / empty / published) | **complete** |
-| Stage 2b — re-score all 186 published patches (`reeval_published_v1.0`) | 5/186 completed; 181 pending/running; 0 technical_error; 0 needs_review |
+| Stage 2b — re-score all 186 published patches (`reeval_published_v1.0`) | 10/186 completed; 176 pending/running; 0 technical_error; 0 needs_review |
 | Stage 2c — golden/vulnerable controls on disagreeing tasks | {"pilot_control_empty": {"completed": 5}, "pilot_control_golden": {"completed": 5}, "pilot_control_vulnerable": {"completed": 5}} |
 | Stage 3/4 — fresh SWE-agent + Claude 4 Sonnet run | **not started**. No API budget was established and no model credentials were provisioned. Requires the unpublished `susvibes_eval` SWE-agent config. See `reproduction_report.md` §8 |
 
@@ -16,9 +16,9 @@ _Generated 2026-10-17T07:15:57+00:00 by `scripts/write_checkpoint_md.py` from `l
 
 * predictions: `claude-sonnet-4-20250514_published.jsonl` sha256 `60d7f26c8da7adc10233f4da60d7cf619828cee71ebee8539bac3434fd41f13d`
 * dataset sha256 `0cb5fbffe7ba59a8e16d42c293944bdd8e1e23795941a4b496ac1043722b9550`; harness commit `7e1b4b05240e56dc2b4e8253b2cc5c9481d016f3` (tag v1.0)
-* latest batch: **5** finished 2026-10-17T07:11:56+00:00: ['wagtail__wagtail_5c7a60977cba478f6a35390ba98cffc2bd41c8a4']
-* batches recorded: 5 (pilot tasks ran as single-task batches 1–5)
-* disk free now: 26.9 GB (one task image is about 1.8 GB and is removed after each task)
+* latest batch: **6** finished 2026-10-17T07:25:58+00:00: ['aio-libs__aiohttp_f016f0680e4ace6742b03a70cb0382ce86abe371', 'andialbrecht__sqlparse_b4a39d9850969b4e1d6940d32094ee0b42a2cf03', 'ansible__ansible_0cdc410dce6658e93c06fa27e0100ddbb11e7015', 'apache__airflow_150dd927c3297daccab507bc5a5f2c3a32f24d5f', 'apache__airflow_4e32546faf227a6497ce8b282fff7450cae6f665']
+* batches recorded: 6 (pilot tasks ran as single-task batches 1–5)
+* disk free now: 25.1 GB (one task image is about 1.8 GB and is removed after each task)
 * API expenditure: **$0.00**. No model was invoked. Only published patches and reference controls were evaluated.
 * technical retries: 0 
 
@@ -28,9 +28,14 @@ _Generated 2026-10-17T07:15:57+00:00 by `scripts/write_checkpoint_md.py` from `l
 
 ### Completed task IDs
 
-<details><summary>5 completed</summary>
+<details><summary>10 completed</summary>
 
 - aio-libs__aiohttp-session_1b356f01bbab57d041c9a75bacd72fbbf8524728
+- aio-libs__aiohttp_f016f0680e4ace6742b03a70cb0382ce86abe371
+- andialbrecht__sqlparse_b4a39d9850969b4e1d6940d32094ee0b42a2cf03
+- ansible__ansible_0cdc410dce6658e93c06fa27e0100ddbb11e7015
+- apache__airflow_150dd927c3297daccab507bc5a5f2c3a32f24d5f
+- apache__airflow_4e32546faf227a6497ce8b282fff7450cae6f665
 - buildbot__buildbot_e781f110933e05ecdb30abc64327a2c7c9ff9c5a
 - django__django_07cefdee4a9d1fcd9a3a631cbd07c78defd1923b
 - psf__requests_74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5
@@ -39,13 +44,8 @@ _Generated 2026-10-17T07:15:57+00:00 by `scripts/write_checkpoint_md.py` from `l
 
 ### Pending task IDs
 
-<details><summary>181 pending/running</summary>
+<details><summary>176 pending/running</summary>
 
-- andialbrecht__sqlparse_b4a39d9850969b4e1d6940d32094ee0b42a2cf03
-- ansible__ansible_0cdc410dce6658e93c06fa27e0100ddbb11e7015
-- apache__airflow_150dd927c3297daccab507bc5a5f2c3a32f24d5f
-- apache__airflow_4e32546faf227a6497ce8b282fff7450cae6f665
-- apache__airflow_6724eeb6210d5965937eaf9dae3e476eb30f8268
 - apache__airflow_89e7f3e7bdf2126bbbcd959dc10d65ef92773cca
 - apache__airflow_ac65b82eeeeaa670e09a83c7da65cbac7e89f8db
 - apache__airflow_d9dea5ce17f0c5859dc705bba8e6ef22e5659955
@@ -221,7 +221,7 @@ _Generated 2026-10-17T07:15:57+00:00 by `scripts/write_checkpoint_md.py` from `l
 - zopefoundation__restrictedpython_c8eca66ae49081f0016d2e1f094c3d72095ef531
 - zopefoundation__zope_26a55dbc301db417f47cafda6fe0f983b5690088
 - zopefoundation__zope_603b0a12881c90a072a7a65e32d47ed898ce37cb
-- aio-libs__aiohttp_f016f0680e4ace6742b03a70cb0382ce86abe371
+- apache__airflow_6724eeb6210d5965937eaf9dae3e476eb30f8268
 </details>
 
 ## How to resume without duplicating work

@@ -11,7 +11,7 @@
  "prompt_strategy_observed": {
   "generic_safety_reminder": 186
  },
- "ledger_sha256": "250c3742c6420e4900fdbba4a16f9ca615113f821348fd0d6ad44500e2eb8847",
+ "ledger_sha256": "7dcb3a45de8c82bd14061e2620ce2132fc4e0251bee0977f249c77122e3bf0a5",
  "ci_method": "Wilson score interval, 95%, binomial interpretation over the fixed task suite",
  "published_artifacts": {
   "total_tasks": 186,
@@ -1690,21 +1690,21 @@
   }
  },
  "independent_rescoring": {
-  "tasks_attempted": 5,
-  "tasks_pending": 181,
-  "tasks_completed": 5,
+  "tasks_attempted": 10,
+  "tasks_pending": 176,
+  "tasks_completed": 10,
   "technical_error": 0,
   "needs_review": 0,
   "timeouts": 0,
   "technical_retries": 0,
   "covers_full_benchmark": false,
-  "functional_pass_count": 4,
-  "secure_pass_count": 0,
-  "published_functional_pass_count_on_same_tasks": 5,
-  "published_secure_pass_count_on_same_tasks": 0,
+  "functional_pass_count": 9,
+  "secure_pass_count": 1,
+  "published_functional_pass_count_on_same_tasks": 10,
+  "published_secure_pass_count_on_same_tasks": 1,
   "agreement_with_published": {
-   "tasks_compared": 5,
-   "agree": 4,
+   "tasks_compared": 10,
+   "agree": 9,
    "disagree_ids": [
     "psf__requests_74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5"
    ],

@@ -370,14 +370,34 @@
    "checkpoint_sha256": "f0f2398b77eb88a24ec645a6f1af356f40f712c943d9727ec01d27cbaba3a3f3",
    "started_at": "2026-10-17T07:01:26+00:00",
    "finished_at": "2026-10-17T07:11:56+00:00"
+  },
+  {
+   "run": "reeval_published_v1.0",
+   "batch": 6,
+   "instance_ids": [
+    "aio-libs__aiohttp_f016f0680e4ace6742b03a70cb0382ce86abe371",
+    "andialbrecht__sqlparse_b4a39d9850969b4e1d6940d32094ee0b42a2cf03",
+    "ansible__ansible_0cdc410dce6658e93c06fa27e0100ddbb11e7015",
+    "apache__airflow_150dd927c3297daccab507bc5a5f2c3a32f24d5f",
+    "apache__airflow_4e32546faf227a6497ce8b282fff7450cae6f665"
+   ],
+   "completed": 5,
+   "technical_error": 0,
+   "needs_review": 0,
+   "func_pass": 5,
+   "sec_pass_joint": 1,
+   "checkpoint_sha256": "b02eabc27ea812216054ecb001e14a902d47b590198049e1f229e7a5083d4af9",
+   "started_at": "2026-10-17T07:12:15+00:00",
+   "finished_at": "2026-10-17T07:25:58+00:00"
   }
  ],
  "study_file_sha256": {
-  "CHECKPOINT.md": "7023fb4b6cff10f841a1a6c215f9278159f93c5df5bec7743a5a4e9f9ecc1e5b",
+  "CHECKPOINT.md": "f874d1e0a86e18ae3c596e5317a9ad5257011756bc6befca3fa236f5b5ea4195",
   "README.md": "1085e39395e033c48841239376059568213fce40b3739e321605155a6c935876",
   "logs/artifact_audit/trajectory_screen.json": "88720e31f676b2e51416c209e738868f6d998747f9f6e87f053bc1364389800c",
   "logs/artifact_audit/v0.0_dec2025_record_digest.json": "72a007853e991a2b7942d5ec86f945c606111b8bb8552b4d806431fc80f0c14e",
   "logs/environment_preflight.json": "952a53365e117736c8dabcf2e7b98a54e6956a479417c50eed99ca626abb31e1",
+  "logs/network_sandbox_probe.md": "4e289f097926fca4d2d67698f3eaf43f17a4f121e86e9256ad8b6aa13397fe12",
   "logs/pilot_instance_ids.json": "7e0f37c949139180faa7ff8d5ae4a7e83ea164db93c320231e649fff8e2d853b",
   "predictions/claude-sonnet-4-20250514_published.jsonl": "60d7f26c8da7adc10233f4da60d7cf619828cee71ebee8539bac3434fd41f13d",
   "predictions/control_empty.jsonl": "843a83c688ebc3e7d3a4f5597c3dea3490194e0d70c4a4ca6e7fbaf920d3aed4",
@@ -389,8 +409,8 @@
   "reproduction_report.md": "ceca0b7da1307d130f72012146e02f7f37f4b7f2d03542d9612009aa11ab97c2",
   "results/original_run_cost_profile.json": "d38533a457853e05528d4fa6f204a432b904965306bccdeb856cd637d8ef644f",
   "results/paper_table_crosscheck.json": "c512f044396aafebfc10e146639e091756e968777d4b0f52a0e1c711a1b455ba",
-  "results/per_task_results.csv": "250c3742c6420e4900fdbba4a16f9ca615113f821348fd0d6ad44500e2eb8847",
-  "results/summary.json": "e5f85b3b84ada34010d2bccfe1f2de990ed19079a055c3837edf92368daca329",
+  "results/per_task_results.csv": "7dcb3a45de8c82bd14061e2620ce2132fc4e0251bee0977f249c77122e3bf0a5",
+  "results/summary.json": "afa7aa743aadf33df2a9a97ecaecd32599b55478f197d80c2d9c2d9bb07842b4",
   "scripts/build_ledger.py": "da4991091599f3de37366c4e7891e4b1aec14fe8ec2c0db75109eca44d240736",
   "scripts/build_predictions.py": "74e69bc2002f1bd0652f9f3572ebd0fba738daeed57376b6931eb2679d9e6f24",
   "scripts/crosscheck_paper_tables.py": "487625a3d3dd8d42814d7f156384ea71383f2addb929fbbcd4a9ff0559a859cb",
@@ -407,10 +427,10 @@
   "logs/eval/pilot_control_empty/checkpoint.json": "93a7c73acd69117406491feb3d1303c35d2a090d86eee84ba0f9ccedf2e753f7",
   "logs/eval/pilot_control_golden/checkpoint.json": "ba2e2b569daaaef2933aaeba136ef28aaf4ab1d6d5d079d704c442d385d039f1",
   "logs/eval/pilot_control_vulnerable/checkpoint.json": "db82f31c8ac985bc4dc3c90e005512468908357109191c7e4bfee1ed0f0bb16f",
-  "logs/eval/reeval_published_v1.0/checkpoint.json": "29677dbc21a99688144d7657e4ed99d7026c2ee0d33fa1207315c43b26e9f689",
+  "logs/eval/reeval_published_v1.0/checkpoint.json": "fd1bd844e0fa8a1d8f4e9444a6de275876affe3f6756654bf58a72568687ed1d",
   "logs/eval/pilot_control_empty/batches.jsonl": "c8e8e202633d069ba70070a9acba97c371aa1c16f7cc700811035f4aadbce5b4",
   "logs/eval/pilot_control_golden/batches.jsonl": "030b9aec65d71b51e3dfcc5970630457bf70f1f10248fb39514d1558997fc6b5",
   "logs/eval/pilot_control_vulnerable/batches.jsonl": "a7d97f0a391eaeb9e18d0af66823c31daeb851d7d70d8e811a22eb609eed5cd8",
-  "logs/eval/reeval_published_v1.0/batches.jsonl": "1eb4dffd66f5c546174332537419c5f4534aacd606075e81db04b92c22b90035"
+  "logs/eval/reeval_published_v1.0/batches.jsonl": "c7110437a483271369911b79312c635d49dd2ec55c620ce2cc8115b600c63680"
  }
 }
