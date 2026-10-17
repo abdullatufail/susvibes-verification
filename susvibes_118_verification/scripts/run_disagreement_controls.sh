@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Stage-2c: for every task whose re-scored verdict disagrees with the published one, evaluate the
+# Stage-2c: for every task whose re-scored verdict disagrees with the published one, or whose official
+# eval_status is not `completed`, evaluate the
 # golden (secure reference) and vulnerable (reversed mask_patch) controls on this machine. If the
 # golden patch also fails here, the disagreement is attributable to this environment.
 set -u
@@ -11,7 +12,8 @@ python3 -I - "$D" <<'PY'
 import csv, json, sys
 d = sys.argv[1]
 ids = [r["instance_id"] for r in csv.DictReader(open(f"{d}/results/per_task_results.csv"))
-       if r["reeval_matches_published"] == "False" or r["reeval_status"] in ("technical_error", "needs_review")]
+       if r["reeval_matches_published"] == "False" or r["reeval_status"] in ("technical_error", "needs_review")
+       or r["reeval_eval_status"] not in ("", "completed")]
 json.dump(ids, open(f"{d}/logs/disagreement_instance_ids.json", "w"), indent=1)
 print(f"{len(ids)} tasks need controls")
 PY

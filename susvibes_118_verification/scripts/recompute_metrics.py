@@ -150,6 +150,8 @@ def main():
             "tasks_attempted": len(rv_rows),
             "tasks_pending": rv_pending,
             "tasks_completed": len(rv_done),
+            "official_eval_status_counts": {k: sum(r["reeval_eval_status"] == k for r in rv_done)
+                                            for k in sorted({r["reeval_eval_status"] for r in rv_done})},
             "technical_error": sum(r["reeval_status"] == "technical_error" for r in rv_rows),
             "needs_review": sum(r["reeval_status"] == "needs_review" for r in rv_rows),
             "timeouts": sum("timeout" in (r["reeval_func_test_status"], r["reeval_sec_test_status"]) for r in rv_rows),

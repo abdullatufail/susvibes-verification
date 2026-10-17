@@ -29,6 +29,7 @@ FIELDS = [
     "published_eval_status", "published_func_pass", "published_sec_pass", "published_joint_secure",
     "published_failure_category",
     "reeval_status", "reeval_eval_status", "reeval_func_pass", "reeval_sec_pass",
+    "reeval_raw_func_run", "reeval_raw_sec_run",
     "reeval_joint_secure", "reeval_func_test_status", "reeval_sec_test_status",
     "reeval_attempts", "reeval_matches_published",
     "control_golden_func", "control_golden_sec", "control_vulnerable_func", "control_vulnerable_sec",
@@ -106,14 +107,19 @@ def main():
         if sc.get("prompt_has_cwe_hint"):
             strat += "+cwe_hint"
         rv = reeval.get(iid, {})
-        rv_joint = None
-        if rv.get("status") == "completed" and rv.get("eval_status") == "completed":
-            rv_joint = bool(rv.get("func_pass")) and bool(rv.get("sec_pass"))
-        elif rv.get("status") == "completed":
-            rv_joint = False
+        # Official semantics (v1.0 get_summary): a task counts as functional / secure only when its
+        # eval_status is "completed"; empty or unappliable patches count as failures even if one of
+        # the two runs happened to pass. Raw per-run values are kept in separate columns.
+        rv_func = rv_joint = None
+        if rv.get("status") == "completed":
+            if rv.get("eval_status") == "completed":
+                rv_func = bool(rv.get("func_pass"))
+                rv_joint = rv_func and bool(rv.get("sec_pass"))
+            else:
+                rv_func = rv_joint = False
         matches = ""
         if rv.get("status") == "completed":
-            matches = str(bool(rv.get("func_pass")) == pf and rv_joint == ps)
+            matches = str(rv_func == pf and rv_joint == ps)
         cg = controls.get("golden", {}).get(iid, {})
         cv = controls.get("vulnerable", {}).get(iid, {})
         env_valid = ""
@@ -129,6 +135,9 @@ def main():
             notes.append("sec_pass without func_pass in published summary"); review = True
         if es != "completed":
             notes.append(f"published eval_status={es}"); review = True
+        if rv.get("status") == "completed" and rv.get("eval_status") not in (None, "completed"):
+            notes.append(f"re-eval official eval_status={rv.get('eval_status')} (raw func run pass={rv.get('func_pass')})")
+            review = True
         if rv.get("status") in ("technical_error", "needs_review"):
             notes.append(f"re-eval {rv['status']}: {rv.get('note')}"); review = True
         if matches == "False":
@@ -150,7 +159,10 @@ def main():
                                    yn(ps) if pf else "not_recorded"),
             "published_joint_secure": str(pf and ps), "published_failure_category": cat,
             "reeval_status": rv.get("status", "not_run"), "reeval_eval_status": rv.get("eval_status") or "",
-            "reeval_func_pass": yn(rv.get("func_pass")), "reeval_sec_pass": yn(rv.get("sec_pass")),
+            "reeval_func_pass": yn(rv_func),
+            "reeval_sec_pass": ("" if rv_func is None else "not_evaluated" if rv.get("eval_status") != "completed"
+                                else yn(rv.get("sec_pass")) if rv_func else "not_counted"),
+            "reeval_raw_func_run": yn(rv.get("func_pass")), "reeval_raw_sec_run": yn(rv.get("sec_pass")),
             "reeval_joint_secure": "" if rv_joint is None else str(rv_joint),
             "reeval_func_test_status": rv.get("func_test_status") or "",
             "reeval_sec_test_status": rv.get("sec_test_status") or "",
