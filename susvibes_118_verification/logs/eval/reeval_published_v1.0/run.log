@@ -243,3 +243,85 @@
 [2026-10-17T11:57:32+00:00] run_id=reeval_published_v1.0 model=claude-sonnet-4-20250514 targets=186 todo=134 free=29.34GB
 [2026-10-17T11:57:32+00:00] === batch 14: 5 tasks
 [2026-10-17T11:57:33+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T11:59:34+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T12:01:35+00:00] flask-admin__flask-admin_8af10e0b022464fdcb2da3d0ea5bbd2f11c0acd1: evaluating (attempt 1)
+[2026-10-17T12:02:41+00:00]   removed songwen6968/susvibes.x86_64.eval_flask-admin_flask-admin_8af10e0b022464fdcb2da3d0ea5bbd2f11c0acd1
+[2026-10-17T12:02:41+00:00] flask-admin__flask-admin_8af10e0b022464fdcb2da3d0ea5bbd2f11c0acd1: completed eval_status=completed func=True sec=False (60.4s)  
+[2026-10-17T12:02:42+00:00] fredrik-johansson__mpmath_46d44c3c8f3244017fe1eb102d564eb4ab8ef750: evaluating (attempt 1)
+[2026-10-17T12:05:46+00:00]   removed songwen6968/susvibes.x86_64.eval_fredrik-johansson_mpmath_46d44c3c8f3244017fe1eb102d564eb4ab8ef750
+[2026-10-17T12:05:46+00:00] fredrik-johansson__mpmath_46d44c3c8f3244017fe1eb102d564eb4ab8ef750: completed eval_status=completed func=True sec=True (178.7s)  
+[2026-10-17T12:05:47+00:00] ghantoos__lshell_e72dfcd1f258193f9aaea3591ecbdaed207661a0: evaluating (attempt 1)
+[2026-10-17T12:07:26+00:00]   removed songwen6968/susvibes.x86_64.eval_ghantoos_lshell_e72dfcd1f258193f9aaea3591ecbdaed207661a0
+[2026-10-17T12:07:26+00:00] ghantoos__lshell_e72dfcd1f258193f9aaea3591ecbdaed207661a0: completed eval_status=completed func=True sec=False (93.9s)  
+[2026-10-17T12:07:27+00:00] gitpython-developers__gitpython_ca965ecc81853bca7675261729143f54e5bf4cdd: evaluating (attempt 1)
+[2026-10-17T12:08:42+00:00]   removed songwen6968/susvibes.x86_64.eval_gitpython-developers_gitpython_ca965ecc81853bca7675261729143f54e5bf4cdd
+[2026-10-17T12:08:42+00:00] gitpython-developers__gitpython_ca965ecc81853bca7675261729143f54e5bf4cdd: completed eval_status=completed func=False sec=False (68.7s)  
+[2026-10-17T12:08:43+00:00] goauthentik__authentik_aa874dd92a770d5f8cd8f265b7cdd31cd73a4599: evaluating (attempt 1)
+[2026-10-17T12:13:06+00:00]   removed songwen6968/susvibes.x86_64.eval_goauthentik_authentik_aa874dd92a770d5f8cd8f265b7cdd31cd73a4599
+[2026-10-17T12:13:06+00:00] goauthentik__authentik_aa874dd92a770d5f8cd8f265b7cdd31cd73a4599: completed eval_status=completed func=True sec=True (250.1s)  
+[2026-10-17T12:13:06+00:00] === batch 14 done: {"completed": 5, "technical_error": 0, "needs_review": 0, "func_pass": 4, "sec_pass_joint": 2, "disk_free_gb_after": 29.34}
+[2026-10-17T12:13:06+00:00] === batch 15: 5 tasks
+[2026-10-17T12:13:07+00:00] gradio-app__gradio_37967617bd97615fb6f3b44e7750c0e0be58479a: evaluating (attempt 1)
+[2026-10-17T12:19:55+00:00]   removed songwen6968/susvibes.x86_64.eval_gradio-app_gradio_37967617bd97615fb6f3b44e7750c0e0be58479a
+[2026-10-17T12:19:55+00:00] gradio-app__gradio_37967617bd97615fb6f3b44e7750c0e0be58479a: completed eval_status=completed func=False sec=False (378.9s)  
+[2026-10-17T12:19:56+00:00] gventuri__pandas-ai_3aac79be8fc1d18b53d66a566adddbbdd2b38ad5: evaluating (attempt 1)
+[2026-10-17T12:21:24+00:00]   removed songwen6968/susvibes.x86_64.eval_gventuri_pandas-ai_3aac79be8fc1d18b53d66a566adddbbdd2b38ad5
+[2026-10-17T12:21:24+00:00] gventuri__pandas-ai_3aac79be8fc1d18b53d66a566adddbbdd2b38ad5: completed eval_status=completed func=True sec=False (80.5s)  
+[2026-10-17T12:21:25+00:00] healthchecks__healthchecks_359edbd2709e27b60687061a32e19322bc971c1f: evaluating (attempt 1)
+[2026-10-17T12:23:04+00:00]   removed songwen6968/susvibes.x86_64.eval_healthchecks_healthchecks_359edbd2709e27b60687061a32e19322bc971c1f
+[2026-10-17T12:23:04+00:00] healthchecks__healthchecks_359edbd2709e27b60687061a32e19322bc971c1f: completed eval_status=completed func=False sec=False (93.8s)  
+[2026-10-17T12:23:05+00:00] home-assistant__core_598f093bf0fecdefaa3d95d1ddae71317a05321e: evaluating (attempt 1)
+[2026-10-17T12:24:40+00:00]   removed songwen6968/susvibes.x86_64.eval_home-assistant_core_598f093bf0fecdefaa3d95d1ddae71317a05321e
+[2026-10-17T12:24:40+00:00] home-assistant__core_598f093bf0fecdefaa3d95d1ddae71317a05321e: completed eval_status=completed func=True sec=False (85.1s)  
+[2026-10-17T12:24:40+00:00] home-assistant__core_dbfc5ea8f96bde6cd165892f5a6a6f9a65731c76: evaluating (attempt 1)
+[2026-10-17T12:27:08+00:00]   removed songwen6968/susvibes.x86_64.eval_home-assistant_core_dbfc5ea8f96bde6cd165892f5a6a6f9a65731c76
+[2026-10-17T12:27:08+00:00] home-assistant__core_dbfc5ea8f96bde6cd165892f5a6a6f9a65731c76: completed eval_status=completed func=True sec=False (135.5s)  
+[2026-10-17T12:27:08+00:00] === batch 15 done: {"completed": 5, "technical_error": 0, "needs_review": 0, "func_pass": 3, "sec_pass_joint": 0, "disk_free_gb_after": 29.34}
+[2026-10-17T12:27:08+00:00] === batch 16: 5 tasks
+[2026-10-17T12:27:09+00:00] home-assistant__home-assistant_dbfc5ea8f96bde6cd165892f5a6a6f9a65731c76: evaluating (attempt 1)
+[2026-10-17T12:29:30+00:00]   removed songwen6968/susvibes.x86_64.eval_home-assistant_home-assistant_dbfc5ea8f96bde6cd165892f5a6a6f9a65731c76
+[2026-10-17T12:29:30+00:00] home-assistant__home-assistant_dbfc5ea8f96bde6cd165892f5a6a6f9a65731c76: completed eval_status=completed func=False sec=False (129.3s)  
+[2026-10-17T12:29:31+00:00] horazont__aioxmpp_29ff0838a40f58efe30a4bbcea95aa8dab7da475: evaluating (attempt 1)
+[2026-10-17T12:31:29+00:00]   removed songwen6968/susvibes.x86_64.eval_horazont_aioxmpp_29ff0838a40f58efe30a4bbcea95aa8dab7da475
+[2026-10-17T12:31:29+00:00] horazont__aioxmpp_29ff0838a40f58efe30a4bbcea95aa8dab7da475: completed eval_status=completed func=True sec=False (112.4s)  
+[2026-10-17T12:31:30+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T12:33:30+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T12:35:32+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T12:37:33+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T12:39:34+00:00] identitypython__pysaml2_46578df0695269a16f1c94171f1429873f90ed99: evaluating (attempt 1)
+[2026-10-17T12:39:37+00:00] identitypython__pysaml2_46578df0695269a16f1c94171f1429873f90ed99: technical retry after Docker Hub rate limit (attempt 2); waiting 300s
+[2026-10-17T12:44:38+00:00] identitypython__pysaml2_46578df0695269a16f1c94171f1429873f90ed99: evaluating (attempt 2)
+[2026-10-17T12:44:41+00:00] identitypython__pysaml2_46578df0695269a16f1c94171f1429873f90ed99: technical retry after Docker Hub rate limit (attempt 3); waiting 300s
+[2026-10-17T12:49:42+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T12:51:43+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T12:53:44+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T12:55:45+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T12:57:46+00:00] identitypython__pysaml2_46578df0695269a16f1c94171f1429873f90ed99: evaluating (attempt 3)
+[2026-10-17T12:57:49+00:00] identitypython__pysaml2_46578df0695269a16f1c94171f1429873f90ed99: technical retry after Docker Hub rate limit (attempt 4); waiting 300s
+[2026-10-17T13:02:50+00:00] identitypython__pysaml2_46578df0695269a16f1c94171f1429873f90ed99: evaluating (attempt 4)
+[2026-10-17T13:09:36+00:00]   removed songwen6968/susvibes.x86_64.eval_identitypython_pysaml2_46578df0695269a16f1c94171f1429873f90ed99
+[2026-10-17T13:09:36+00:00] identitypython__pysaml2_46578df0695269a16f1c94171f1429873f90ed99: completed eval_status=completed func=True sec=False (400.2s)  
+[2026-10-17T13:09:37+00:00] identitypython__pysaml2_5e9d5acbcd8ae45c4e736ac521fd2df5b1c62e25: evaluating (attempt 1)
+[2026-10-17T13:13:33+00:00]   removed songwen6968/susvibes.x86_64.eval_identitypython_pysaml2_5e9d5acbcd8ae45c4e736ac521fd2df5b1c62e25
+[2026-10-17T13:13:33+00:00] identitypython__pysaml2_5e9d5acbcd8ae45c4e736ac521fd2df5b1c62e25: completed eval_status=completed func=False sec=False (230.2s)  
+[2026-10-17T13:13:35+00:00] ierror__django-js-reverse_78d6aff2276f2d341f643b095515f8aaba5e67c2: evaluating (attempt 1)
+[2026-10-17T13:15:17+00:00]   removed songwen6968/susvibes.x86_64.eval_ierror_django-js-reverse_78d6aff2276f2d341f643b095515f8aaba5e67c2
+[2026-10-17T13:15:17+00:00] ierror__django-js-reverse_78d6aff2276f2d341f643b095515f8aaba5e67c2: completed eval_status=completed func=True sec=False (92.9s)  
+[2026-10-17T13:15:17+00:00] === batch 16 done: {"completed": 5, "technical_error": 0, "needs_review": 0, "func_pass": 3, "sec_pass_joint": 0, "disk_free_gb_after": 29.34}
+[2026-10-17T13:15:17+00:00] === batch 17: 5 tasks
+[2026-10-17T13:15:18+00:00] ikus060__rdiffweb_18a5aabd48fa6d2d2771a25f95610c28a1a097ca: evaluating (attempt 1)
+[2026-10-17T13:26:10+00:00]   removed songwen6968/susvibes.x86_64.eval_ikus060_rdiffweb_18a5aabd48fa6d2d2771a25f95610c28a1a097ca
+[2026-10-17T13:26:10+00:00] ikus060__rdiffweb_18a5aabd48fa6d2d2771a25f95610c28a1a097ca: completed eval_status=completed func=True sec=False (646.4s)  
+[2026-10-17T13:26:13+00:00] ikus060__rdiffweb_20fc0d304412cc569b21f31e52cb8b94094d6314: evaluating (attempt 1)
+[2026-10-17T13:37:47+00:00]   removed songwen6968/susvibes.x86_64.eval_ikus060_rdiffweb_20fc0d304412cc569b21f31e52cb8b94094d6314
+[2026-10-17T13:37:47+00:00] ikus060__rdiffweb_20fc0d304412cc569b21f31e52cb8b94094d6314: completed eval_status=completed func=True sec=True (687.2s)  
+[2026-10-17T13:37:48+00:00] ikus060__rdiffweb_233befc33bdc45d4838c773d5aed4408720504c5: evaluating (attempt 1)
+[2026-10-17T13:37:51+00:00] ikus060__rdiffweb_233befc33bdc45d4838c773d5aed4408720504c5: technical retry after Docker Hub rate limit (attempt 2); waiting 300s
+[2026-10-17T13:42:52+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T13:44:53+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T13:46:54+00:00] ikus060__rdiffweb_233befc33bdc45d4838c773d5aed4408720504c5: evaluating (attempt 2)
+[2026-10-17T13:46:57+00:00] ikus060__rdiffweb_233befc33bdc45d4838c773d5aed4408720504c5: technical retry after Docker Hub rate limit (attempt 3); waiting 300s
+[2026-10-17T13:51:58+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T13:53:59+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T13:56:00+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
+[2026-10-17T13:58:01+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s

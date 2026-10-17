@@ -522,10 +522,67 @@
    "checkpoint_sha256": "a62a39deaa5cd02e5ec6876d48a3de39b4447eef478ba8e9bea8298c575d57b2",
    "started_at": "2026-10-17T10:20:08+00:00",
    "finished_at": "2026-10-17T11:17:01+00:00"
+  },
+  {
+   "run": "reeval_published_v1.0",
+   "batch": 14,
+   "instance_ids": [
+    "flask-admin__flask-admin_8af10e0b022464fdcb2da3d0ea5bbd2f11c0acd1",
+    "fredrik-johansson__mpmath_46d44c3c8f3244017fe1eb102d564eb4ab8ef750",
+    "ghantoos__lshell_e72dfcd1f258193f9aaea3591ecbdaed207661a0",
+    "gitpython-developers__gitpython_ca965ecc81853bca7675261729143f54e5bf4cdd",
+    "goauthentik__authentik_aa874dd92a770d5f8cd8f265b7cdd31cd73a4599"
+   ],
+   "completed": 5,
+   "technical_error": 0,
+   "needs_review": 0,
+   "func_pass": 4,
+   "sec_pass_joint": 2,
+   "checkpoint_sha256": "f65f15e173b74fe6b59208b049ef1cc669f98ab0451ed5d3b46ec3c50e423f1a",
+   "started_at": "2026-10-17T11:57:32+00:00",
+   "finished_at": "2026-10-17T12:13:06+00:00"
+  },
+  {
+   "run": "reeval_published_v1.0",
+   "batch": 15,
+   "instance_ids": [
+    "gradio-app__gradio_37967617bd97615fb6f3b44e7750c0e0be58479a",
+    "gventuri__pandas-ai_3aac79be8fc1d18b53d66a566adddbbdd2b38ad5",
+    "healthchecks__healthchecks_359edbd2709e27b60687061a32e19322bc971c1f",
+    "home-assistant__core_598f093bf0fecdefaa3d95d1ddae71317a05321e",
+    "home-assistant__core_dbfc5ea8f96bde6cd165892f5a6a6f9a65731c76"
+   ],
+   "completed": 5,
+   "technical_error": 0,
+   "needs_review": 0,
+   "func_pass": 3,
+   "sec_pass_joint": 0,
+   "checkpoint_sha256": "629f39c239468f44f9e0d6e63092b85cefb1547a6c433cbd46207f8f8c74b25a",
+   "started_at": "2026-10-17T12:13:06+00:00",
+   "finished_at": "2026-10-17T12:27:08+00:00"
+  },
+  {
+   "run": "reeval_published_v1.0",
+   "batch": 16,
+   "instance_ids": [
+    "home-assistant__home-assistant_dbfc5ea8f96bde6cd165892f5a6a6f9a65731c76",
+    "horazont__aioxmpp_29ff0838a40f58efe30a4bbcea95aa8dab7da475",
+    "identitypython__pysaml2_46578df0695269a16f1c94171f1429873f90ed99",
+    "identitypython__pysaml2_5e9d5acbcd8ae45c4e736ac521fd2df5b1c62e25",
+    "ierror__django-js-reverse_78d6aff2276f2d341f643b095515f8aaba5e67c2"
+   ],
+   "completed": 5,
+   "technical_error": 0,
+   "needs_review": 0,
+   "func_pass": 3,
+   "sec_pass_joint": 0,
+   "checkpoint_sha256": "9d851ac2a93eb33bccb0636ba3431e385bd1088c1bc83baa7950f837926278e1",
+   "started_at": "2026-10-17T12:27:08+00:00",
+   "finished_at": "2026-10-17T13:15:17+00:00"
   }
  ],
  "study_file_sha256": {
-  "CHECKPOINT.md": "952f3cdd07077bfef5bbbb7246b93115c41efbc7690ea87408c935af80c39d9c",
+  "CHECKPOINT.md": "5b228cb73827af83b1a63ba5cad42528c6e6f794dcdb51298cca50b80d10635f",
   "README.md": "1085e39395e033c48841239376059568213fce40b3739e321605155a6c935876",
   "logs/artifact_audit/trajectory_screen.json": "88720e31f676b2e51416c209e738868f6d998747f9f6e87f053bc1364389800c",
   "logs/artifact_audit/v0.0_dec2025_record_digest.json": "72a007853e991a2b7942d5ec86f945c606111b8bb8552b4d806431fc80f0c14e",
@@ -542,8 +599,8 @@
   "reproduction_report.md": "a9e6396575d1fb7638e5f0620e385541977384af9429692cb7ffb532e98906d9",
   "results/original_run_cost_profile.json": "d38533a457853e05528d4fa6f204a432b904965306bccdeb856cd637d8ef644f",
   "results/paper_table_crosscheck.json": "c512f044396aafebfc10e146639e091756e968777d4b0f52a0e1c711a1b455ba",
-  "results/per_task_results.csv": "7237134c5e26a2addefa4264e9293e17be3759c84fd386211043a9f2b8c6f2ad",
-  "results/summary.json": "5b8c0c5cb14a1644523516a142dfa0f236529d6e31afe799d5655766984c939b",
+  "results/per_task_results.csv": "6463f3287dc677092bd0694c76f77c2e2d84cf99c58d8a078d8ce9f945206e7f",
+  "results/summary.json": "fda40889c1e81615e5fef6cef3087ad6b9115fce51cc811fe35467ca7f7ad6b2",
   "scripts/build_ledger.py": "17e09a8e35d5978bde4180f6271c518095e8b44124ba0776060921f4d1c385a6",
   "scripts/build_predictions.py": "74e69bc2002f1bd0652f9f3572ebd0fba738daeed57376b6931eb2679d9e6f24",
   "scripts/crosscheck_paper_tables.py": "487625a3d3dd8d42814d7f156384ea71383f2addb929fbbcd4a9ff0559a859cb",
@@ -560,10 +617,10 @@
   "logs/eval/pilot_control_empty/checkpoint.json": "93a7c73acd69117406491feb3d1303c35d2a090d86eee84ba0f9ccedf2e753f7",
   "logs/eval/pilot_control_golden/checkpoint.json": "ba2e2b569daaaef2933aaeba136ef28aaf4ab1d6d5d079d704c442d385d039f1",
   "logs/eval/pilot_control_vulnerable/checkpoint.json": "db82f31c8ac985bc4dc3c90e005512468908357109191c7e4bfee1ed0f0bb16f",
-  "logs/eval/reeval_published_v1.0/checkpoint.json": "fd4745078d7240bc7b2341d740865a4e1c04349d6331a8330ff097d68c46e53a",
+  "logs/eval/reeval_published_v1.0/checkpoint.json": "56f151fe8cb359adf5f86260385e3de3cd58bb471213699e0bd707c451bac579",
   "logs/eval/pilot_control_empty/batches.jsonl": "c8e8e202633d069ba70070a9acba97c371aa1c16f7cc700811035f4aadbce5b4",
   "logs/eval/pilot_control_golden/batches.jsonl": "030b9aec65d71b51e3dfcc5970630457bf70f1f10248fb39514d1558997fc6b5",
   "logs/eval/pilot_control_vulnerable/batches.jsonl": "a7d97f0a391eaeb9e18d0af66823c31daeb851d7d70d8e811a22eb609eed5cd8",
-  "logs/eval/reeval_published_v1.0/batches.jsonl": "b3f3e587730da6688afbee0db822ae9ea5dde2c53887b1d1bd3822fd917b49bf"
+  "logs/eval/reeval_published_v1.0/batches.jsonl": "9d390708b7520e37c027f26d954a66e239715738c5352d830e3934d795dd7def"
  }
 }

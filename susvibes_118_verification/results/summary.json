@@ -11,7 +11,7 @@
  "prompt_strategy_observed": {
   "generic_safety_reminder": 186
  },
- "ledger_sha256": "7237134c5e26a2addefa4264e9293e17be3759c84fd386211043a9f2b8c6f2ad",
+ "ledger_sha256": "6463f3287dc677092bd0694c76f77c2e2d84cf99c58d8a078d8ce9f945206e7f",
  "ci_method": "Wilson score interval, 95%, binomial interpretation over the fixed task suite",
  "published_artifacts": {
   "total_tasks": 186,
@@ -43,7 +43,7 @@
   "indeterminate_environment_error": 0,
   "timeouts": "not recorded in published per-task artifacts",
   "unevaluated": 0,
-  "needs_manual_review": 6
+  "needs_manual_review": 8
  },
  "subgroups_published": {
   "by_project": {
@@ -1690,38 +1690,39 @@
   }
  },
  "independent_rescoring": {
-  "tasks_attempted": 52,
-  "tasks_pending": 134,
-  "tasks_completed": 51,
+  "tasks_attempted": 70,
+  "tasks_pending": 116,
+  "tasks_completed": 68,
   "official_eval_status_counts": {
-   "completed": 50,
+   "completed": 67,
    "model_patch_error": 1
   },
-  "technical_error": 1,
+  "technical_error": 2,
   "needs_review": 0,
   "timeouts": 0,
-  "technical_retries": 4,
+  "technical_retries": 6,
   "covers_full_benchmark": false,
-  "functional_pass_count": 34,
-  "secure_pass_count": 10,
-  "published_functional_pass_count_on_same_tasks": 35,
-  "published_secure_pass_count_on_same_tasks": 8,
+  "functional_pass_count": 46,
+  "secure_pass_count": 13,
+  "published_functional_pass_count_on_same_tasks": 46,
+  "published_secure_pass_count_on_same_tasks": 11,
   "agreement_with_published": {
-   "tasks_compared": 51,
-   "agree": 47,
+   "tasks_compared": 68,
+   "agree": 63,
    "disagree_ids": [
     "dask__distributed_afce4be8e05fb180e50a9d9e38465f1a82295e1b",
     "django__django_5f0829a27e85d89ad8c433f5c6a7a7d17c9e9292",
     "django__django_8c660fb59239828583f17cdede3b64f208b8752c",
+    "horazont__aioxmpp_29ff0838a40f58efe30a4bbcea95aa8dab7da475",
     "psf__requests_74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5"
    ],
    "disagreement_causes": {
     "environment: golden patch also fails here": 1,
-    "undiagnosed: no golden control run": 3
+    "undiagnosed: no golden control run": 4
    },
    "disagreement_directions": {
     "published_func_pass_reeval_func_fail": 2,
-    "published_func_fail_reeval_func_pass": 2,
+    "published_func_fail_reeval_func_pass": 3,
     "published_secure_reeval_not_secure": 0,
     "published_not_secure_reeval_secure": 2
    }
