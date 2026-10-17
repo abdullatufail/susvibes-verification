@@ -2191,7 +2191,12 @@
    "status": "technical_error"
   },
   "flask-admin__flask-admin_8af10e0b022464fdcb2da3d0ea5bbd2f11c0acd1": {
-   "status": "pending"
+   "attempt": 1,
+   "disk_free_gb_before": 29.34,
+   "image_name": "songwen6968/susvibes.x86_64.eval_flask-admin_flask-admin_8af10e0b022464fdcb2da3d0ea5bbd2f11c0acd1",
+   "patch_sha256": "0da82bae49c81d3c7731e1a514c35be498421f34b83cd0e230c241cbc29db747",
+   "started_at": "2026-10-17T11:57:32+00:00",
+   "status": "running"
   },
   "fredrik-johansson__mpmath_46d44c3c8f3244017fe1eb102d564eb4ab8ef750": {
    "status": "pending"

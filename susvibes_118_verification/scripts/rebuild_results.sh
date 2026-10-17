@@ -6,6 +6,10 @@ SRC=/home/user/sources
 SUB=$SRC/susvibes-leaderboard/public/submissions/claude-4-sonnet_swe-agent_default_2025-12-29
 DS=$SRC/susvibes-v1.0/datasets/default/susvibes_dataset.jsonl
 E=$D/logs/eval
+# Sync live run output (written outside the repo) into the study directory.
+LIVE=${LIVE:-/home/user/runs/eval}
+if [ -d "$LIVE" ]; then cp -a "$LIVE"/. "$E"/; fi
+[ -f /home/user/runs/full_reeval_driver.log ] && cp /home/user/runs/full_reeval_driver.log $D/logs/full_reeval_driver.log
 python3 -I $D/scripts/screen_trajectories.py $SUB/trajectories $D/logs/artifact_audit/trajectory_screen.json > /dev/null
 python3 -I $D/scripts/build_ledger.py --dataset $DS --submission $SUB \
   --dec2025_digest $D/logs/artifact_audit/v0.0_dec2025_record_digest.json \

@@ -64,8 +64,9 @@ def main(study):
 
 1. Start Docker if it is not running: `dockerd > /tmp/dockerd.log 2>&1 &`. Check it with `docker info`.
 2. Make sure the pinned harness exists at `/home/user/sources/susvibes-v1.0` (tag `v1.0`) with its venv `/home/user/sources/sv-venv` (see README §Reproduction).
-3. Run `scripts/run_full_reeval.sh` with the same arguments. `run_eval_batches.py` reloads `logs/eval/reeval_published_v1.0/checkpoint.json`. It refuses to continue if the predictions, dataset, run_id or harness commit differ. It skips every `completed` task whose saved `report.json` checksum and patch hash still validate. It re-queues a task left in `running` state, which is treated as interrupted. It does **not** retry `technical_error`/`needs_review` tasks unless `--retry_errors` is given. With that flag the original record is kept under `previous_attempts`.
-4. Then run `scripts/run_disagreement_controls.sh` and `scripts/rebuild_results.sh`, and regenerate this file with `python -I scripts/write_checkpoint_md.py .`.
+3. Live run output is written **outside the repo** to `$LIVE` (default `/home/user/runs/eval/`), and `scripts/rebuild_results.sh` copies it into `logs/eval/`. If `$LIVE` was lost, for example in a fresh container, seed it from the committed copy: `mkdir -p /home/user/runs/eval && cp -a logs/eval/reeval_published_v1.0 /home/user/runs/eval/`.
+4. Run `scripts/run_full_reeval.sh` with the same arguments. `run_eval_batches.py` reloads `logs/eval/reeval_published_v1.0/checkpoint.json`. It refuses to continue if the predictions, dataset, run_id or harness commit differ. It skips every `completed` task whose saved `report.json` checksum and patch hash still validate. It re-queues a task left in `running` state, which is treated as interrupted. It does **not** retry `technical_error`/`needs_review` tasks unless `--retry_errors` is given. With that flag the original record is kept under `previous_attempts`.
+5. Finish the 429-exhausted tasks with `scripts/run_full_reeval.sh --retry_errors`. Then run `scripts/run_disagreement_controls.sh` and `scripts/rebuild_results.sh`, and regenerate this file with `python -I scripts/write_checkpoint_md.py .`.
 """)
     (sd / "CHECKPOINT.md").write_text("\n".join(L) + "\n")
     print(f"CHECKPOINT.md: completed={n_done} statuses={ {k: len(v) for k, v in by.items()} }")

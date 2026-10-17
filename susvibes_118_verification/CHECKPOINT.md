@@ -1,6 +1,6 @@
 # CHECKPOINT — experiment state
 
-_Generated 2026-10-17T11:55:52+00:00 by `scripts/write_checkpoint_md.py` from `logs/eval/*/checkpoint.json`. Do not edit by hand._
+_Generated 2026-10-17T11:57:58+00:00 by `scripts/write_checkpoint_md.py` from `logs/eval/*/checkpoint.json`. Do not edit by hand._
 
 ## Experiments
 
@@ -18,7 +18,7 @@ _Generated 2026-10-17T11:55:52+00:00 by `scripts/write_checkpoint_md.py` from `l
 * dataset sha256 `0cb5fbffe7ba59a8e16d42c293944bdd8e1e23795941a4b496ac1043722b9550`; harness commit `7e1b4b05240e56dc2b4e8253b2cc5c9481d016f3` (tag v1.0)
 * latest batch: **13** finished 2026-10-17T11:17:01+00:00: ['django__django_601107524523bca02376a0ddc1a06c6fdb8f22f3', 'django__django_8c660fb59239828583f17cdede3b64f208b8752c', 'django__django_8f9a4d3a2bc42f14bb437defd30c7315adbff22c', 'django__django_ad0410ec4f458aa39803e5f6b9a3736527062dcd', 'django__django_c5544d289233f501917e25970c03ed444abbd4f0']
 * batches recorded: 13 (pilot tasks ran as single-task batches 1–5)
-* disk free now: 29.4 GB (one task image is about 1.8 GB and is removed after each task)
+* disk free now: 29.3 GB (one task image is about 1.8 GB and is removed after each task)
 * API expenditure: **$0.00**. No model was invoked. Only published patches and reference controls were evaluated.
 * technical retries: 4 ['apragacz__django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5', 'django__django_0bd57a879a0d54920bb9038a732645fb917040e9', 'django__django_8f9a4d3a2bc42f14bb437defd30c7315adbff22c', 'executablebooks__markdown-it-py_53ca3e9c2b9e9b295f6abf7f4ad2730a9b70f68c']
 
@@ -87,7 +87,6 @@ _Generated 2026-10-17T11:55:52+00:00 by `scripts/write_checkpoint_md.py` from `l
 
 <details><summary>134 pending/running</summary>
 
-- flask-admin__flask-admin_8af10e0b022464fdcb2da3d0ea5bbd2f11c0acd1
 - fredrik-johansson__mpmath_46d44c3c8f3244017fe1eb102d564eb4ab8ef750
 - ghantoos__lshell_e72dfcd1f258193f9aaea3591ecbdaed207661a0
 - gitpython-developers__gitpython_ca965ecc81853bca7675261729143f54e5bf4cdd
@@ -221,12 +220,14 @@ _Generated 2026-10-17T11:55:52+00:00 by `scripts/write_checkpoint_md.py` from `l
 - zopefoundation__restrictedpython_c8eca66ae49081f0016d2e1f094c3d72095ef531
 - zopefoundation__zope_26a55dbc301db417f47cafda6fe0f983b5690088
 - zopefoundation__zope_603b0a12881c90a072a7a65e32d47ed898ce37cb
+- flask-admin__flask-admin_8af10e0b022464fdcb2da3d0ea5bbd2f11c0acd1
 </details>
 
 ## How to resume without duplicating work
 
 1. Start Docker if it is not running: `dockerd > /tmp/dockerd.log 2>&1 &`. Check it with `docker info`.
 2. Make sure the pinned harness exists at `/home/user/sources/susvibes-v1.0` (tag `v1.0`) with its venv `/home/user/sources/sv-venv` (see README §Reproduction).
-3. Run `scripts/run_full_reeval.sh` with the same arguments. `run_eval_batches.py` reloads `logs/eval/reeval_published_v1.0/checkpoint.json`. It refuses to continue if the predictions, dataset, run_id or harness commit differ. It skips every `completed` task whose saved `report.json` checksum and patch hash still validate. It re-queues a task left in `running` state, which is treated as interrupted. It does **not** retry `technical_error`/`needs_review` tasks unless `--retry_errors` is given. With that flag the original record is kept under `previous_attempts`.
-4. Then run `scripts/run_disagreement_controls.sh` and `scripts/rebuild_results.sh`, and regenerate this file with `python -I scripts/write_checkpoint_md.py .`.
+3. Live run output is written **outside the repo** to `$LIVE` (default `/home/user/runs/eval/`), and `scripts/rebuild_results.sh` copies it into `logs/eval/`. If `$LIVE` was lost, for example in a fresh container, seed it from the committed copy: `mkdir -p /home/user/runs/eval && cp -a logs/eval/reeval_published_v1.0 /home/user/runs/eval/`.
+4. Run `scripts/run_full_reeval.sh` with the same arguments. `run_eval_batches.py` reloads `logs/eval/reeval_published_v1.0/checkpoint.json`. It refuses to continue if the predictions, dataset, run_id or harness commit differ. It skips every `completed` task whose saved `report.json` checksum and patch hash still validate. It re-queues a task left in `running` state, which is treated as interrupted. It does **not** retry `technical_error`/`needs_review` tasks unless `--retry_errors` is given. With that flag the original record is kept under `previous_attempts`.
+5. Finish the 429-exhausted tasks with `scripts/run_full_reeval.sh --retry_errors`. Then run `scripts/run_disagreement_controls.sh` and `scripts/rebuild_results.sh`, and regenerate this file with `python -I scripts/write_checkpoint_md.py .`.
 

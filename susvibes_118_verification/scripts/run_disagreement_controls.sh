@@ -5,6 +5,7 @@
 # golden patch also fails here, the disagreement is attributable to this environment.
 set -u
 D=/home/user/susvibes-verification/susvibes_118_verification
+LIVE=${LIVE:-/home/user/runs/eval}
 H=/home/user/sources/susvibes-v1.0
 PY=/home/user/sources/sv-venv/bin/python
 IDS=$D/logs/disagreement_instance_ids.json
@@ -23,7 +24,7 @@ for c in golden vulnerable; do
     python3 -c "import json;json.dump(['$iid'],open('$D/logs/_one.json','w'))"
     python3 -I $D/scripts/run_eval_batches.py --predictions $D/predictions/control_${c}_all186.jsonl \
       --run_id disagree_control_$c --strategy generic --harness_root $H --harness_python $PY \
-      --out_dir $D/logs/eval/disagree_control_$c --instance_ids_file $D/logs/_one.json $keep
+      --out_dir $LIVE/disagree_control_$c --instance_ids_file $D/logs/_one.json $keep
   done
 done
 rm -f $D/logs/_one.json

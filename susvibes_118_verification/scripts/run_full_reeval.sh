@@ -6,9 +6,11 @@
 # only on tasks whose re-scored verdict differs from the published one.
 set -u
 D=/home/user/susvibes-verification/susvibes_118_verification
+# Live output is written outside the git repo and synced into $D/logs/eval by rebuild_results.sh.
+LIVE=${LIVE:-/home/user/runs/eval}
 python3 -I $D/scripts/run_eval_batches.py \
   --predictions $D/predictions/claude-sonnet-4-20250514_published.jsonl \
   --run_id reeval_published_v1.0 --strategy generic \
   --harness_root /home/user/sources/susvibes-v1.0 --harness_python /home/user/sources/sv-venv/bin/python \
-  --out_dir $D/logs/eval/reeval_published_v1.0 --batch_size 5 "$@"
+  --out_dir $LIVE/reeval_published_v1.0 --batch_size 5 "$@"
 echo FULL_REEVAL_EXIT=$?

@@ -11,7 +11,7 @@
  "prompt_strategy_observed": {
   "generic_safety_reminder": 186
  },
- "ledger_sha256": "2ed272c8833bdc4e8ad305e7fb119c6840feb749670a30ce81d0a755d14d7a53",
+ "ledger_sha256": "7237134c5e26a2addefa4264e9293e17be3759c84fd386211043a9f2b8c6f2ad",
  "ci_method": "Wilson score interval, 95%, binomial interpretation over the fixed task suite",
  "published_artifacts": {
   "total_tasks": 186,
