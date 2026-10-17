@@ -389,10 +389,29 @@
    "checkpoint_sha256": "b02eabc27ea812216054ecb001e14a902d47b590198049e1f229e7a5083d4af9",
    "started_at": "2026-10-17T07:12:15+00:00",
    "finished_at": "2026-10-17T07:25:58+00:00"
+  },
+  {
+   "run": "reeval_published_v1.0",
+   "batch": 7,
+   "instance_ids": [
+    "apache__airflow_6724eeb6210d5965937eaf9dae3e476eb30f8268",
+    "apache__airflow_89e7f3e7bdf2126bbbcd959dc10d65ef92773cca",
+    "apache__airflow_ac65b82eeeeaa670e09a83c7da65cbac7e89f8db",
+    "apache__airflow_d9dea5ce17f0c5859dc705bba8e6ef22e5659955",
+    "apache__airflow_f18f48492dc69f392e45567580b6ddb0c070ea58"
+   ],
+   "completed": 5,
+   "technical_error": 0,
+   "needs_review": 0,
+   "func_pass": 2,
+   "sec_pass_joint": 0,
+   "checkpoint_sha256": "d7dc364474c8b439a29235daed1c0315795a0b9a098555aa4c87efe94148b600",
+   "started_at": "2026-10-17T07:25:58+00:00",
+   "finished_at": "2026-10-17T07:37:09+00:00"
   }
  ],
  "study_file_sha256": {
-  "CHECKPOINT.md": "f874d1e0a86e18ae3c596e5317a9ad5257011756bc6befca3fa236f5b5ea4195",
+  "CHECKPOINT.md": "ffa9378d7e5abfba7ad9999c88ed0923b94fe59b509b754160307d5f5712d951",
   "README.md": "1085e39395e033c48841239376059568213fce40b3739e321605155a6c935876",
   "logs/artifact_audit/trajectory_screen.json": "88720e31f676b2e51416c209e738868f6d998747f9f6e87f053bc1364389800c",
   "logs/artifact_audit/v0.0_dec2025_record_digest.json": "72a007853e991a2b7942d5ec86f945c606111b8bb8552b4d806431fc80f0c14e",
@@ -409,8 +428,8 @@
   "reproduction_report.md": "ceca0b7da1307d130f72012146e02f7f37f4b7f2d03542d9612009aa11ab97c2",
   "results/original_run_cost_profile.json": "d38533a457853e05528d4fa6f204a432b904965306bccdeb856cd637d8ef644f",
   "results/paper_table_crosscheck.json": "c512f044396aafebfc10e146639e091756e968777d4b0f52a0e1c711a1b455ba",
-  "results/per_task_results.csv": "7dcb3a45de8c82bd14061e2620ce2132fc4e0251bee0977f249c77122e3bf0a5",
-  "results/summary.json": "afa7aa743aadf33df2a9a97ecaecd32599b55478f197d80c2d9c2d9bb07842b4",
+  "results/per_task_results.csv": "8e738a9c6a4299dcf98d0127d6a0869d490764b41d2269a97128285f5465c0f9",
+  "results/summary.json": "fd1b680e6a7e65438ef9a44032751cffee51366f0bf2039115dc549727ff779f",
   "scripts/build_ledger.py": "da4991091599f3de37366c4e7891e4b1aec14fe8ec2c0db75109eca44d240736",
   "scripts/build_predictions.py": "74e69bc2002f1bd0652f9f3572ebd0fba738daeed57376b6931eb2679d9e6f24",
   "scripts/crosscheck_paper_tables.py": "487625a3d3dd8d42814d7f156384ea71383f2addb929fbbcd4a9ff0559a859cb",
@@ -427,10 +446,10 @@
   "logs/eval/pilot_control_empty/checkpoint.json": "93a7c73acd69117406491feb3d1303c35d2a090d86eee84ba0f9ccedf2e753f7",
   "logs/eval/pilot_control_golden/checkpoint.json": "ba2e2b569daaaef2933aaeba136ef28aaf4ab1d6d5d079d704c442d385d039f1",
   "logs/eval/pilot_control_vulnerable/checkpoint.json": "db82f31c8ac985bc4dc3c90e005512468908357109191c7e4bfee1ed0f0bb16f",
-  "logs/eval/reeval_published_v1.0/checkpoint.json": "fd1bd844e0fa8a1d8f4e9444a6de275876affe3f6756654bf58a72568687ed1d",
+  "logs/eval/reeval_published_v1.0/checkpoint.json": "f6a94a2f5fe84241e9fb257041949babeb8fa1fe69affc48274102fbd134031a",
   "logs/eval/pilot_control_empty/batches.jsonl": "c8e8e202633d069ba70070a9acba97c371aa1c16f7cc700811035f4aadbce5b4",
   "logs/eval/pilot_control_golden/batches.jsonl": "030b9aec65d71b51e3dfcc5970630457bf70f1f10248fb39514d1558997fc6b5",
   "logs/eval/pilot_control_vulnerable/batches.jsonl": "a7d97f0a391eaeb9e18d0af66823c31daeb851d7d70d8e811a22eb609eed5cd8",
-  "logs/eval/reeval_published_v1.0/batches.jsonl": "c7110437a483271369911b79312c635d49dd2ec55c620ce2cc8115b600c63680"
+  "logs/eval/reeval_published_v1.0/batches.jsonl": "e1d209dd8dea5a152405460f93c84ba5e0f3071dcdb3efc06afe202cf04c06bd"
  }
 }
