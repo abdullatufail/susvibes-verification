@@ -119,6 +119,55 @@ def remove_task_image(image_name: str, log):
     log(f"  removed {image_name}")
 
 
+RATE_LIMIT_MARKERS = ("429 Too Many Requests", "toomanyrequests", "rate limit")
+
+
+def dockerhub_quota_remaining():
+    """Anonymous Docker Hub pull quota for this egress IP, via the documented ratelimitpreview HEAD
+    check (HEAD requests do not consume quota). Returns (remaining, limit) or (None, None)."""
+    try:
+        tok = subprocess.run(["curl", "-s", "--max-time", "20",
+                              "https://auth.docker.io/token?service=registry.docker.io"
+                              "&scope=repository:ratelimitpreview/test:pull"],
+                             capture_output=True, text=True).stdout
+        token = json.loads(tok)["token"]
+        hdr = subprocess.run(["curl", "-s", "--max-time", "20", "--head", "-H", f"Authorization: Bearer {token}",
+                              "https://registry-1.docker.io/v2/ratelimitpreview/test/manifests/latest"],
+                             capture_output=True, text=True).stdout
+        vals = {}
+        for line in hdr.splitlines():
+            k, _, v = line.partition(":")
+            if k.strip().lower() in ("ratelimit-remaining", "ratelimit-limit"):
+                vals[k.strip().lower()] = int(v.strip().split(";")[0])
+        return vals.get("ratelimit-remaining"), vals.get("ratelimit-limit")
+    except Exception:  # noqa: BLE001 - quota probing is best-effort
+        return None, None
+
+
+def pull_with_backoff(image_name: str, log, max_wait_s: int = 6 * 3600) -> bool:
+    """Wait until the anonymous Docker Hub quota allows a pull before invoking the harness (which
+    pulls the task image itself). Does not pull. Returns False only if the wait limit expires."""
+    waited, delay = 0, 120
+    while True:
+        remaining, limit = dockerhub_quota_remaining()
+        if remaining is None or remaining >= 2:
+            return True
+        if waited >= max_wait_s:
+            log(f"  Docker Hub quota still exhausted after {waited}s; proceeding anyway")
+            return False
+        log(f"  Docker Hub anonymous quota {remaining}/{limit} per hour (shared egress IP); waiting {delay}s")
+        time.sleep(delay)
+        waited += delay
+
+
+def is_rate_limited(task_dir: Path) -> bool:
+    f = task_dir / "harness_stdout_stderr.txt.gz"
+    if not f.exists():
+        return False
+    text = gzip.decompress(f.read_bytes()).decode(errors="replace")
+    return any(m.lower() in text.lower() for m in RATE_LIMIT_MARKERS)
+
+
 def evaluate_prediction(pred, run_id, args, harness_root, tdir, tmp_dir, log):
     """Evaluate one prediction with the official entry point; copy evidence to tdir; return the
     record fields. The official report is taken verbatim."""
@@ -192,6 +241,9 @@ def main():
                     help="Re-run tasks whose status is technical_error/needs_review (original "
                          "record is preserved under `previous_attempts`).")
     ap.add_argument("--task_timeout", type=int, default=2 * 1800 + 1800)
+    ap.add_argument("--max_infra_retries", type=int, default=3,
+                    help="Technical retries for a task whose harness run failed only because Docker Hub "
+                         "rate-limited the image pull (each failed attempt is preserved).")
     ap.add_argument("--control", action="append", default=[], metavar="NAME=PATH",
                     help="Per-task control predictions evaluated on the same cached image before "
                          "the main prediction (e.g. golden=predictions/control_golden.jsonl).")
@@ -293,8 +345,28 @@ def main():
                                                harness_root, out_dir / "controls" / cname / i, tmp_dir, log)
                     rec.setdefault("controls", {})[cname] = crec
                     atomic_write_json(ck_path, ck)
-            log(f"{i}: evaluating (attempt {attempt})")
-            rec.update(evaluate_prediction(pred, args.run_id, args, harness_root, out_dir / i, tmp_dir, log))
+            for infra_try in range(1, args.max_infra_retries + 2):
+                pull_with_backoff(dataset[i]["image_name"], log)
+                log(f"{i}: evaluating (attempt {attempt})")
+                rec.update(evaluate_prediction(pred, args.run_id, args, harness_root, out_dir / i, tmp_dir, log))
+                if not (rec["status"] == "technical_error" and is_rate_limited(out_dir / i)):
+                    break
+                if infra_try > args.max_infra_retries:
+                    break
+                # Preserve the failed attempt verbatim, then retry the same unchanged prediction.
+                failed = {k: v for k, v in rec.items() if k != "previous_attempts"}
+                failed["note"] = (failed.get("note") or "") + " [Docker Hub HTTP 429 during harness pull]"
+                failed_dir = out_dir / "_failed_attempts" / f"{i}.attempt{attempt}"
+                if failed_dir.exists():
+                    shutil.rmtree(failed_dir)
+                shutil.move(str(out_dir / i), str(failed_dir))
+                failed["evidence_dir"] = str(failed_dir.relative_to(out_dir))
+                rec.setdefault("previous_attempts", []).append(failed)
+                attempt += 1
+                rec["attempt"] = attempt
+                atomic_write_json(ck_path, ck)
+                log(f"{i}: technical retry after Docker Hub rate limit (attempt {attempt}); waiting 300s")
+                time.sleep(300)
             if not args.keep_images:
                 remove_task_image(dataset[i]["image_name"], log)
             rec["disk_free_gb_after"] = disk_free_gb()

@@ -100,6 +100,11 @@ Tasks are grouped into logical batches of 5, and each batch appends a record (co
 
 * **Resume.** A resumed run skips a `completed` task only if its saved report checksum and patch hash still validate. It refuses to mix runs with a different dataset, predictions or harness commit.
 * **Errors.** `technical_error` and `needs_review` tasks are not retried unless `--retry_errors` is given. With that flag, the original record is preserved under `previous_attempts`.
+* **Docker Hub rate limit.** On 2026-10-17 at 07:39 UTC one harness call failed before evaluation (`apragacz__django-rest-registration`). The cause was Docker Hub's anonymous pull limit: HTTP 429. This sandbox's egress IP is shared, and its measured quota was **100 pulls per 3600 s**, with 0 remaining.
+  * The harness always re-pulls the task image, even when it is cached, and aborts on any registry error, so such a failure carries no verdict.
+  * The wrapper now polls the documented `ratelimitpreview` HEAD endpoint, which does not consume quota, and invokes the harness only when quota is available.
+  * If a harness run still fails solely with a 429, the failed attempt is preserved verbatim, under `previous_attempts` in the checkpoint and `_failed_attempts/` on disk. The **unchanged** prediction is then re-run as a documented technical retry, at most 3 times. No other retries are performed.
+  * The run was stopped and restarted twice for these changes. Both stops happened between tasks, so no task verdict was lost or duplicated.
 * **Classification.** An official `eval_status: indeterminate` becomes `technical_error`. A run whose `test_status` is not `completed` (timeout or startup error) becomes `needs_review`. Neither is ever counted silently as a security or functional failure.
 
 ## 6. Metric definitions and statistics

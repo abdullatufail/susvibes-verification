@@ -35,3 +35,21 @@
 [2026-10-17T07:37:09+00:00] === batch 7 done: {"completed": 5, "technical_error": 0, "needs_review": 0, "func_pass": 2, "sec_pass_joint": 0, "disk_free_gb_after": 29.41}
 [2026-10-17T07:37:09+00:00] === batch 8: 5 tasks
 [2026-10-17T07:37:09+00:00] apache__superset_ccf73b2608f3f3d1f3d31b927e094fcf50b86a03: evaluating (attempt 1)
+[2026-10-17T07:39:24+00:00]   removed songwen6968/susvibes.x86_64.eval_apache_superset_ccf73b2608f3f3d1f3d31b927e094fcf50b86a03
+[2026-10-17T07:39:24+00:00] apache__superset_ccf73b2608f3f3d1f3d31b927e094fcf50b86a03: completed eval_status=completed func=True sec=False (123.4s)  
+[2026-10-17T07:39:24+00:00] apragacz__django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5: evaluating (attempt 1)
+[2026-10-17T07:39:27+00:00]   image songwen6968/susvibes.x86_64.eval_apragacz_django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5 not present; nothing to remove
+[2026-10-17T07:39:27+00:00] apragacz__django-rest-registration_26d094fab65ea8c2694fdfb6a3ab95a7808b62d5: technical_error eval_status=None func=None sec=None (3.7s) harness returncode=1; no report.json produced 
+[2026-10-17T07:39:27+00:00] borgbackup__borg_3eb070191da10c2d3f7bc6484cf3d51c3045f884: evaluating (attempt 1)
+[2026-10-17T07:50:16+00:00]   removed songwen6968/susvibes.x86_64.eval_borgbackup_borg_3eb070191da10c2d3f7bc6484cf3d51c3045f884
+[2026-10-17T07:50:16+00:00] borgbackup__borg_3eb070191da10c2d3f7bc6484cf3d51c3045f884: completed eval_status=completed func=False sec=False (642.7s)  
+[2026-10-17T07:50:16+00:00] bottlepy__bottle_6d7e13da0f998820800ecb3fe9ccee4189aefb54: evaluating (attempt 1)
+--- restart 2026-10-17T07:50:39Z with --retry_errors after Docker Hub 429 (see CHECKPOINT.md)
+[2026-10-17T07:50:39+00:00] run_id=reeval_published_v1.0 model=claude-sonnet-4-20250514 targets=186 todo=169 free=29.4GB
+[2026-10-17T07:50:39+00:00] === batch 8: 5 tasks
+[2026-10-17T07:50:40+00:00]   pull attempt 1 failed (rate limited); retrying in 60s
+[2026-10-17T07:51:41+00:00]   pull attempt 2 failed (rate limited); retrying in 120s
+--- restart 2026-10-17T07:51:47Z: quota-gated pulls (Docker Hub anonymous limit 100/h on shared egress IP)
+[2026-10-17T07:51:47+00:00] run_id=reeval_published_v1.0 model=claude-sonnet-4-20250514 targets=186 todo=169 free=29.4GB
+[2026-10-17T07:51:47+00:00] === batch 8: 5 tasks
+[2026-10-17T07:51:48+00:00]   Docker Hub anonymous quota 0/100 per hour (shared egress IP); waiting 120s
